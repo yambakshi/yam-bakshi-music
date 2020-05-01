@@ -124,6 +124,10 @@ body {
     box-shadow: 0 0 28px 0 rgba(0,0,0,.8);
 }
 
+.social-button {
+    display: flex;
+}
+
 .social-button > a {
     display: flex;
     justify-content: center;
