@@ -24,7 +24,9 @@ body {
 }
 
 .iframe-container {
-    margin-bottom: 20px;
+    /* box-shadow: 0 0 28px 0 rgba(0,0,0,.8);
+    border-radius: 8px; */
+    margin-bottom: 25px;
 }
 
 .artwork-container {
@@ -106,19 +108,27 @@ body {
     background-color: rgb(62, 167, 224);
 }
 
-.socials-container {
+.footer {
     width: 100%;
     margin-bottom: 20px;
+}
+
+.socials-container {
+    margin-bottom: 30px;
+    background-color: #f7f7f7;
+    padding: 12px 15px 15px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 28px 0 rgba(0,0,0,.8);
+}
+
+.socials-title {
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .socials {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
-    background-color: #f7f7f7;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 28px 0 rgba(0,0,0,.8);
 }
 
 .social-button {
