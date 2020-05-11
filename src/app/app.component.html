@@ -1,45 +1,43 @@
-<div class="container">
-    <div class="inner-container">
-        <div class="iframe-container">
-            <iframe frameborder="0" width="320px" height="610px"
-                style="overflow:hidden; border-radius: 8px; box-shadow: 0 0 28px 0 rgba(0,0,0,.8);" scrolling="no"
-                allowtransparency="true" src="https://snd.click/nq9qQT0?embed=1"></iframe>
-        </div>
-        <div class="footer">
-            <div class="plarforms-container">
-                <div class="platforms-title">MORE MUSIC</div>
-                <div class="platforms streaming">
-                    <div *ngFor="let name of moreMusic" class="platform-button">
-                        <a href="{{platforms[name].links.artistPage}}" target="_blank">
-                            <img src="{{platforms[name].icons.small}}" alt="spotify"
-                                height="{{platforms[name].icons.size ? platforms[name].icons.size.height : 32}}"
-                                width="{{platforms[name].icons.size ? platforms[name].icons.size.width : 32}}" />
-                        </a>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="platforms-title">SOCIALS</div>
-                <div class="platforms socials">
-                    <div *ngFor="let name of socials" class="platform-button">
-                        <a href="{{platforms[name].links.artistPage}}" target="_blank">
-                            <img src="{{platforms[name].icons.small}}" alt="facebook" height="32" width="32" />
-                        </a>
-                    </div>
+<div class="pre-save-container">
+    <div class="iframe-container">
+        <iframe frameborder="0" width="320px" height="610px"
+            style="overflow:hidden; border-radius: 8px; box-shadow: 0 0 28px 0 rgba(0,0,0,.8);" scrolling="no"
+            allowtransparency="true" src="https://snd.click/nq9qQT0?embed=1"></iframe>
+    </div>
+    <div class="footer">
+        <div class="platforms-container">
+            <div class="platforms-title">MORE MUSIC</div>
+            <div class="platforms streaming">
+                <div *ngFor="let name of moreMusic" class="platform-button">
+                    <a href="{{platforms[name].links.artistPage}}" target="_blank">
+                        <img src="{{platforms[name].icons.small}}" alt="spotify"
+                            height="{{platforms[name].icons.size ? platforms[name].icons.size.height : 32}}"
+                            width="{{platforms[name].icons.size ? platforms[name].icons.size.width : 32}}" />
+                    </a>
                 </div>
             </div>
-            <div class="follow-buttons">
-                <div class="spotify-follow">
-                    <iframe id="spotify-iframe"
-                        src="https://open.spotify.com/follow/1/?uri=spotify:artist:6oz7LyT8COPHziKlASn0HP?si=uA6NEXQlQN2bPKRShHJGoQ&size=basic&theme=dark&show-count=0"
-                        width="100" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;"
-                        allowtransparency="true"></iframe>
-                </div>
-                <div class="youtube-subscribe">
-                    <div class="g-ytsubscribe" data-channelid="UCKSj4o9QxRUbtBsb1IsIqCQ" data-layout="default"
-                        data-theme="dark" data-count="default"></div>
+            <div class="divider"></div>
+            <div class="platforms-title">SOCIALS</div>
+            <div class="platforms socials">
+                <div *ngFor="let name of socials" class="platform-button">
+                    <a href="{{platforms[name].links.artistPage}}" target="_blank">
+                        <img src="{{platforms[name].icons.small}}" alt="facebook" height="32" width="32" />
+                    </a>
                 </div>
             </div>
-            <div class="copyright">&copy; Yam Bakshi 2020</div>
         </div>
+        <div class="follow-buttons">
+            <div class="spotify-follow">
+                <iframe id="spotify-iframe"
+                    src="https://open.spotify.com/follow/1/?uri=spotify:artist:6oz7LyT8COPHziKlASn0HP?si=uA6NEXQlQN2bPKRShHJGoQ&size=basic&theme=dark&show-count=0"
+                    width="100" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;"
+                    allowtransparency="true"></iframe>
+            </div>
+            <div class="youtube-subscribe">
+                <div class="g-ytsubscribe" data-channelid="UCKSj4o9QxRUbtBsb1IsIqCQ" data-layout="default"
+                    data-theme="dark" data-count="default"></div>
+            </div>
+        </div>
+        <div class="copyright">&copy; Yam Bakshi 2020</div>
     </div>
 </div>
