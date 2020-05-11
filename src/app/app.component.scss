@@ -1,21 +1,14 @@
-.container {
-    padding-top: 30px;
-    width: 100%;
-    height: 100%;
-}
-
-.inner-container {
-    width: 320px;
-    margin: auto;
-}
-
 .smartlink-container {
+    padding-top: 30px;
+}
+
+.smartlink {
     box-shadow: 0 0 28px 0 rgba(0,0,0,.8);
     border-radius: 8px;
     margin-bottom: 25px;
 }
 
-.artwork-container {
+.artwork {
     display: flex;
     height: 320px;
     width: 320px;
