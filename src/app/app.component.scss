@@ -1,95 +1,9 @@
-.container {
+.pre-save-container {
     padding-top: 30px;
-    width: 100%;
-    height: 100%;
-}
-
-.inner-container {
-    width: 320px;
-    margin: auto;
 }
 
 .iframe-container {
     margin-bottom: 25px;
-}
-
-.artwork-container {
-    display: flex;
-    height: 320px;
-    width: 320px;
-    background-image: url("https://res.cloudinary.com/dasokqhnv/image/upload/v1588181094/1400_u1gcuv.png");
-    background-size: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.artwork-container > img {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.description {
-    padding: 15px;
-    color: white;
-    background-color: #2e2e2e;
-    text-align: center;
-    text-decoration: none;
-}
-
-.description-primary {
-    font-size: 18px;
-    font-weight: 700;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.description-secondary {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.pre-saves-container {
-    margin: 0;
-    padding: 0;
-}
-
-.pre-save {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: #f7f7f7;
-    height: 40px;
-    border-bottom: 1px solid #e1e1e4;
-}
-
-.pre-save:last-child {
-    border-bottom: none;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.cta {
-    padding: 7px 4px;
-    text-align: center;
-    border: 1.2px solid rgba(179,181,187,.4);
-    border-radius: 4px;
-    float: right;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    color: #414754;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 100px;
-    min-width: 100px;
-    background-color: #fff;
-}
-
-.cta:hover {
-    color: white;
-    background-color: rgb(62, 167, 224);
 }
 
 .footer {
@@ -97,7 +11,7 @@
     margin-bottom: 20px;
 }
 
-.plarforms-container {
+.platforms-container {
     display: flex;
     flex-direction: column;
     align-items: center;
