@@ -28,8 +28,8 @@ export class AppComponent {
       },
       icons: {
         alt: "Apple Music",
-        big: `${this.cloudinaryPrefix}v1588337095/streaming-platforms/big/apple-music_lhjro4.png`,
-        small: `${this.cloudinaryPrefix}v1588442101/streaming-platforms/small/apple-music_klh2ue.png`
+        big: `${this.cloudinaryPrefix}v1589304167/streaming-platforms/big/apple-music_qd85pv.png`,
+        small: `${this.cloudinaryPrefix}v1589305606/streaming-platforms/small/apple-music_f8fskk.png`
       }
     },
     "iTunesStore": {
