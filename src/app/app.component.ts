@@ -16,7 +16,7 @@ export class AppComponent {
       },
       icons: {
         alt: "Spotify",
-        big: `${this.cloudinaryPrefix}v1588182100/streaming-platforms/big/spotify_gtsbmd.png`,
+        big: `${this.cloudinaryPrefix}v1589301599/streaming-platforms/big/spotify-black_rii4x8.png`,
         small: `${this.cloudinaryPrefix}v1588185204/streaming-platforms/small/spotify_kmpedi.svg`
       }
     },
@@ -40,7 +40,7 @@ export class AppComponent {
       },
       icons: {
         alt: "iTunes Store",
-        big: `${this.cloudinaryPrefix}v1589202159/streaming-platforms/big/itunes_a9zifr.png`,
+        big: `${this.cloudinaryPrefix}v1589301070/streaming-platforms/big/itunes-store_gwv5f6.png`,
       }
     },
     "Deezer": {
@@ -51,7 +51,7 @@ export class AppComponent {
       },
       icons: {
         alt: "Deezer",
-        big: `${this.cloudinaryPrefix}v1588182100/streaming-platforms/big/deezer_l1k1w5.png`,
+        big: `${this.cloudinaryPrefix}v1589303303/streaming-platforms/big/deezer_haceax.png`,
         small: `${this.cloudinaryPrefix}v1588443162/streaming-platforms/small/deezer_o9cayg.png`,
       }
     },
@@ -63,7 +63,7 @@ export class AppComponent {
       },
       icons: {
         alt: "YouTube Music",
-        big: `${this.cloudinaryPrefix}v1589201516/streaming-platforms/big/youtube_bvfphs.png`,
+        big: `${this.cloudinaryPrefix}v1589303227/streaming-platforms/big/youtube_zdjnf6.png`,
         small: `${this.cloudinaryPrefix}v1588180498/streaming-platforms/small/youtube_l3tpk7.svg`,
       }
     },
@@ -75,7 +75,7 @@ export class AppComponent {
       },
       icons: {
         alt: "Amazon Music",
-        big: `${this.cloudinaryPrefix}v1589201606/streaming-platforms/big/amazon_music_mtns1y.png`,
+        big: `${this.cloudinaryPrefix}v1589303525/streaming-platforms/big/amazon-music_bl5vrg.svg`,
       }
     },
     "Soundcloud": {
@@ -99,7 +99,7 @@ export class AppComponent {
       },
       icons: {
         alt: "Bandcamp",
-        big: `${this.cloudinaryPrefix}v1589201840/streaming-platforms/big/bandcamp_vvtrjv.png`,
+        big: `${this.cloudinaryPrefix}v1589300977/streaming-platforms/big/bandcamp_vaaq8h.png`,
         small: `${this.cloudinaryPrefix}v1588444379/streaming-platforms/small/bandcamp_thcf1t.png`,
       }
     },
