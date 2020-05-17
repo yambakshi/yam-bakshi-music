@@ -18,7 +18,7 @@ export class StutterEpComponent implements OnInit {
   constructor(
     private titleService: Title,
     private appService: AppService,
-    private platformsService: PlatformsService) {
+    public platformsService: PlatformsService) {
     this.titleService.setTitle(this.title);
     this.appService.setAppFavicon(this.favicon);
   }

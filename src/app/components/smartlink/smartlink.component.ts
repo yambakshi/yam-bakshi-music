@@ -10,7 +10,7 @@ export class SmartlinkComponent implements OnInit {
   @Input() releaseData;
 
   constructor(
-    private platformsService: PlatformsService) { }
+    public platformsService: PlatformsService) { }
 
   ngOnInit(): void {
   }
