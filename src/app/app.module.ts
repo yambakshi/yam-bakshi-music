@@ -7,6 +7,7 @@ import { ShyComponent } from '@components/shy/shy.component';
 import { StutterComponent } from '@components/stutter/stutter.component';
 import { StutterEpComponent } from '@components/stutter-ep/stutter-ep.component';
 import { SmartlinkComponent } from '@components/smartlink/smartlink.component';
+import { StutterEpPreSaveComponent } from '@components/stutter-ep-pre-save/stutter-ep-pre-save.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SmartlinkComponent } from '@components/smartlink/smartlink.component';
     ShyComponent,
     StutterComponent,
     StutterEpComponent,
-    SmartlinkComponent
+    SmartlinkComponent,
+    StutterEpPreSaveComponent
   ],
   imports: [
     BrowserModule,
