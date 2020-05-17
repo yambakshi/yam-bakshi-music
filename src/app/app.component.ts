@@ -12,11 +12,11 @@ export class AppComponent {
       cta: "Stream",
       links: {
         artistPage: "https://open.spotify.com/artist/6oz7LyT8COPHziKlASn0HP?si=O6l70OKySc2OagtaW2x_Hg",
-        release: ""
+        release: "https://open.spotify.com/track/2fJtgqXs5IUrqIbnpyPpkY?si=V9PVdlIGSxm2HeYRTnIW_g"
       },
       icons: {
         alt: "Spotify",
-        big: `${this.cloudinaryPrefix}v1588182100/streaming-platforms/big/spotify_gtsbmd.png`,
+        big: `${this.cloudinaryPrefix}v1589301599/streaming-platforms/big/spotify-black_rii4x8.png`,
         small: `${this.cloudinaryPrefix}v1588185204/streaming-platforms/small/spotify_kmpedi.svg`
       }
     },
@@ -24,7 +24,7 @@ export class AppComponent {
       cta: "Stream",
       links: {
         artistPage: "https://music.apple.com/il/artist/yam-bakshi/1488408087",
-        release: ""
+        release: "https://music.apple.com/il/album/stutter-single/1497439324"
       },
       icons: {
         alt: "Apple Music",
@@ -35,23 +35,23 @@ export class AppComponent {
     "iTunesStore": {
       cta: "Download",
       links: {
-        artistPage: "",
-        release: ""
+        artistPage: "https://music.apple.com/il/artist/yam-bakshi/1488408087",
+        release: "https://music.apple.com/il/album/stutter-single/1497439324"
       },
       icons: {
         alt: "iTunes Store",
-        big: `${this.cloudinaryPrefix}v1589202159/streaming-platforms/big/itunes_a9zifr.png`,
+        big: `${this.cloudinaryPrefix}v1589301070/streaming-platforms/big/itunes-store_gwv5f6.png`,
       }
     },
     "Deezer": {
       cta: "Stream",
       links: {
         artistPage: "https://www.deezer.com/artist/79338092?utm_source=deezer&utm_content=artist-79338092&utm_term=3486418944_1588442193&utm_medium=web",
-        release: ""
+        release: "https://www.deezer.com/album/129873472?utm_source=deezer&utm_content=album-129873472&utm_term=3486418944_1589705252&utm_medium=web"
       },
       icons: {
         alt: "Deezer",
-        big: `${this.cloudinaryPrefix}v1588182100/streaming-platforms/big/deezer_l1k1w5.png`,
+        big: `${this.cloudinaryPrefix}v1589303303/streaming-platforms/big/deezer_haceax.png`,
         small: `${this.cloudinaryPrefix}v1588443162/streaming-platforms/small/deezer_o9cayg.png`,
       }
     },
@@ -59,30 +59,30 @@ export class AppComponent {
       cta: "Stream",
       links: {
         artistPage: "https://www.youtube.com/user/yambakshi?sub_confirmation=1",
-        release: ""
+        release: "https://www.youtube.com/watch?v=PejPHc8Qzxw"
       },
       icons: {
         alt: "YouTube Music",
-        big: `${this.cloudinaryPrefix}v1589201516/streaming-platforms/big/youtube_bvfphs.png`,
+        big: `${this.cloudinaryPrefix}v1589303227/streaming-platforms/big/youtube_zdjnf6.png`,
         small: `${this.cloudinaryPrefix}v1588180498/streaming-platforms/small/youtube_l3tpk7.svg`,
       }
     },
     "AmazonMusic": {
       cta: "Stream",
       links: {
-        artistPage: "",
-        release: ""
+        artistPage: "https://www.amazon.com/s?k=Yam+Bakshi&i=digital-music&search-type=ss&ref=ntt_srch_drd_B081VD9MDY",
+        release: "https://www.amazon.com/Stutter-Yam-Bakshi/dp/B084F8N245/ref=sr_1_2?dchild=1&keywords=yam+bakshi&qid=1589705342&sr=8-2"
       },
       icons: {
         alt: "Amazon Music",
-        big: `${this.cloudinaryPrefix}v1589201606/streaming-platforms/big/amazon_music_mtns1y.png`,
+        big: `${this.cloudinaryPrefix}v1589303525/streaming-platforms/big/amazon-music_bl5vrg.svg`,
       }
     },
     "Soundcloud": {
       cta: "Stream",
       links: {
         artistPage: "https://soundcloud.com/yambakshi",
-        release: ""
+        release: "https://soundcloud.com/yambakshi/stutter"
       },
       icons: {
         alt: "Soundcloud",
@@ -95,11 +95,11 @@ export class AppComponent {
       cta: "Stream",
       links: {
         artistPage: "https://yambakshi.bandcamp.com/",
-        release: ""
+        release: "https://yambakshi.bandcamp.com/track/stutter-2"
       },
       icons: {
         alt: "Bandcamp",
-        big: `${this.cloudinaryPrefix}v1589201840/streaming-platforms/big/bandcamp_vvtrjv.png`,
+        big: `${this.cloudinaryPrefix}v1589300977/streaming-platforms/big/bandcamp_vaaq8h.png`,
         small: `${this.cloudinaryPrefix}v1588444379/streaming-platforms/small/bandcamp_thcf1t.png`,
       }
     },
@@ -134,6 +134,17 @@ export class AppComponent {
     },
   };
 
+  releasePlatforms = [
+    "Spotify",
+    "AppleMusic",
+    "iTunesStore",
+    "Deezer",
+    "YouTubeMusic",
+    "AmazonMusic",
+    "Soundcloud",
+    "Bandcamp"
+  ];
+
   moreMusic = [
     "Spotify",
     "AppleMusic",
@@ -141,11 +152,11 @@ export class AppComponent {
     "YouTubeMusic",
     "Bandcamp",
     "Soundcloud"
-  ]
+  ];
 
   socials = [
     "Facebook",
     "Instagram",
     "Twitter"
-  ]
+  ];
 }

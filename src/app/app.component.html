@@ -1,8 +1,18 @@
-<div class="pre-save-container">
-    <div class="iframe-container">
-        <iframe frameborder="0" width="320px" height="610px"
-            style="overflow:hidden; border-radius: 8px; box-shadow: 0 0 28px 0 rgba(0,0,0,.8);" scrolling="no"
-            allowtransparency="true" src="https://snd.click/nq9qQT0?embed=1"></iframe>
+<div class="smartlink-container">
+    <div class="smartlink">
+        <div class="artwork"></div>
+        <div class="description">
+            <div class="description-primary">Stutter</div>
+            <div class="description-secondary">Choose your preferred music service</div>
+        </div>
+        <ul class="streaming-platforms-container">
+            <li *ngFor="let name of releasePlatforms" class="streaming-platform">
+                <img src="{{platforms[name].icons.big}}" alt="{{platforms[name].icons.alt}}" width="120" />
+                <a href="{{platforms[name].links.release}}" target="_blank">
+                    <div class="cta">{{platforms[name].cta}}</div>
+                </a>
+            </li>
+        </ul>
     </div>
     <div class="footer">
         <div class="platforms-container">
