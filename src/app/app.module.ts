@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StutterComponent } from './stutter/stutter.component';
+import { StutterEpComponent } from './stutter-ep/stutter-ep.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StutterComponent,
+    StutterEpComponent
   ],
   imports: [
     BrowserModule,
