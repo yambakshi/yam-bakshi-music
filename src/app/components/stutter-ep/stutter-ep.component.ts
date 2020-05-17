@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AppService } from '../services/app.service';
+import { AppService } from '@services/app.service';
 
 @Component({
   selector: 'app-stutter-ep',

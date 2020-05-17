@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { APP_PROVIDERS } from './app.providers';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StutterComponent } from './stutter/stutter.component';
-import { StutterEpComponent } from './stutter-ep/stutter-ep.component';
+import { StutterComponent } from '@components/stutter/stutter.component';
+import { StutterEpComponent } from '@components/stutter-ep/stutter-ep.component';
 
 @NgModule({
   declarations: [

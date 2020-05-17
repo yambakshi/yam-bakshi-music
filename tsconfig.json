@@ -18,6 +18,7 @@
     "paths": {
       "@root/*": ["./*"],
       "@services/*": ["app/services/*"],
+      "@components/*": ["app/components/*"],
       "@providers/*": ["app/providers/*"]
     }
   },

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { StutterComponent } from './stutter/stutter.component';
-import { StutterEpComponent } from './stutter-ep/stutter-ep.component';
+import { StutterComponent } from '@components/stutter/stutter.component';
+import { StutterEpComponent } from '@components/stutter-ep/stutter-ep.component';
 
 
 const routes: Routes = [
