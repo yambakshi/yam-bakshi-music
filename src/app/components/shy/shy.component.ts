@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '@services/app.service';
 import { Title } from '@angular/platform-browser';
+import { AppService } from '@root/app/services/app.service';
 
 @Component({
-  selector: 'app-stutter',
-  templateUrl: './stutter.component.html',
-  styleUrls: ['./stutter.component.scss']
+  selector: 'app-shy',
+  templateUrl: './shy.component.html',
+  styleUrls: ['./shy.component.scss']
 })
-export class StutterComponent implements OnInit {
-  title: string = "Yam Bakshi - Stutter";
-  descriptionTitle: string = "Stutter";
+export class ShyComponent implements OnInit {
+  title: string = "Yam Bakshi - Shy";
+  descriptionTitle: string = "Shy";
   cloudinaryPrefix: string = "https://res.cloudinary.com/dasokqhnv/image/upload/";
-  favicon: string = `${this.cloudinaryPrefix}v1589725576/stutter/favicon_tjbh1o.ico`;
-  artwork: string = `${this.cloudinaryPrefix}v1589704997/stutter/artwork_n4ah6v.png`;
-  backgroundImg: string = `${this.cloudinaryPrefix}v1589706035/stutter/background_epu6g3.png`;
+  favicon: string = `${this.cloudinaryPrefix}v1589729776/shy/favicon_xltdu4.ico`;
+  artwork: string = `${this.cloudinaryPrefix}v1589729797/shy/artwork_fdyrjx.png`;
+  backgroundImg: string = `${this.cloudinaryPrefix}v1589730470/shy/background_b5sidt.png`;
   platforms = {
     "Spotify": {
       cta: "Stream",
       links: {
         artistPage: "https://open.spotify.com/artist/6oz7LyT8COPHziKlASn0HP?si=O6l70OKySc2OagtaW2x_Hg",
-        release: "https://open.spotify.com/track/2fJtgqXs5IUrqIbnpyPpkY?si=V9PVdlIGSxm2HeYRTnIW_g"
+        release: "https://open.spotify.com/track/4sj4bL3MmutjSqWcolyjKr"
       },
       icons: {
         alt: "Spotify",
@@ -31,7 +31,7 @@ export class StutterComponent implements OnInit {
       cta: "Stream",
       links: {
         artistPage: "https://music.apple.com/il/artist/yam-bakshi/1488408087",
-        release: "https://music.apple.com/il/album/stutter-single/1497439324"
+        release: "https://music.apple.com/il/album/shy-single/1488885785"
       },
       icons: {
         alt: "Apple Music",
@@ -43,7 +43,7 @@ export class StutterComponent implements OnInit {
       cta: "Download",
       links: {
         artistPage: "https://music.apple.com/il/artist/yam-bakshi/1488408087",
-        release: "https://music.apple.com/il/album/stutter-single/1497439324"
+        release: "https://music.apple.com/il/album/shy-single/1488885785"
       },
       icons: {
         alt: "iTunes Store",
@@ -54,7 +54,7 @@ export class StutterComponent implements OnInit {
       cta: "Stream",
       links: {
         artistPage: "https://www.deezer.com/artist/79338092?utm_source=deezer&utm_content=artist-79338092&utm_term=3486418944_1588442193&utm_medium=web",
-        release: "https://www.deezer.com/album/129873472?utm_source=deezer&utm_content=album-129873472&utm_term=3486418944_1589705252&utm_medium=web"
+        release: "https://www.deezer.com/album/120187772?utm_source=deezer&utm_content=album-120187772&utm_term=3486418944_1589728289&utm_medium=web"
       },
       icons: {
         alt: "Deezer",
@@ -66,7 +66,7 @@ export class StutterComponent implements OnInit {
       cta: "Stream",
       links: {
         artistPage: "https://www.youtube.com/user/yambakshi?sub_confirmation=1",
-        release: "https://www.youtube.com/watch?v=PejPHc8Qzxw"
+        release: "https://www.youtube.com/watch?v=vRJm9pqe7-I"
       },
       icons: {
         alt: "YouTube Music",
@@ -78,7 +78,7 @@ export class StutterComponent implements OnInit {
       cta: "Stream",
       links: {
         artistPage: "https://www.amazon.com/s?k=Yam+Bakshi&i=digital-music&search-type=ss&ref=ntt_srch_drd_B081VD9MDY",
-        release: "https://www.amazon.com/Stutter-Yam-Bakshi/dp/B084F8N245/ref=sr_1_2?dchild=1&keywords=yam+bakshi&qid=1589705342&sr=8-2"
+        release: "https://www.amazon.com/Shy-Explicit-Yam-Bakshi/dp/B081VLWHSG/ref=sr_1_3?dchild=1&keywords=yam+bakshi&qid=1589728368&sr=8-3"
       },
       icons: {
         alt: "Amazon Music",
@@ -89,7 +89,7 @@ export class StutterComponent implements OnInit {
       cta: "Stream",
       links: {
         artistPage: "https://soundcloud.com/yambakshi",
-        release: "https://soundcloud.com/yambakshi/stutter"
+        release: "https://soundcloud.com/yambakshi/shy"
       },
       icons: {
         alt: "Soundcloud",
@@ -102,7 +102,7 @@ export class StutterComponent implements OnInit {
       cta: "Stream",
       links: {
         artistPage: "https://yambakshi.bandcamp.com/",
-        release: "https://yambakshi.bandcamp.com/track/stutter-2"
+        release: "https://yambakshi.bandcamp.com/track/shy-2"
       },
       icons: {
         alt: "Bandcamp",
@@ -176,4 +176,5 @@ export class StutterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }
