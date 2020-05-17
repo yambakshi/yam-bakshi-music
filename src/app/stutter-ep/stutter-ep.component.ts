@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-stutter-ep',
@@ -152,7 +153,9 @@ export class StutterEpComponent implements OnInit {
     "Twitter"
   ];
 
-  constructor() { }
+  constructor(private titleService: Title) {
+    this.titleService.setTitle("Yam Bakshi - Stutter EP");
+  }
 
   ngOnInit(): void {
   }
