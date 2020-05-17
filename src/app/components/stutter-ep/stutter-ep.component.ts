@@ -10,7 +10,7 @@ import { AppService } from '@services/app.service';
 export class StutterEpComponent implements OnInit {
   title: string = "Yam Bakshi - Stutter EP";
   cloudinaryPrefix: string = "https://res.cloudinary.com/dasokqhnv/image/upload/";
-  favicon: string = `${this.cloudinaryPrefix}v1589704997/stutter-ep/artwork_ehv7fz.png`;
+  favicon: string = `${this.cloudinaryPrefix}v1589725229/stutter-ep/favicon_rqrnvr.ico`;
   artwork: string = `${this.cloudinaryPrefix}v1589194126/stutter-ep/artwork_ehv7fz.png`;
   backgroundImg: string = `${this.cloudinaryPrefix}v1589194126/stutter-ep/background_qlkzad.png`;
   platforms = {

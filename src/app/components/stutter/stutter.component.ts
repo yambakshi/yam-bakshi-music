@@ -10,7 +10,7 @@ import { Title } from '@angular/platform-browser';
 export class StutterComponent implements OnInit {
   title: string = "Yam Bakshi - Stutter";
   cloudinaryPrefix: string = "https://res.cloudinary.com/dasokqhnv/image/upload/";
-  favicon: string = `${this.cloudinaryPrefix}v1589704997/stutter/artwork_n4ah6v.png`;
+  favicon: string = `${this.cloudinaryPrefix}v1589725576/stutter/favicon_tjbh1o.ico`;
   artwork: string = `${this.cloudinaryPrefix}v1589704997/stutter/artwork_n4ah6v.png`;
   backgroundImg: string = `${this.cloudinaryPrefix}v1589706035/stutter/background_epu6g3.png`;
   platforms = {
