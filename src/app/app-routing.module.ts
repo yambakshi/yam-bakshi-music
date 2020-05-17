@@ -6,7 +6,8 @@ import { StutterEpComponent } from './stutter-ep/stutter-ep.component';
 
 const routes: Routes = [
   { path: '', component: StutterEpComponent },
-  { path: 'stutter', component: StutterComponent }
+  { path: 'stutter', component: StutterComponent },
+  { path: "**", redirectTo: "" }
 ];
 
 @NgModule({
