@@ -152,11 +152,11 @@ export class AppComponent {
     "YouTubeMusic",
     "Bandcamp",
     "Soundcloud"
-  ]
+  ];
 
   socials = [
     "Facebook",
     "Instagram",
     "Twitter"
-  ]
+  ];
 }
