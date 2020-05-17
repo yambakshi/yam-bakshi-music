@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '@services/app.service';
 import { Title } from '@angular/platform-browser';
-import { AppService } from '@root/app/services/app.service';
-import { PlatformsService } from '@root/app/services/platforms.service';
 
 @Component({
   selector: 'app-shy',
@@ -9,35 +8,32 @@ import { PlatformsService } from '@root/app/services/platforms.service';
   styleUrls: ['./shy.component.scss']
 })
 export class ShyComponent implements OnInit {
-  title: string = "Yam Bakshi - Shy";
-  descriptionTitle: string = "Shy";
   cloudinaryPrefix: string = "https://res.cloudinary.com/dasokqhnv/image/upload/";
-  favicon: string = `${this.cloudinaryPrefix}v1589729776/shy/favicon_xltdu4.ico`;
-  artwork: string = `${this.cloudinaryPrefix}v1589729797/shy/artwork_fdyrjx.png`;
-  backgroundImg: string = `${this.cloudinaryPrefix}v1589730470/shy/background_b5sidt.png`;
-  releaseLinks = {
-    "Spotify": "https://open.spotify.com/track/4sj4bL3MmutjSqWcolyjKr",
-    "AppleMusic": "https://music.apple.com/il/album/shy-single/1488885785",
-    "iTunesStore": "https://music.apple.com/il/album/shy-single/1488885785",
-    "Deezer": "https://www.deezer.com/album/120187772?utm_source=deezer&utm_content=album-120187772&utm_term=3486418944_1589728289&utm_medium=web",
-    "YouTubeMusic": "https://www.youtube.com/watch?v=vRJm9pqe7-I",
-    "AmazonMusic": "https://www.amazon.com/Shy-Explicit-Yam-Bakshi/dp/B081VLWHSG/ref=sr_1_3?dchild=1&keywords=yam+bakshi&qid=1589728368&sr=8-3",
-    "Soundcloud": "https://soundcloud.com/yambakshi/shy",
-    "Bandcamp": "https://yambakshi.bandcamp.com/track/shy-2"
-  };
+  releaseData = {
+    title: "Yam Bakshi - Shy",
+    descriptionTitle: "Shy",
+    favicon: `${this.cloudinaryPrefix}v1589729776/shy/favicon_xltdu4.ico`,
+    artwork: `${this.cloudinaryPrefix}v1589729797/shy/artwork_fdyrjx.png`,
+    backgroundImg: `${this.cloudinaryPrefix}v1589730470/shy/background_b5sidt.png`,
+    links: {
+      "Spotify": "https://open.spotify.com/track/4sj4bL3MmutjSqWcolyjKr",
+      "AppleMusic": "https://music.apple.com/il/album/shy-single/1488885785",
+      "iTunesStore": "https://music.apple.com/il/album/shy-single/1488885785",
+      "Deezer": "https://www.deezer.com/album/120187772?utm_source=deezer&utm_content=album-120187772&utm_term=3486418944_1589728289&utm_medium=web",
+      "YouTubeMusic": "https://www.youtube.com/watch?v=vRJm9pqe7-I",
+      "AmazonMusic": "https://www.amazon.com/Shy-Explicit-Yam-Bakshi/dp/B081VLWHSG/ref=sr_1_3?dchild=1&keywords=yam+bakshi&qid=1589728368&sr=8-3",
+      "Soundcloud": "https://soundcloud.com/yambakshi/shy",
+      "Bandcamp": "https://yambakshi.bandcamp.com/track/shy-2"
+    }
+  }
 
   constructor(
     private titleService: Title,
-    private appService: AppService,
-    private platformsService: PlatformsService) {
-    this.titleService.setTitle(this.title);
-    this.appService.setAppFavicon(this.favicon);
+    private appService: AppService) {
+    this.titleService.setTitle(this.releaseData.title);
+    this.appService.setAppFavicon(this.releaseData.favicon);
   }
 
   ngOnInit(): void {
-  }
-
-  get releasePlatforms(): string[] {
-    return Object.keys(this.releaseLinks);
   }
 }

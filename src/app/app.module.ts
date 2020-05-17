@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ShyComponent } from '@components/shy/shy.component';
 import { StutterComponent } from '@components/stutter/stutter.component';
 import { StutterEpComponent } from '@components/stutter-ep/stutter-ep.component';
+import { SmartlinkComponent } from '@components/smartlink/smartlink.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShyComponent,
     StutterComponent,
-    StutterEpComponent
+    StutterEpComponent,
+    SmartlinkComponent
   ],
   imports: [
     BrowserModule,
