@@ -138,6 +138,17 @@ export class StutterEpComponent implements OnInit {
         small: `${this.cloudinaryPrefix}v1588180496/socials/twitter_hdbalh.svg`,
       }
     },
+    "Genius": {
+      links: {
+        artistPage: "https://genius.com/artists/Yam-bakshi",
+        release: "https://genius.com/Yam-bakshi-shy-lyrics"
+      },
+      icons: {
+        alt: "Genius",
+        small: `${this.cloudinaryPrefix}v1589731581/socials/genius_lh2ntf.png`,
+        big: ""
+      }
+    }
   };
 
   moreMusic = [
@@ -152,7 +163,8 @@ export class StutterEpComponent implements OnInit {
   socials = [
     "Facebook",
     "Instagram",
-    "Twitter"
+    "Twitter",
+    "Genius"
   ];
 
   constructor(

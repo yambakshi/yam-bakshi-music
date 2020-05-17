@@ -11,7 +11,7 @@
                 <div class="platforms streaming">
                     <div *ngFor="let name of moreMusic" class="platform-button">
                         <a href="{{platforms[name].links.artistPage}}" target="_blank">
-                            <img src="{{platforms[name].icons.small}}" alt="spotify"
+                            <img src="{{platforms[name].icons.small}}" alt="{{platforms[name].icons.alt}}"
                                 height="{{platforms[name].icons.size ? platforms[name].icons.size.height : 32}}"
                                 width="{{platforms[name].icons.size ? platforms[name].icons.size.width : 32}}" />
                         </a>
@@ -22,7 +22,7 @@
                 <div class="platforms socials">
                     <div *ngFor="let name of socials" class="platform-button">
                         <a href="{{platforms[name].links.artistPage}}" target="_blank">
-                            <img src="{{platforms[name].icons.small}}" alt="facebook" height="32" width="32" />
+                            <img src="{{platforms[name].icons.small}}" alt="{{platforms[name].icons.alt}}" height="32" width="32" />
                         </a>
                     </div>
                 </div>

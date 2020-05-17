@@ -120,7 +120,6 @@ export class StutterComponent implements OnInit {
       }
     },
     "Instagram": {
-      cta: "Stream",
       links: {
         artistPage: "https://www.instagram.com/yam_bakshi",
       },
@@ -130,7 +129,6 @@ export class StutterComponent implements OnInit {
       }
     },
     "Twitter": {
-      cta: "Stream",
       links: {
         artistPage: "https://twitter.com/yambakshi",
       },
@@ -139,6 +137,17 @@ export class StutterComponent implements OnInit {
         small: `${this.cloudinaryPrefix}v1588180496/socials/twitter_hdbalh.svg`,
       }
     },
+    "Genius": {
+      links: {
+        artistPage: "https://genius.com/artists/Yam-bakshi",
+        release: "https://genius.com/Yam-bakshi-stutter-lyrics"
+      },
+      icons: {
+        alt: "Genius",
+        small: `${this.cloudinaryPrefix}v1589731581/socials/genius_lh2ntf.png`,
+        big: ""
+      }
+    }
   };
 
   releasePlatforms = [
@@ -164,7 +173,8 @@ export class StutterComponent implements OnInit {
   socials = [
     "Facebook",
     "Instagram",
-    "Twitter"
+    "Twitter",
+    "Genius"
   ];
 
   constructor(
