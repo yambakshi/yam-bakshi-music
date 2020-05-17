@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { AppService } from '../services/app.service';
 
 @Component({
   selector: 'app-stutter-ep',
@@ -7,6 +8,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./stutter-ep.component.scss']
 })
 export class StutterEpComponent implements OnInit {
+  title: string = "Yam Bakshi - Stutter EP";
   cloudinaryPrefix: string = "https://res.cloudinary.com/dasokqhnv/image/upload/";
   favicon: string = `${this.cloudinaryPrefix}v1589704997/stutter-ep/artwork_ehv7fz.png`;
   artwork: string = `${this.cloudinaryPrefix}v1589194126/stutter-ep/artwork_ehv7fz.png`;
@@ -153,11 +155,13 @@ export class StutterEpComponent implements OnInit {
     "Twitter"
   ];
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle("Yam Bakshi - Stutter EP");
+  constructor(
+    private titleService: Title,
+    private appService: AppService) {
+    this.titleService.setTitle(this.title);
+    this.appService.setAppFavicon(this.favicon);
   }
 
   ngOnInit(): void {
   }
-
 }

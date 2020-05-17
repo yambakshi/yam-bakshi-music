@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '@services/app.service';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -7,6 +8,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./stutter.component.scss']
 })
 export class StutterComponent implements OnInit {
+  title: string = "Yam Bakshi - Stutter";
   cloudinaryPrefix: string = "https://res.cloudinary.com/dasokqhnv/image/upload/";
   favicon: string = `${this.cloudinaryPrefix}v1589704997/stutter/artwork_n4ah6v.png`;
   artwork: string = `${this.cloudinaryPrefix}v1589704997/stutter/artwork_n4ah6v.png`;
@@ -164,11 +166,13 @@ export class StutterComponent implements OnInit {
     "Twitter"
   ];
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle("Yam Bakshi - Stutter");
+  constructor(
+    private titleService: Title,
+    private appService: AppService) {
+    this.titleService.setTitle(this.title);
+    this.appService.setAppFavicon(this.favicon);
   }
 
   ngOnInit(): void {
   }
-
 }
