@@ -6,9 +6,13 @@ export class MetaTagsService {
     siteName: string = "Yam Bakshi - Official Website";
     description: string = "Yam Bakshi - Official Website";
 
-    constructor(private meta: Meta ) { }
+    constructor(
+        private meta: Meta,
+        private window: Window) { }
 
     setMetaTags({ title, artwork }): void {
+        const url = this.window.location.href;
+
         // Twitter OG
         this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
         this.meta.updateTag({ name: 'twitter:site', content: this.siteName });
@@ -22,6 +26,6 @@ export class MetaTagsService {
         this.meta.updateTag({ property: 'og:title', content: title });
         this.meta.updateTag({ property: 'og:description', content: this.description });
         this.meta.updateTag({ property: 'og:image', content: artwork });
-        this.meta.updateTag({ property: 'og:url', content: "https://www.yambakshimusic.com" });
+        this.meta.updateTag({ property: 'og:url', content: url });
     }
 }
