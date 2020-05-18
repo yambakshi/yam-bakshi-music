@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '@services/app.service';
+import { MetaTagsService } from '@services/meta-tags.service';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -9,8 +10,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class StutterComponent implements OnInit {
   cloudinaryPrefix: string = "https://res.cloudinary.com/dasokqhnv/image/upload/";
+  metaData = { title: "Yam Bakshi - Stutter" };
   releaseData = {
-    title: "Yam Bakshi - Stutter",
     descriptionTitle: "Stutter",
     favicon: `${this.cloudinaryPrefix}v1589725576/stutter/favicon_tjbh1o.ico`,
     artwork: `${this.cloudinaryPrefix}v1589704997/stutter/artwork_n4ah6v.png`,
@@ -25,13 +26,18 @@ export class StutterComponent implements OnInit {
       "Soundcloud": "https://soundcloud.com/yambakshi/stutter",
       "Bandcamp": "https://yambakshi.bandcamp.com/track/stutter-2"
     }
-  }
+  };
 
   constructor(
-    private titleService: Title,
-    private appService: AppService) {
-    this.titleService.setTitle(this.releaseData.title);
+    private title: Title,
+    private appService: AppService,
+    private metaTagsService: MetaTagsService) {
+    this.title.setTitle(this.metaData.title);
     this.appService.setAppFavicon(this.releaseData.favicon);
+    this.metaTagsService.setMetaTags({
+      title: this.metaData.title,
+      artwork: this.releaseData.artwork
+    });
   }
 
   ngOnInit(): void {

@@ -101,7 +101,6 @@ export class PlatformsService {
             icons: {
                 alt: "Genius",
                 small: `${this.cloudinaryPrefix}v1589731581/socials/genius_lh2ntf.png`,
-                big: ""
             }
         }
     };
