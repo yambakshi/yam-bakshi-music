@@ -105,21 +105,5 @@ export class PlatformsService {
         }
     };
 
-    moreMusic = [
-        "Spotify",
-        "AppleMusic",
-        "Deezer",
-        "YouTubeMusic",
-        "Bandcamp",
-        "Soundcloud"
-    ];
-
-    socials = [
-        "Facebook",
-        "Instagram",
-        "Twitter",
-        "Genius"
-    ];
-
     constructor() { }
 }

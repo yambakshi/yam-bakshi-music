@@ -7,6 +7,21 @@ import { PlatformsService } from '@root/app/services/platforms.service';
   styleUrls: ['./smartlink-footer.component.scss']
 })
 export class SmartlinkFooterComponent implements OnInit {
+  moreMusic = [
+    "Spotify",
+    "AppleMusic",
+    "Deezer",
+    "YouTubeMusic",
+    "Bandcamp",
+    "Soundcloud"
+  ];
+
+  socials = [
+    "Facebook",
+    "Instagram",
+    "Twitter",
+    "Genius"
+  ];
 
   constructor(
     public platformsService: PlatformsService) { }
