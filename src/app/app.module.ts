@@ -8,6 +8,7 @@ import { StutterComponent } from '@components/stutter/stutter.component';
 import { StutterEpComponent } from '@components/stutter-ep/stutter-ep.component';
 import { SmartlinkComponent } from '@components/smartlink/smartlink.component';
 import { StutterEpPreSaveComponent } from '@components/stutter-ep-pre-save/stutter-ep-pre-save.component';
+import { SmartlinkFooterComponent } from '@components/smartlink-footer/smartlink-footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StutterEpPreSaveComponent } from '@components/stutter-ep-pre-save/stutt
     StutterComponent,
     StutterEpComponent,
     SmartlinkComponent,
-    StutterEpPreSaveComponent
+    StutterEpPreSaveComponent,
+    SmartlinkFooterComponent
   ],
   imports: [
     BrowserModule,
