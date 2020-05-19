@@ -9,7 +9,7 @@
             <ul class="streaming-platforms-container">
                 <li *ngFor="let name of releasePlatforms" class="streaming-platform">
                     <img src="{{platformsService.platforms[name].icons.big}}" alt="{{platformsService.platforms[name].icons.alt}}" width="120" />
-                    <a href="{{releaseData.links[name]}}" target="_blank">
+                    <a id="{{name}} ({{platformsService.platforms[name].cta}})" href="{{releaseData.links[name]}}" target="_blank">
                         <div class="cta">{{platformsService.platforms[name].cta}}</div>
                     </a>
                 </li>
