@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '@services/app.service';
 import { MetaTagsService } from '@services/meta-tags.service';
+import { CloudinaryService } from '@services/cloudinary.service';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -9,13 +10,12 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./stutter.component.scss']
 })
 export class StutterComponent implements OnInit {
-  cloudinaryPrefix: string = "https://res.cloudinary.com/dasokqhnv/image/upload/";
   metaData = { title: "Yam Bakshi - Stutter" };
   releaseData = {
     descriptionTitle: "Stutter",
-    favicon: `${this.cloudinaryPrefix}v1589725576/stutter/favicon_tjbh1o.ico`,
-    artwork: `${this.cloudinaryPrefix}v1589704997/stutter/artwork_n4ah6v.png`,
-    backgroundImg: `${this.cloudinaryPrefix}v1589706035/stutter/background_epu6g3.png`,
+    favicon: "v1589725576/stutter/favicon_tjbh1o.ico",
+    artwork: "v1589704997/stutter/artwork_n4ah6v.png",
+    backgroundImg: "v1589706035/stutter/background_epu6g3.png",
     links: {
       "Spotify": "https://open.spotify.com/track/2fJtgqXs5IUrqIbnpyPpkY?si=V9PVdlIGSxm2HeYRTnIW_g",
       "AppleMusic": "https://music.apple.com/il/album/stutter-single/1497439324",
@@ -31,13 +31,19 @@ export class StutterComponent implements OnInit {
   constructor(
     private title: Title,
     private appService: AppService,
-    private metaTagsService: MetaTagsService) {
+    private metaTagsService: MetaTagsService,
+    private cloudinaryService: CloudinaryService) {
+
     this.title.setTitle(this.metaData.title);
-    this.appService.setAppFavicon(this.releaseData.favicon);
     this.metaTagsService.setMetaTags({
       title: this.metaData.title,
       artwork: this.releaseData.artwork
     });
+
+    this.releaseData.favicon = `${this.cloudinaryService.prefix}${this.releaseData.favicon}`;
+    this.releaseData.artwork = `${this.cloudinaryService.prefix}${this.releaseData.artwork}`;
+    this.releaseData.backgroundImg = `${this.cloudinaryService.prefix}${this.releaseData.backgroundImg}`;
+    this.appService.setAppFavicon(this.releaseData.favicon);
   }
 
   ngOnInit(): void {
