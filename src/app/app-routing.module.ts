@@ -7,8 +7,8 @@ import { StutterEpPreSaveComponent } from './components/stutter-ep-pre-save/stut
 
 
 const routes: Routes = [
-  { path: '', component: StutterEpPreSaveComponent },
-  { path: 'stutter-ep', component: StutterEpComponent },
+  { path: '', component: StutterEpComponent },
+  { path: 'stutter-ep-pre-save', component: StutterEpPreSaveComponent },
   { path: 'stutter', component: StutterComponent },
   { path: 'shy', component: ShyComponent },
   { path: "**", redirectTo: "" }
