@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '@services/app.service';
 import { MetaTagsService } from '@services/meta-tags.service';
-import { CloudinaryService } from '@services/cloudinary.service';
 import { Title } from '@angular/platform-browser';
+import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
   selector: 'app-stutter',
@@ -29,12 +29,11 @@ export class StutterComponent implements OnInit {
   };
 
   constructor(
-    private title: Title,
+    private titleService: Title,
     private appService: AppService,
     private metaTagsService: MetaTagsService,
     private cloudinaryService: CloudinaryService) {
-
-    this.title.setTitle(this.metaData.title);
+    this.titleService.setTitle(this.metaData.title);
     this.metaTagsService.setMetaTags({
       title: this.metaData.title,
       artwork: this.releaseData.artwork
