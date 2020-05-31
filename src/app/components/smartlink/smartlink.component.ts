@@ -9,8 +9,7 @@ import { PlatformsService } from '@root/app/services/platforms.service';
 export class SmartlinkComponent implements OnInit {
   @Input() releaseData;
 
-  constructor(
-    public platformsService: PlatformsService) { }
+  constructor(public platformsService: PlatformsService) { }
 
   ngOnInit(): void {
   }
