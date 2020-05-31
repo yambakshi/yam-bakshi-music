@@ -9,6 +9,8 @@ import { StutterEpComponent } from '@components/stutter-ep/stutter-ep.component'
 import { SmartlinkComponent } from '@components/smartlink/smartlink.component';
 import { StutterEpPreSaveComponent } from '@components/stutter-ep-pre-save/stutter-ep-pre-save.component';
 import { SmartlinkFooterComponent } from '@components/smartlink-footer/smartlink-footer.component';
+import { MySleepParalysisPreSaveComponent } from '@components/my-sleep-paralysis-pre-save/my-sleep-paralysis-pre-save.component';
+import { MySleepParalysisComponent } from '@components/my-sleep-paralysis/my-sleep-paralysis.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SmartlinkFooterComponent } from '@components/smartlink-footer/smartlink
     StutterEpComponent,
     SmartlinkComponent,
     StutterEpPreSaveComponent,
-    SmartlinkFooterComponent
+    SmartlinkFooterComponent,
+    MySleepParalysisPreSaveComponent,
+    MySleepParalysisComponent
   ],
   imports: [
     BrowserModule,
