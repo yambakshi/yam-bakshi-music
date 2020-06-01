@@ -12,6 +12,7 @@ import { CloudinaryService } from '@services/cloudinary.service';
 export class ShyComponent implements OnInit {
   metaData = { title: "Yam Bakshi - Shy" };
   releaseData = {
+    released: true,
     descriptionTitle: "Shy",
     favicon: "v1589729776/shy/favicon_xltdu4.ico",
     artwork: "v1589729797/shy/artwork_fdyrjx.png",

@@ -12,7 +12,7 @@ import { CloudinaryService } from '@services/cloudinary.service';
 export class MySleepParalysisComponent implements OnInit {
   metaData = { title: "Yam Bakshi - My Sleep Paralysis" };
   releaseData = {
-    released: true,
+    released: false,
     descriptionTitle: "My Sleep Paralysis",
     favicon: "v1590919056/my-sleep-paralysis/favicon_x7n4fg.ico",
     artwork: "v1590919074/my-sleep-paralysis/artwork_hopfb9.png",
@@ -33,8 +33,7 @@ export class MySleepParalysisComponent implements OnInit {
     private titleService: Title,
     private appService: AppService,
     private metaTagsService: MetaTagsService,
-    private cloudinaryService: CloudinaryService
-  ) {
+    private cloudinaryService: CloudinaryService) {
     this.titleService.setTitle(this.metaData.title);
     this.metaTagsService.setMetaTags({
       title: this.metaData.title,

@@ -7,7 +7,6 @@ import { ShyComponent } from '@components/shy/shy.component';
 import { StutterComponent } from '@components/stutter/stutter.component';
 import { StutterEpComponent } from '@components/stutter-ep/stutter-ep.component';
 import { SmartlinkComponent } from '@components/smartlink/smartlink.component';
-import { StutterEpPreSaveComponent } from '@components/stutter-ep-pre-save/stutter-ep-pre-save.component';
 import { SmartlinkFooterComponent } from '@components/smartlink-footer/smartlink-footer.component';
 import { MySleepParalysisComponent } from '@components/my-sleep-paralysis/my-sleep-paralysis.component';
 
@@ -18,7 +17,6 @@ import { MySleepParalysisComponent } from '@components/my-sleep-paralysis/my-sle
     StutterComponent,
     StutterEpComponent,
     SmartlinkComponent,
-    StutterEpPreSaveComponent,
     SmartlinkFooterComponent,
     MySleepParalysisComponent
   ],

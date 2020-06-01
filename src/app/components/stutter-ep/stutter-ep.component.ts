@@ -12,6 +12,7 @@ import { CloudinaryService } from '@services/cloudinary.service';
 export class StutterEpComponent implements OnInit {
   metaData = { title: "Yam Bakshi - Stutter EP" };
   releaseData = {
+    released: true,
     descriptionTitle: "Stutter EP",
     favicon: "v1589725229/stutter-ep/favicon_rqrnvr.ico",
     artwork: "v1589194126/stutter-ep/artwork_ehv7fz.png",
