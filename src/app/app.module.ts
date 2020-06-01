@@ -7,8 +7,8 @@ import { ShyComponent } from '@components/releases/shy/shy.component';
 import { StutterComponent } from '@components/releases/stutter/stutter.component';
 import { StutterEpComponent } from '@components/releases/stutter-ep/stutter-ep.component';
 import { MySleepParalysisComponent } from '@components/releases/my-sleep-paralysis/my-sleep-paralysis.component';
-import { SmartlinkTemplateComponent } from '@components/smartlink-template/smartlink-template.component';
-import { SmartlinkFooterComponent } from '@components/smartlink-footer/smartlink-footer.component';
+import { SmartlinkTemplateComponent } from '@components/templates/smartlink-template/smartlink-template.component';
+import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer/smartlink-footer.component';
 
 @NgModule({
   declarations: [
