@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ShyComponent } from './components/shy/shy.component';
-import { StutterComponent } from '@components/stutter/stutter.component';
-import { StutterEpComponent } from '@components/stutter-ep/stutter-ep.component';
-import { MySleepParalysisComponent } from '@components/my-sleep-paralysis/my-sleep-paralysis.component';
+import { ShyComponent } from './components/releases/shy/shy.component';
+import { StutterComponent } from '@components/releases/stutter/stutter.component';
+import { StutterEpComponent } from '@components/releases/stutter-ep/stutter-ep.component';
+import { MySleepParalysisComponent } from '@components/releases/my-sleep-paralysis/my-sleep-paralysis.component';
 
 
 const routes: Routes = [
