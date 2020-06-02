@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '@services/app.service';
-import { MetaTagsService } from '@services/meta-tags.service';
-import { Title } from '@angular/platform-browser';
-import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
   selector: 'app-shy',
@@ -10,13 +6,16 @@ import { CloudinaryService } from '@services/cloudinary.service';
   styleUrls: ['./shy.component.scss']
 })
 export class ShyComponent implements OnInit {
-  metaData = { title: "Yam Bakshi - Shy" };
   releaseData = {
-    released: true,
-    descriptionTitle: "Shy",
-    favicon: "v1589729776/shy/favicon_xltdu4.ico",
-    artwork: "v1589729797/shy/artwork_fdyrjx.png",
-    backgroundImg: "v1589730470/shy/background_b5sidt.png",
+    meta: {
+      name: "Shy",
+      released: true,
+    },
+    graphics: {
+      favicon: "v1589729776/shy/favicon_xltdu4.ico",
+      artwork: "v1589729797/shy/artwork_fdyrjx.png",
+      backgroundImg: "v1589730470/shy/background_b5sidt.png",
+    },
     links: {
       "Spotify": "https://open.spotify.com/track/4sj4bL3MmutjSqWcolyjKr",
       "AppleMusic": "https://music.apple.com/il/album/shy-single/1488885785",
@@ -29,22 +28,7 @@ export class ShyComponent implements OnInit {
     }
   };
 
-  constructor(
-    private titleService: Title,
-    private appService: AppService,
-    private metaTagsService: MetaTagsService,
-    private cloudinaryService: CloudinaryService) {
-    this.titleService.setTitle(this.metaData.title);
-    this.metaTagsService.setMetaTags({
-      title: this.metaData.title,
-      artwork: this.releaseData.artwork
-    });
-
-    this.releaseData.favicon = `${this.cloudinaryService.prefix}${this.releaseData.favicon}`;
-    this.releaseData.artwork = `${this.cloudinaryService.prefix}${this.releaseData.artwork}`;
-    this.releaseData.backgroundImg = `${this.cloudinaryService.prefix}${this.releaseData.backgroundImg}`;
-    this.appService.setAppFavicon(this.releaseData.favicon);
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
