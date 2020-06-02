@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '@services/app.service';
-import { MetaTagsService } from '@services/meta-tags.service';
-import { Title } from '@angular/platform-browser';
-import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
   selector: 'app-stutter',
@@ -10,13 +6,16 @@ import { CloudinaryService } from '@services/cloudinary.service';
   styleUrls: ['./stutter.component.scss']
 })
 export class StutterComponent implements OnInit {
-  metaData = { title: "Yam Bakshi - Stutter" };
   releaseData = {
-    released: true,
-    descriptionTitle: "Stutter",
-    favicon: "v1589725576/stutter/favicon_tjbh1o.ico",
-    artwork: "v1589704997/stutter/artwork_n4ah6v.png",
-    backgroundImg: "v1589706035/stutter/background_epu6g3.png",
+    meta: {
+      name: "Stutter",
+      released: true,
+    },
+    graphics: {
+      favicon: "v1589725576/stutter/favicon_tjbh1o.ico",
+      artwork: "v1589704997/stutter/artwork_n4ah6v.png",
+      backgroundImg: "v1589706035/stutter/background_epu6g3.png",
+    },
     links: {
       "Spotify": "https://open.spotify.com/track/2fJtgqXs5IUrqIbnpyPpkY?si=V9PVdlIGSxm2HeYRTnIW_g",
       "AppleMusic": "https://music.apple.com/il/album/stutter-single/1497439324",
@@ -29,22 +28,7 @@ export class StutterComponent implements OnInit {
     }
   };
 
-  constructor(
-    private titleService: Title,
-    private appService: AppService,
-    private metaTagsService: MetaTagsService,
-    private cloudinaryService: CloudinaryService) {
-    this.titleService.setTitle(this.metaData.title);
-    this.metaTagsService.setMetaTags({
-      title: this.metaData.title,
-      artwork: this.releaseData.artwork
-    });
-
-    this.releaseData.favicon = `${this.cloudinaryService.prefix}${this.releaseData.favicon}`;
-    this.releaseData.artwork = `${this.cloudinaryService.prefix}${this.releaseData.artwork}`;
-    this.releaseData.backgroundImg = `${this.cloudinaryService.prefix}${this.releaseData.backgroundImg}`;
-    this.appService.setAppFavicon(this.releaseData.favicon);
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
