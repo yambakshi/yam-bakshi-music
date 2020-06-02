@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '@services/app.service';
-import { MetaTagsService } from '@root/app/services/meta-tags.service';
+import { MetaTagsService } from '@services/meta-tags.service';
 import { Title } from '@angular/platform-browser';
-import { CloudinaryService } from '@root/app/services/cloudinary.service';
+import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
   selector: 'app-stutter-ep',
@@ -12,6 +12,7 @@ import { CloudinaryService } from '@root/app/services/cloudinary.service';
 export class StutterEpComponent implements OnInit {
   metaData = { title: "Yam Bakshi - Stutter EP" };
   releaseData = {
+    released: true,
     descriptionTitle: "Stutter EP",
     favicon: "v1589725229/stutter-ep/favicon_rqrnvr.ico",
     artwork: "v1589194126/stutter-ep/artwork_ehv7fz.png",

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SmartlinkComponent } from './smartlink.component';
+import { MySleepParalysisComponent } from './my-sleep-paralysis.component';
 
-describe('SmartlinkComponent', () => {
-  let component: SmartlinkComponent;
-  let fixture: ComponentFixture<SmartlinkComponent>;
+describe('MySleepParalysisComponent', () => {
+  let component: MySleepParalysisComponent;
+  let fixture: ComponentFixture<MySleepParalysisComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SmartlinkComponent ]
+      declarations: [ MySleepParalysisComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SmartlinkComponent);
+    fixture = TestBed.createComponent(MySleepParalysisComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StutterEpPreSaveComponent } from './stutter-ep-pre-save.component';
+import { SmartlinkTemplateComponent } from './smartlink-template.component';
 
-describe('StutterEpPreSaveComponent', () => {
-  let component: StutterEpPreSaveComponent;
-  let fixture: ComponentFixture<StutterEpPreSaveComponent>;
+describe('SmartlinkTemplateComponent', () => {
+  let component: SmartlinkTemplateComponent;
+  let fixture: ComponentFixture<SmartlinkTemplateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StutterEpPreSaveComponent ]
+      declarations: [ SmartlinkTemplateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StutterEpPreSaveComponent);
+    fixture = TestBed.createComponent(SmartlinkTemplateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

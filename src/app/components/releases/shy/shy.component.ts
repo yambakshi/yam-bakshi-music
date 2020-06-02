@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '@services/app.service';
-import { MetaTagsService } from '@root/app/services/meta-tags.service';
+import { MetaTagsService } from '@services/meta-tags.service';
 import { Title } from '@angular/platform-browser';
-import { CloudinaryService } from '@root/app/services/cloudinary.service';
+import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
   selector: 'app-shy',
@@ -12,6 +12,7 @@ import { CloudinaryService } from '@root/app/services/cloudinary.service';
 export class ShyComponent implements OnInit {
   metaData = { title: "Yam Bakshi - Shy" };
   releaseData = {
+    released: true,
     descriptionTitle: "Shy",
     favicon: "v1589729776/shy/favicon_xltdu4.ico",
     artwork: "v1589729797/shy/artwork_fdyrjx.png",
