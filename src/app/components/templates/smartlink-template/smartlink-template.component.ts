@@ -12,6 +12,7 @@ import { PlatformsService } from '@root/app/services/platforms.service';
 })
 export class SmartlinkTemplateComponent implements OnInit {
   @Input() releaseData;
+  lyricsExpanded: boolean = false;
 
   constructor(
     private titleService: Title,
@@ -39,5 +40,9 @@ export class SmartlinkTemplateComponent implements OnInit {
 
   get releasePlatforms(): string[] {
     return Object.keys(this.releaseData.links);
+  }
+
+  toggleLyricsExpand() {
+    this.lyricsExpanded = !this.lyricsExpanded;
   }
 }

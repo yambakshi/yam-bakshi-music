@@ -4,8 +4,14 @@
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
             <div class="artwork" [ngStyle]="{'background-image': 'url(' + releaseData.artwork + ')'}"></div>
             <div class="description">
-                <div class="description-primary">{{releaseData.meta.name}}</div>
+                <div class="description-primary">
+                    <div class="release-name">{{releaseData.meta.name}}</div>
+                    <div class="lyrics-arrow" (click)="toggleLyricsExpand()" [ngClass]="lyricsExpanded ? 'expand' : ''">
+                        &#9660;</div>
+                </div>
                 <div class="description-secondary">Choose your preferred music service</div>
+                <!-- <div class="lyrics-expander" (click)="toggleLyricsExpand()">Lyrics >></div> -->
+                <div class="lyrics-container" [ngClass]="lyricsExpanded ? 'expand' : ''">{{releaseData.lyrics}}</div>
             </div>
             <ul class="streaming-platforms-container">
                 <li *ngFor="let name of releasePlatforms" class="streaming-platform">
