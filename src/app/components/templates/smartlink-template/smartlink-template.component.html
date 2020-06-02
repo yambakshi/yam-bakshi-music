@@ -1,0 +1,30 @@
+<div class="smartlink-container"
+    [ngStyle]="{'background': 'black url(' + releaseData.backgroundImg + ') no-repeat fixed center'}">
+    <div class="smartlink">
+        <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
+            <div class="artwork" [ngStyle]="{'background-image': 'url(' + releaseData.artwork + ')'}"></div>
+            <div class="description">
+                <div class="description-primary">{{releaseData.meta.name}}</div>
+                <div class="description-secondary">Choose your preferred music service</div>
+            </div>
+            <ul class="streaming-platforms-container">
+                <li *ngFor="let name of releasePlatforms" class="streaming-platform">
+                    <img src="{{platformsService.platforms[name].icons.big}}"
+                        alt="{{platformsService.platforms[name].icons.alt}}" width="120" />
+                    <a id="{{name}} ({{platformsService.platforms[name].cta}})" href="{{releaseData.links[name]}}"
+                        target="_blank">
+                        <div class="cta">{{platformsService.platforms[name].cta}}</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ng-template #preRelease>
+            <div class="iframe-container">
+                <iframe frameborder="0" width="320px" height="610px"
+                    style="overflow:hidden; border-radius: 8px; box-shadow: 0 0 28px 0 rgba(0,0,0,.8);" scrolling="no"
+                    allowtransparency="true" src="https://snd.click/nq9qQT0?embed=1"></iframe>
+            </div>
+        </ng-template>
+        <smartlink-footer></smartlink-footer>
+    </div>
+</div>
