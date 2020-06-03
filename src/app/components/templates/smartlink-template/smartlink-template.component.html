@@ -6,7 +6,7 @@
             <div class="description">
                 <div class="description-primary">
                     <div class="release-name">{{releaseData.meta.name}}</div>
-                    <div class="lyrics-arrow" (click)="toggleLyricsExpand()" [ngClass]="lyricsExpanded ? 'expand' : ''">
+                    <div *ngIf="releaseData.lyrics" class="lyrics-arrow" (click)="toggleLyricsExpand()" [ngClass]="lyricsExpanded ? 'expand' : ''">
                         &#9660;</div>
                 </div>
                 <div class="description-secondary">Choose your preferred music service</div>

@@ -73,11 +73,11 @@
     font-size: 14px;
     cursor: pointer;
     transform: rotate(0deg);
-    transition: transform 0.50s ease-out;
+    transition: transform 0.32s ease-out;
 
     &.expand {
         transform: rotate(180deg);
-        transition: transform 0.50s ease-in;
+        transition: transform 0.32s ease-in;
     }
 }
 
