@@ -70,12 +70,9 @@
 }
 
 .lyrics-fade {
-    position: absolute; 
-    left: 0;
-    width: 100%; 
-    text-align: center; 
-    margin: 0;
-    padding: 15px 0; 
+    position: absolute;
+    width: 100%;
+    padding: 15px 0;
     background-size: cover;
 
     &.top {
