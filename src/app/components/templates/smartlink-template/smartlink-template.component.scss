@@ -59,36 +59,6 @@
     border-top-right-radius: 8px;
     width: 100%;
     height: 100%;
-
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     z-index: 1;
-    //     top: 0;
-    //     left: 0;
-    //     pointer-events: none;
-    //     background-image: linear-gradient(to top,
-    //                         rgba(0,0,0, 0),
-    //                         rgba(0,0,0, 0.5) 100%);
-    //     width: 100%;
-    //     height: 2em;
-    //     border-top-left-radius: 8px;
-    //     border-top-right-radius: 8px;
-    // }
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     z-index: 1;
-    //     bottom: 0;
-    //     left: 0;
-    //     pointer-events: none;
-    //     background-image: linear-gradient(to bottom, 
-    //                         rgba(0,0,0, 0), 
-    //                         rgba(0,0,0, 0.5) 100%);
-    //     width: 100%;
-    //     height: 2em;
-    // }
 }
 
 .artwork-lyrics {
@@ -106,33 +76,36 @@
     text-align: center; 
     margin: 0;
     padding: 15px 0; 
-    background-size: cover; 
+    background-size: cover;
+
+    &.top {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        top: 0;
+        background-position: top;
+        -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 95%);
+    }
+    
+    &.bottom {
+        bottom: 0; 
+        background-position: bottom;
+        -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 95%);   
+    }
 }
 
-.text-fade-overlay {
+.lyrics-fade-overlay {
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
     background-color: rgba(0, 0, 0, 0.6);
-}
 
-.top {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    top: 0;
-    background-position: top;
-    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 95%);
-}
-
-.bottom {
-    bottom: 0; 
-    background-position: bottom;
-    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 95%);   
+    &.top {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
 }
 
 .description {
@@ -153,16 +126,16 @@
     text-overflow: ellipsis;
     overflow: hidden;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        height: 1px;
-        background-color: white;
-    }
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     width: 90%;
+    //     height: 1px;
+    //     background-color: white;
+    // }
 }
 
 .description-secondary {
@@ -171,16 +144,16 @@
     padding-top: 5px;
     font-size: 14px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        height: 1px;
-        background-color: white;
-    }
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     width: 90%;
+    //     height: 1px;
+    //     background-color: white;
+    // }
 }
 
 .release-title {
@@ -189,6 +162,10 @@
     align-items: center;
     padding-bottom: 4px;
 }
+
+/*
+
+Collapse-able Lyrics
 
 .lyrics-arrow {
     cursor: pointer;
@@ -222,6 +199,8 @@
 .lyrics {
     padding: 4px 0px 6px;
 }
+
+*/
 
 ::-webkit-scrollbar {
     width: 0px;
