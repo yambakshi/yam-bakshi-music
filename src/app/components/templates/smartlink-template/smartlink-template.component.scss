@@ -95,10 +95,10 @@
 
 .lyrics-arrow {
     cursor: pointer;
-    font-size: 14px;
+    font-size: 10px;
     user-select: none;
     position: absolute;
-    left: calc(100% + 2px);
+    left: calc(100% + 4px);
     transform: rotate(0deg);
     transition: transform 0.5s;
 
@@ -123,7 +123,7 @@
 }
 
 .lyrics {
-    padding: 4px 0px 8px;
+    padding: 4px 0px 6px;
 }
 
 ::-webkit-scrollbar {
