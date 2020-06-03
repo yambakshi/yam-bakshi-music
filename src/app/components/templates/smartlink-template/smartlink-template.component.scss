@@ -11,6 +11,7 @@
 }
 
 .smartlink {
+    max-width: 320px;
     padding-top: 30px;
 }
 
@@ -25,6 +26,7 @@
 }
 
 .artwork {
+    position: relative;
     display: flex;
     height: 320px;
     width: 320px;
@@ -33,9 +35,101 @@
     border-top-right-radius: 8px;
 }
 
-.artwork-container > img {
+.tap-for-lyrics {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-animation: flickerAnimation 1.5s infinite;
+    -moz-animation: flickerAnimation 1.5s infinite;
+    -o-animation: flickerAnimation 1.5s infinite;
+    animation: flickerAnimation 1.5s infinite;
+}
+
+.lyrics-container {
+    position: absolute;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    visibility: hidden;
+    opacity: 0.0;
+    transition: visibility 0.5s, opacity 0.5s;
+    
+    &.fade-in {
+        visibility: visible;
+        opacity: 1.0;
+        transition: visibility 0s, opacity 0.5s;
+    }
+}
+
+.song-lyrics-container {
+    overflow: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.song-lyrics {
+    position: relative;
+    white-space: pre;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 8px 0px 30px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: white;
+    }
+}
+
+.lyrics-fade {
+    position: absolute;
+    width: 100%;
+    padding: 15px 0;
+    background-size: cover;
+
+    &.top {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        top: 0;
+        background-position: top;
+        -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 95%);
+    }
+    
+    &.bottom {
+        bottom: 0; 
+        background-position: bottom;
+        -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 95%);   
+    }
+}
+
+.lyrics-fade-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &.top {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
 }
 
 .description {
@@ -47,83 +141,16 @@
 }
 
 .description-primary {
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 8px;
     font-size: 18px;
     font-weight: 700;
     text-overflow: ellipsis;
-    overflow: hidden;
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        height: 1px;
-        background-color: white;
-    }
 }
 
 .description-secondary {
-    position: relative;
-    margin-top: -1px;
-    padding-top: 5px;
     font-size: 14px;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        height: 1px;
-        background-color: white;
-    }
-}
-
-.release-title {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-bottom: 4px;
-}
-
-.lyrics-arrow {
-    cursor: pointer;
-    font-size: 10px;
-    user-select: none;
-    position: absolute;
-    left: calc(100% + 4px);
-    transform: rotate(0deg);
-    transition: transform 0.5s;
-
-    &.expand {
-        transform: rotate(180deg);
-        transition: transform 0.5s;
-    }
-}
-
-.lyrics-container {
-    position: relative;
-    white-space: pre;
-    font-size: 14px;
-    max-height: 0px;
-    transition: max-height 0.5s ease-out;
-    overflow: auto;
-    
-    &.expand {
-        max-height: 500px;
-        transition: max-height 0.5s ease-in;
-    }
-}
-
-.lyrics {
-    padding: 4px 0px 6px;
 }
 
 ::-webkit-scrollbar {
@@ -173,4 +200,28 @@
 .cta:hover {
     color: white;
     background-color: rgb(62, 167, 224);
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes flickerAnimation{
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes flickerAnimation{
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
 }

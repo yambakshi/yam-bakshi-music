@@ -26,7 +26,9 @@ export class ShyComponent implements OnInit {
       "Soundcloud": "https://soundcloud.com/yambakshi/shy",
       "Bandcamp": "https://yambakshi.bandcamp.com/track/shy-2"
     },
-    lyrics: `If you'll stay awake
+    lyrics: [{
+      name: 'Shy',
+      lyrics: `If you'll stay awake
 Between early and too late
 Circles will appear in the sphere
 No one sees a thing
@@ -63,6 +65,7 @@ Than what you offer so
 Leave me the fuck alone
 And I’ll be grateful
 For what you give`
+    }]
   };
 
   constructor() { }

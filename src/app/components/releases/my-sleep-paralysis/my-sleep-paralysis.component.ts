@@ -26,7 +26,9 @@ export class MySleepParalysisComponent implements OnInit {
       "Soundcloud": "https://soundcloud.com/yambakshi/my-sleep-paralysis/s-BQADo",
       "Bandcamp": ""
     },
-    lyrics: `Grains of sand slip out of your hand
+    lyrics: [{
+      name: 'My Sleep Paralysis',
+      lyrics: `Grains of sand slip out of your hand
 It seems that you've got no other options
 Lucid dreams or nightmares
 Coexist with yourself, return to the path
@@ -42,6 +44,7 @@ Coexist with yourself
 You were so close
 
 Close to me`
+    }]
   }
 
   constructor() { }

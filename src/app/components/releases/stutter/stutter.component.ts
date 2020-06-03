@@ -26,7 +26,9 @@ export class StutterComponent implements OnInit {
       "Soundcloud": "https://soundcloud.com/yambakshi/stutter",
       "Bandcamp": "https://yambakshi.bandcamp.com/track/stutter-2"
     },
-    lyrics: `I guess it's best I keep it to myself
+    lyrics: [{
+      name: 'Stutter',
+      lyrics: `I guess it's best I keep it to myself
 Write it down and rip the page
 Why did you stop fighting?
 How did you become like this?
@@ -65,6 +67,7 @@ So, how did you ended up here?
 Steep slope
 Treading lightly
 Guess not`
+    }]
   };
 
   constructor() { }

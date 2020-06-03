@@ -1,19 +1,26 @@
-<div class="smartlink-container"
-    [ngStyle]="{'background': 'black url(' + releaseData.backgroundImg + ') no-repeat fixed center'}">
+<div class="smartlink-container" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.backgroundImg + ')'}">
     <div class="smartlink">
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
-            <div class="artwork" [ngStyle]="{'background-image': 'url(' + releaseData.artwork + ')'}"></div>
-            <div class="description">
-                <div class="description-primary">
-                    <div class="release-title">
-                        <div class="release-name">{{releaseData.meta.name}}</div>
-                        <div *ngIf="releaseData.lyrics" class="lyrics-arrow" (click)="toggleLyricsExpand()"
-                            [ngClass]="lyricsExpanded ? 'expand' : ''">&#9660;</div>
+            <div class="artwork" (click)="toggleShowLyrics()"
+                [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                <div *ngIf="tapForLyrics" class="tap-for-lyrics">Tap for lyrics</div>
+                <div class="lyrics-container" [ngClass]="showLyrics ? 'fade-in' : ''">
+                    <div class="lyrics-fade top" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                        <div class="lyrics-fade-overlay top"></div>
+                    </div>
+                    <div class="song-lyrics-container">
+                        <div *ngFor="let song of releaseData.lyrics" class="song-lyrics">
+                            <h3><strong>{{song.name}}</strong></h3>
+                            {{song.lyrics}}
+                        </div>
+                    </div>
+                    <div class="lyrics-fade bottom" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                        <div class="lyrics-fade-overlay bottom"></div>
                     </div>
                 </div>
-                <div class="lyrics-container" [ngClass]="lyricsExpanded ? 'expand' : ''">
-                    <div class="lyrics">{{releaseData.lyrics}}</div>
-                </div>
+            </div>
+            <div class="description">
+                <div class="description-primary">{{releaseData.meta.name}}</div>
                 <div class="description-secondary">Choose your preferred music service</div>
             </div>
             <ul class="streaming-platforms-container">
