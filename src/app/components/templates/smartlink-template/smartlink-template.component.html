@@ -3,6 +3,9 @@
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
             <div class="artwork" (click)="toggleShowLyrics()"
                 [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                <div *ngIf="tapForLyrics" class="tap-for-lyrics-container">
+                    <div class="tap-for-lyrics">Tap for lyrics</div>
+                </div>
                 <div class="artwork-lyrics-container" [ngClass]="showLyrics ? 'fade-in' : ''">
                     <div class="lyrics-fade top" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
                         <div class="lyrics-fade-overlay top"></div>
@@ -22,13 +25,8 @@
                 <div class="description-primary">
                     <div class="release-title">
                         <div class="release-name">{{releaseData.meta.name}}</div>
-                        <!-- <div *ngIf="releaseData.lyrics" class="lyrics-arrow" (click)="toggleLyricsExpand()"
-                            [ngClass]="lyricsExpanded ? 'expand' : ''">&#9660;</div> -->
                     </div>
                 </div>
-                <!-- <div class="lyrics-container" [ngClass]="lyricsExpanded ? 'expand' : ''">
-                    <div class="lyrics">{{releaseData.lyrics}}</div>
-                </div> -->
                 <div class="description-secondary">Choose your preferred music service</div>
             </div>
             <ul class="streaming-platforms-container">

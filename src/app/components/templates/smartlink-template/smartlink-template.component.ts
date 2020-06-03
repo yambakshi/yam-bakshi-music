@@ -12,8 +12,8 @@ import { PlatformsService } from '@root/app/services/platforms.service';
 })
 export class SmartlinkTemplateComponent implements OnInit {
   @Input() releaseData;
-  lyricsExpanded: boolean = false;
   showLyrics: boolean = false;
+  tapForLyrics: boolean = true;
 
   constructor(
     private titleService: Title,
@@ -43,11 +43,8 @@ export class SmartlinkTemplateComponent implements OnInit {
     return Object.keys(this.releaseData.links);
   }
 
-  toggleLyricsExpand(): void {
-    this.lyricsExpanded = !this.lyricsExpanded;
-  }
-
   toggleShowLyrics(): void {
+    this.tapForLyrics = false;
     this.showLyrics = !this.showLyrics;
   }
 }

@@ -35,6 +35,50 @@
     border-top-right-radius: 8px;
 }
 
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+
+.tap-for-lyrics-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 5px;
+
+    & > .tap-for-lyrics {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+        -webkit-animation: flickerAnimation 1.5s infinite;
+        -moz-animation: flickerAnimation 1.5s infinite;
+        -o-animation: flickerAnimation 1.5s infinite;
+        animation: flickerAnimation 1.5s infinite;
+    }
+}
+
 .artwork-lyrics-container {
     position: absolute;
     border-top-left-radius: 8px;
@@ -122,17 +166,6 @@
     font-weight: 700;
     text-overflow: ellipsis;
     overflow: hidden;
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: 0px;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     width: 90%;
-    //     height: 1px;
-    //     background-color: white;
-    // }
 }
 
 .description-secondary {
@@ -140,17 +173,6 @@
     margin-top: -1px;
     padding-top: 5px;
     font-size: 14px;
-
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0px;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     width: 90%;
-    //     height: 1px;
-    //     background-color: white;
-    // }
 }
 
 .release-title {
@@ -159,45 +181,6 @@
     align-items: center;
     padding-bottom: 4px;
 }
-
-/*
-
-Collapse-able Lyrics
-
-.lyrics-arrow {
-    cursor: pointer;
-    font-size: 10px;
-    user-select: none;
-    position: absolute;
-    left: calc(100% + 4px);
-    transform: rotate(0deg);
-    transition: transform 0.5s;
-
-    &.expand {
-        transform: rotate(180deg);
-        transition: transform 0.5s;
-    }
-}
-
-.lyrics-container {
-    position: relative;
-    white-space: pre;
-    font-size: 14px;
-    max-height: 0px;
-    transition: max-height 0.5s ease-out;
-    overflow: auto;
-    
-    &.expand {
-        max-height: 500px;
-        transition: max-height 0.5s ease-in;
-    }
-}
-
-.lyrics {
-    padding: 4px 0px 6px;
-}
-
-*/
 
 ::-webkit-scrollbar {
     width: 0px;
