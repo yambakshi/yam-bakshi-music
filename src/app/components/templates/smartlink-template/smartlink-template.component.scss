@@ -47,15 +47,88 @@
 }
 
 .description-primary {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
     font-weight: 700;
     text-overflow: ellipsis;
     overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: white;
+    }
 }
 
 .description-secondary {
-    margin-top: 5px;
+    position: relative;
+    margin-top: -1px;
+    padding-top: 5px;
     font-size: 14px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: white;
+    }
+}
+
+.release-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.lyrics-arrow {
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+    position: absolute;
+    left: calc(100% + 2px);
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+
+    &.expand {
+        transform: rotate(180deg);
+        transition: transform 0.5s;
+    }
+}
+
+.lyrics-container {
+    position: relative;
+    white-space: pre;
+    font-size: 14px;
+    max-height: 0px;
+    transition: max-height 0.5s ease-out;
+    overflow: auto;
+    
+    &.expand {
+        max-height: 500px;
+        transition: max-height 0.5s ease-in;
+    }
+}
+
+.lyrics {
+    padding: 4px 0px 8px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
 .streaming-platforms-container {

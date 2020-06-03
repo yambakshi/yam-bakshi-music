@@ -9,7 +9,7 @@ export class MySleepParalysisComponent implements OnInit {
   releaseData = {
     meta: {
       name: "My Sleep Paralysis",
-      released: false,
+      released: true,
     },
     graphics: {
       favicon: "v1590919056/my-sleep-paralysis/favicon_x7n4fg.ico",
@@ -25,7 +25,23 @@ export class MySleepParalysisComponent implements OnInit {
       "AmazonMusic": "",
       "Soundcloud": "https://soundcloud.com/yambakshi/my-sleep-paralysis/s-BQADo",
       "Bandcamp": ""
-    }
+    },
+    lyrics: `Grains of sand slip out of your hand
+It seems that you've got no other options
+Lucid dreams or nightmares
+Coexist with yourself, return to the path
+A fraction of a second
+Right before you take the shot
+
+Look to me
+
+But instead, you’re probably dead
+Do exactly as instructed
+And if it should happen
+Coexist with yourself
+You were so close
+
+Close to me`
   }
 
   constructor() { }
