@@ -55,6 +55,17 @@
     font-weight: 700;
     text-overflow: ellipsis;
     overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: white;
+    }
 }
 
 .description-secondary {
@@ -80,35 +91,20 @@
     display: flex;
     align-items: center;
     padding-bottom: 4px;
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        height: 1px;
-        background-color: white;
-    }
-}
-
-.release-name {
-    // margin-bottom: 4px;
 }
 
 .lyrics-arrow {
     cursor: pointer;
     font-size: 14px;
     user-select: none;
-    transform: rotate(0deg);
-    transition: transform 0.32s ease-out;
     position: absolute;
-    left: 100%;
+    left: calc(100% + 2px);
+    transform: rotate(0deg);
+    transition: transform 0.5s;
 
     &.expand {
         transform: rotate(180deg);
-        transition: transform 0.32s ease-in;
+        transition: transform 0.5s;
     }
 }
 
@@ -116,7 +112,6 @@
     position: relative;
     white-space: pre;
     font-size: 14px;
-    max-width: 320px;
     max-height: 0px;
     transition: max-height 0.5s ease-out;
     overflow: auto;
@@ -128,7 +123,7 @@
 }
 
 .lyrics {
-    padding: 4px 0px;
+    padding: 4px 0px 8px;
 }
 
 ::-webkit-scrollbar {
