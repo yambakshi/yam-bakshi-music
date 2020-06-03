@@ -4,18 +4,18 @@
             <div class="artwork" (click)="toggleShowLyrics()"
                 [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
                 <div class="artwork-lyrics-container" [ngClass]="showLyrics ? 'fade-in' : ''">
-                    <!-- <div class="fade top" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
-                        <div class="gray-overlay"></div>
-                    </div> -->
+                    <div class="lyrics-fade top" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                        <div class="text-fade-overlay"></div>
+                    </div>
                     <div class="artwork-inner-lyrics-container">
                         <div class="artwork-lyrics">
                             <h3><strong>{{releaseData.meta.name}}</strong></h3>
                             {{releaseData.lyrics}}
                         </div>
                     </div>
-                    <!-- <div class="fade bottom" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
-                        <div class="gray-overlay"></div>
-                    </div> -->
+                    <div class="lyrics-fade bottom" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                        <div class="text-fade-overlay"></div>
+                    </div>
                 </div>
             </div>
             <div class="description">
