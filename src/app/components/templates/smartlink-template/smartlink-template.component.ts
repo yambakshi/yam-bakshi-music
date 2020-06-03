@@ -13,6 +13,7 @@ import { PlatformsService } from '@root/app/services/platforms.service';
 export class SmartlinkTemplateComponent implements OnInit {
   @Input() releaseData;
   lyricsExpanded: boolean = false;
+  showLyrics: boolean = false;
 
   constructor(
     private titleService: Title,
@@ -32,17 +33,21 @@ export class SmartlinkTemplateComponent implements OnInit {
       artwork: graphics.artwork
     });
 
-    this.releaseData.favicon = `${this.cloudinaryService.prefix}${graphics.favicon}`;
-    this.releaseData.artwork = `${this.cloudinaryService.prefix}${graphics.artwork}`;
-    this.releaseData.backgroundImg = `${this.cloudinaryService.prefix}${graphics.backgroundImg}`;
-    this.appService.setAppFavicon(this.releaseData.favicon);
+    this.releaseData.graphics.favicon = `${this.cloudinaryService.prefix}${graphics.favicon}`;
+    this.releaseData.graphics.artwork = `${this.cloudinaryService.prefix}${graphics.artwork}`;
+    this.releaseData.graphics.backgroundImg = `${this.cloudinaryService.prefix}${graphics.backgroundImg}`;
+    this.appService.setAppFavicon(this.releaseData.graphics.favicon);
   }
 
   get releasePlatforms(): string[] {
     return Object.keys(this.releaseData.links);
   }
 
-  toggleLyricsExpand() {
+  toggleLyricsExpand(): void {
     this.lyricsExpanded = !this.lyricsExpanded;
+  }
+
+  toggleShowLyrics(): void {
+    this.showLyrics = !this.showLyrics;
   }
 }

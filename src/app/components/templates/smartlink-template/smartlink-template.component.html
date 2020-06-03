@@ -1,8 +1,20 @@
-<div class="smartlink-container"
-    [ngStyle]="{'background-image': 'url(' + releaseData.backgroundImg + ')'}">
+<div class="smartlink-container" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.backgroundImg + ')'}">
     <div class="smartlink">
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
-            <div class="artwork" [ngStyle]="{'background-image': 'url(' + releaseData.artwork + ')'}"></div>
+            <div class="artwork" (click)="toggleShowLyrics()"
+                [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                <div *ngIf="showLyrics" class="artwork-lyrics-container">
+                    <!-- <div class="fade top" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                        <div class="gray-overlay"></div>
+                    </div> -->
+                    <div class="artwork-inner-lyrics-container">
+                        <div class="artwork-lyrics">{{releaseData.lyrics}}</div>
+                    </div>
+                    <!-- <div class="fade bottom" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                        <div class="gray-overlay"></div>
+                    </div> -->
+                </div>
+            </div>
             <div class="description">
                 <div class="description-primary">
                     <div class="release-title">
