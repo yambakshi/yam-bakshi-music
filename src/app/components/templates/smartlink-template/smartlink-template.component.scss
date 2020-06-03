@@ -47,6 +47,7 @@
 }
 
 .description-primary {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,8 +58,36 @@
 }
 
 .description-secondary {
-    margin-top: 5px;
+    position: relative;
+    margin-top: -1px;
+    padding-top: 5px;
     font-size: 14px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: white;
+    }
+}
+
+.release-name {
+    margin-bottom: 4px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: white;
+    }
 }
 
 .lyrics-expander {
@@ -70,10 +99,12 @@
 }
 
 .lyrics-arrow {
-    font-size: 14px;
     cursor: pointer;
+    font-size: 14px;
+    user-select: none;
     transform: rotate(0deg);
     transition: transform 0.32s ease-out;
+    position: absolute;
 
     &.expand {
         transform: rotate(180deg);
@@ -82,22 +113,27 @@
 }
 
 .lyrics-container {
+    position: relative;
     white-space: pre;
     font-size: 14px;
     max-width: 320px;
-    max-height: 0;
-    transition: max-height 0.50s ease-out;
+    max-height: 0px;
+    transition: max-height 0.5s ease-out;
     overflow: auto;
+    
+    &.expand {
+        max-height: 500px;
+        transition: max-height 0.5s ease-in;
+    }
+}
+
+.lyrics {
+    padding: 4px 0px;
 }
 
 ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
-}
-
-.expand {
-    max-height: 500px;
-    transition: max-height 0.50s ease-in;
 }
 
 .streaming-platforms-container {

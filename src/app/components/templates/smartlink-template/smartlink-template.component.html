@@ -9,9 +9,12 @@
                     <div *ngIf="releaseData.lyrics" class="lyrics-arrow" (click)="toggleLyricsExpand()" [ngClass]="lyricsExpanded ? 'expand' : ''">
                         &#9660;</div>
                 </div>
-                <div class="description-secondary">Choose your preferred music service</div>
-                <!-- <div class="lyrics-expander" (click)="toggleLyricsExpand()">Lyrics >></div> -->
-                <div class="lyrics-container" [ngClass]="lyricsExpanded ? 'expand' : ''">{{releaseData.lyrics}}</div>
+                <div class="lyrics-container" [ngClass]="lyricsExpanded ? 'expand' : ''">
+                    <div class="lyrics">
+                        {{releaseData.lyrics}}
+                    </div>
+                </div>
+                <div class="description-secondary">Choose your preferred music service</div>                
             </div>
             <ul class="streaming-platforms-container">
                 <li *ngFor="let name of releasePlatforms" class="streaming-platform">
