@@ -35,51 +35,21 @@
     border-top-right-radius: 8px;
 }
 
-@keyframes flickerAnimation {
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-}
-
-@-o-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-}
-
-@-moz-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-}
-
-@-webkit-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-}
-
-.tap-for-lyrics-container {
+.tap-for-lyrics {
     display: flex;
-    width: 100%;
+    align-items: flex-end;
     justify-content: center;
+    width: 100%;
     padding-bottom: 5px;
-
-    & > .tap-for-lyrics {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        color: white;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-
-        -webkit-animation: flickerAnimation 1.5s infinite;
-        -moz-animation: flickerAnimation 1.5s infinite;
-        -o-animation: flickerAnimation 1.5s infinite;
-        animation: flickerAnimation 1.5s infinite;
-    }
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-animation: flickerAnimation 1.5s infinite;
+    -moz-animation: flickerAnimation 1.5s infinite;
+    -o-animation: flickerAnimation 1.5s infinite;
+    animation: flickerAnimation 1.5s infinite;
 }
 
-.artwork-lyrics-container {
+.lyrics-container {
     position: absolute;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -97,7 +67,7 @@
     }
 }
 
-.artwork-inner-lyrics-container {
+.song-lyrics-container {
     overflow: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -105,12 +75,25 @@
     height: 100%;
 }
 
-.artwork-lyrics {
+.song-lyrics {
+    position: relative;
     white-space: pre;
     font-size: 14px;
     color: white;
     text-align: center;
     padding: 8px 0px 30px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: white;
+    }
 }
 
 .lyrics-fade {
@@ -158,28 +141,16 @@
 }
 
 .description-primary {
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 8px;
     font-size: 18px;
     font-weight: 700;
     text-overflow: ellipsis;
-    overflow: hidden;
 }
 
 .description-secondary {
-    position: relative;
-    margin-top: -1px;
-    padding-top: 5px;
     font-size: 14px;
-}
-
-.release-title {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-bottom: 4px;
 }
 
 ::-webkit-scrollbar {
@@ -229,4 +200,28 @@
 .cta:hover {
     color: white;
     background-color: rgb(62, 167, 224);
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes flickerAnimation{
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes flickerAnimation{
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
 }
