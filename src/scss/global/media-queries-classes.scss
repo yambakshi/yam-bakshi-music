@@ -1,0 +1,20 @@
+@import './media-queries.scss';
+
+// Classes
+@include media("screen", "<mobile") {
+    .mobile-hide {
+        display: none !important;
+    }
+}
+  
+@include media("screen", ">mobile","<desktop") {
+    .tablet-hide {
+        display: none !important;
+    }
+}
+  
+@include media("screen",">desktop") {
+    .desktop-hide {
+        display: none !important;
+    }
+}

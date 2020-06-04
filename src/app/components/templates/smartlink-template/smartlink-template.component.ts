@@ -8,7 +8,11 @@ import { PlatformsService } from '@root/app/services/platforms.service';
 @Component({
   selector: 'smartlink-template',
   templateUrl: './smartlink-template.component.html',
-  styleUrls: ['./smartlink-template.component.scss']
+  styleUrls: [
+    './smartlink-template.component.common.scss',
+    './smartlink-template.component.desktop.scss',
+    './smartlink-template.component.mobile.scss'
+]
 })
 export class SmartlinkTemplateComponent implements OnInit {
   @Input() releaseData;
