@@ -3,7 +3,8 @@
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
             <div class="artwork" (click)="toggleShowLyrics()"
                 [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
-                <div *ngIf="tapForLyrics" class="tap-for-lyrics">Tap for lyrics</div>
+                <div *ngIf="tapForLyrics" class="tap-for-lyrics desktop-hide tablet-hide">Tap for lyrics</div>
+                <div *ngIf="tapForLyrics" class="tap-for-lyrics mobile-hide">Click for lyrics</div>
                 <div class="lyrics-container" [ngClass]="showLyrics ? 'fade-in' : ''">
                     <div class="song-lyrics-container">
                         <div *ngFor="let song of releaseData.lyrics" class="song-lyrics">

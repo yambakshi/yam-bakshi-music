@@ -39,6 +39,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    user-select: none;
     width: 100%;
     padding-bottom: 5px;
     color: white;
@@ -107,15 +108,15 @@
         border-top-right-radius: 8px;
         top: 0;
         background-position: top;
-        -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-        mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 95%);
+        -webkit-mask-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+        mask-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1) 90%);
     }
     
     &.bottom {
         bottom: 0; 
         background-position: bottom;
         -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
-        mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 95%);   
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 90%);
     }
 }
 
