@@ -8,8 +8,8 @@
                     <div class="mobile-hide">Click for lyrics</div>
                 </div>
                 <div class="lyrics-container" [ngClass]="showLyrics ? 'fade-in' : ''">
-                    <div id="Toggle Lyrics - Hide Lyrics" class="song-lyrics-container">
-                        <div *ngFor="let song of releaseData.lyrics" class="song-lyrics">
+                    <div class="song-lyrics-container">
+                        <div *ngFor="let song of releaseData.lyrics" id="{{song.name}}" class="song-lyrics">
                             <h3><strong>{{song.name}}</strong></h3>
                             {{song.lyrics}}
                         </div>
