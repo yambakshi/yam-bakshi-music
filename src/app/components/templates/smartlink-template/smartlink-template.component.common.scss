@@ -154,11 +154,6 @@
     font-size: 14px;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
 .streaming-platforms-container {
     margin: 0;
     padding: 0;
@@ -172,12 +167,12 @@
     background-color: #f7f7f7;
     height: 40px;
     border-bottom: 1px solid #e1e1e4;
-}
 
-.streaming-platform:last-child {
-    border-bottom: none;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    &:last-child {
+        border-bottom: none;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
 }
 
 .cta {
@@ -196,11 +191,16 @@
     max-width: 100px;
     min-width: 100px;
     background-color: #fff;
+
+    &:hover {
+        color: white;
+        background-color: rgb(62, 167, 224);
+    }
 }
 
-.cta:hover {
-    color: white;
-    background-color: rgb(62, 167, 224);
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
 @keyframes flickerAnimation {
