@@ -1,10 +1,12 @@
 <div class="smartlink-container" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.backgroundImg + ')'}">
     <div class="smartlink">
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
-            <div class="artwork" (click)="toggleShowLyrics()"
+            <div id="Artwork - Show Lyrics" class="artwork" (click)="toggleShowLyrics()"
                 [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
-                <div *ngIf="tapForLyrics" class="tap-for-lyrics desktop-hide tablet-hide">Tap for lyrics</div>
-                <div *ngIf="tapForLyrics" class="tap-for-lyrics mobile-hide">Click for lyrics</div>
+                <div *ngIf="showLyricsActive" class="show-lyrics">
+                    <div class="desktop-hide tablet-hide">Tap for lyrics</div>
+                    <div class="mobile-hide">Click for lyrics</div>
+                </div>
                 <div class="lyrics-container" [ngClass]="showLyrics ? 'fade-in' : ''">
                     <div class="song-lyrics-container">
                         <div *ngFor="let song of releaseData.lyrics" class="song-lyrics">
@@ -12,10 +14,12 @@
                             {{song.lyrics}}
                         </div>
                     </div>
-                    <div class="lyrics-fade top" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                    <div class="lyrics-fade top"
+                        [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
                         <div class="lyrics-fade-overlay top"></div>
                     </div>
-                    <div class="lyrics-fade bottom" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
+                    <div class="lyrics-fade bottom"
+                        [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
                         <div class="lyrics-fade-overlay bottom"></div>
                     </div>
                 </div>
