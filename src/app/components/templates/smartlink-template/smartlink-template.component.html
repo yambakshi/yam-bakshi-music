@@ -1,9 +1,9 @@
 <div class="smartlink-container" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.backgroundImg + ')'}">
     <div class="smartlink">
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
-            <div id="Artwork - Show Lyrics" class="artwork" (click)="toggleShowLyrics()"
+            <div id="Artwork - Click/Tap ({{showLyrics ? 'Show' : 'Hide'}})" class="artwork" (click)="toggleShowLyrics()"
                 [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
-                <div *ngIf="showLyricsActive" class="show-lyrics">
+                <div *ngIf="showLyricsActive" id="Artwork - Show Lyrics ({{showLyrics ? 'Show' : 'Hide'}})" class="show-lyrics">
                     <div class="desktop-hide tablet-hide">Tap for lyrics</div>
                     <div class="mobile-hide">Click for lyrics</div>
                 </div>
