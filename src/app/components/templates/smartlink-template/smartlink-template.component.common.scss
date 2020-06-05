@@ -35,19 +35,20 @@
     border-top-right-radius: 8px;
 }
 
-.tap-for-lyrics {
+.show-lyrics {
     display: flex;
     align-items: flex-end;
+    font-size: 20px;
     justify-content: center;
     user-select: none;
     width: 100%;
     padding-bottom: 5px;
     color: white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -webkit-animation: flickerAnimation 1.5s infinite;
-    -moz-animation: flickerAnimation 1.5s infinite;
-    -o-animation: flickerAnimation 1.5s infinite;
-    animation: flickerAnimation 1.5s infinite;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.6);
+    -webkit-animation: flickerAnimation 1.3s infinite;
+    -moz-animation: flickerAnimation 1.3s infinite;
+    -o-animation: flickerAnimation 1.3s infinite;
+    animation: flickerAnimation 1.3s infinite;
 }
 
 .lyrics-container {
@@ -154,11 +155,6 @@
     font-size: 14px;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
 .streaming-platforms-container {
     margin: 0;
     padding: 0;
@@ -172,12 +168,12 @@
     background-color: #f7f7f7;
     height: 40px;
     border-bottom: 1px solid #e1e1e4;
-}
 
-.streaming-platform:last-child {
-    border-bottom: none;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    &:last-child {
+        border-bottom: none;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
 }
 
 .cta {
@@ -196,11 +192,16 @@
     max-width: 100px;
     min-width: 100px;
     background-color: #fff;
+
+    &:hover {
+        color: white;
+        background-color: rgb(62, 167, 224);
+    }
 }
 
-.cta:hover {
-    color: white;
-    background-color: rgb(62, 167, 224);
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
 @keyframes flickerAnimation {
