@@ -17,7 +17,7 @@ import { PlatformsService } from '@root/app/services/platforms.service';
 export class SmartlinkTemplateComponent implements OnInit {
   @Input() releaseData;
   showLyrics: boolean = false;
-  tapForLyrics: boolean = true;
+  showLyricsActive: boolean = true;
 
   constructor(
     private titleService: Title,
@@ -48,7 +48,7 @@ export class SmartlinkTemplateComponent implements OnInit {
   }
 
   toggleShowLyrics(): void {
-    this.tapForLyrics = false;
+    this.showLyricsActive = false;
     this.showLyrics = !this.showLyrics;
   }
 }
