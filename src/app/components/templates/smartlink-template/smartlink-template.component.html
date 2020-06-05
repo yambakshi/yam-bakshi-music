@@ -4,8 +4,8 @@
             <div id="Toggle Lyrics - Show Lyrics" class="artwork" (click)="toggleShowLyrics()"
                 [ngStyle]="{'background-image': 'url(' + releaseData.graphics.artwork + ')'}">
                 <div *ngIf="showLyricsActive" id="Toggle Lyrics - Initial Show Lyrics" class="show-lyrics">
-                    <div class="desktop-hide tablet-hide">Tap for lyrics</div>
-                    <div class="mobile-hide">Click for lyrics</div>
+                    <div class="desktop-hide tablet-hide">TAP FOR LYRICS</div>
+                    <div class="mobile-hide">CLICK FOR LYRICS</div>
                 </div>
                 <div class="lyrics-container" [ngClass]="showLyrics ? 'fade-in' : ''">
                     <div class="song-lyrics-container">

@@ -38,16 +38,17 @@
 .show-lyrics {
     display: flex;
     align-items: flex-end;
+    font-size: 20px;
     justify-content: center;
     user-select: none;
     width: 100%;
     padding-bottom: 5px;
     color: white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -webkit-animation: flickerAnimation 1.5s infinite;
-    -moz-animation: flickerAnimation 1.5s infinite;
-    -o-animation: flickerAnimation 1.5s infinite;
-    animation: flickerAnimation 1.5s infinite;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.6);
+    -webkit-animation: flickerAnimation 1.3s infinite;
+    -moz-animation: flickerAnimation 1.3s infinite;
+    -o-animation: flickerAnimation 1.3s infinite;
+    animation: flickerAnimation 1.3s infinite;
 }
 
 .lyrics-container {
