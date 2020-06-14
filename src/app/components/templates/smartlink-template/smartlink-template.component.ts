@@ -16,8 +16,8 @@ import { PlatformsService } from '@root/app/services/platforms.service';
 })
 export class SmartlinkTemplateComponent implements OnInit {
   @Input() releaseData;
-  showLyrics: boolean = false;
   showLyricsActive: boolean = true;
+  showLyrics: boolean = false;
 
   constructor(
     private titleService: Title,
@@ -29,6 +29,7 @@ export class SmartlinkTemplateComponent implements OnInit {
 
   ngOnInit(): void {
     const { meta, graphics } = this.releaseData;
+    const { prefix } = this.cloudinaryService;
     const title = `Yam Bakshi - ${meta.name}`;
 
     this.titleService.setTitle(title);
@@ -37,9 +38,9 @@ export class SmartlinkTemplateComponent implements OnInit {
       artwork: graphics.artwork
     });
 
-    this.releaseData.graphics.favicon = `${this.cloudinaryService.prefix}${graphics.favicon}`;
-    this.releaseData.graphics.artwork = `${this.cloudinaryService.prefix}${graphics.artwork}`;
-    this.releaseData.graphics.backgroundImg = `${this.cloudinaryService.prefix}${graphics.backgroundImg}`;
+    this.releaseData.graphics.favicon = `${prefix}${graphics.favicon}`;
+    this.releaseData.graphics.artwork = `${prefix}${graphics.artwork}`;
+    this.releaseData.graphics.backgroundImg = `${prefix}${graphics.backgroundImg}`;
     this.appService.setAppFavicon(this.releaseData.graphics.favicon);
   }
 
