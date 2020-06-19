@@ -12,12 +12,12 @@ import { PlatformsService } from '@root/app/services/platforms.service';
     './smartlink-template.component.common.scss',
     './smartlink-template.component.desktop.scss',
     './smartlink-template.component.mobile.scss'
-]
+  ]
 })
 export class SmartlinkTemplateComponent implements OnInit {
   @Input() releaseData;
-  showLyrics: boolean = false;
   showLyricsActive: boolean = true;
+  showLyrics: boolean = false;
 
   constructor(
     private titleService: Title,
@@ -29,17 +29,16 @@ export class SmartlinkTemplateComponent implements OnInit {
 
   ngOnInit(): void {
     const { meta, graphics } = this.releaseData;
+    const { favicon, artwork, backgroundImg } = graphics;
+    const { prefix } = this.cloudinaryService;
     const title = `Yam Bakshi - ${meta.name}`;
 
-    this.titleService.setTitle(title);
-    this.metaTagsService.setMetaTags({
-      title,
-      artwork: graphics.artwork
-    });
+    this.releaseData.graphics.favicon = `${prefix}${favicon}`;
+    this.releaseData.graphics.artwork = `${prefix}${artwork}`;
+    this.releaseData.graphics.backgroundImg = `${prefix}${backgroundImg}`;
 
-    this.releaseData.graphics.favicon = `${this.cloudinaryService.prefix}${graphics.favicon}`;
-    this.releaseData.graphics.artwork = `${this.cloudinaryService.prefix}${graphics.artwork}`;
-    this.releaseData.graphics.backgroundImg = `${this.cloudinaryService.prefix}${graphics.backgroundImg}`;
+    this.titleService.setTitle(title);
+    this.metaTagsService.setMetaTags({ title, artwork: this.releaseData.graphics.artwork });
     this.appService.setAppFavicon(this.releaseData.graphics.favicon);
   }
 
