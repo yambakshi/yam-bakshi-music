@@ -1,4 +1,5 @@
-<div class="smartlink-container" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.backgroundImg + ')'}">
+<div class="smartlink-container">
+    <div class="smartlink-background" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.backgroundImg + ')'}"></div>
     <div class="smartlink">
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
             <div id="Toggle Lyrics - Show Lyrics" class="artwork" (click)="toggleShowLyrics()"

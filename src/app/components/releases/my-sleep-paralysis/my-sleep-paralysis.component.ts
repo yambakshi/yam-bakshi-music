@@ -12,12 +12,9 @@ export class MySleepParalysisComponent implements OnInit {
       released: true,
     },
     graphics: {
-      favicon: "v1590919056/my-sleep-paralysis/favicon_x7n4fg.ico",
-      // artwork: "v1590919074/my-sleep-paralysis/artwork_hopfb9.png",
-      artwork: "v1590919074/my-sleep-paralysis/2_mqy2iq.png",
-      // backgroundImg: "v1590919059/my-sleep-paralysis/background_zmrrpe.png",
-      // backgroundImg: "v1590919059/my-sleep-paralysis/2_-_bg_vzhgys.png",
-      backgroundImg: "v1590919059/my-sleep-paralysis/2_-_bg_-_1_jgd08f.png",
+      favicon: "v1590919056/my-sleep-paralysis/favicon_hktbns.ico",
+      artwork: "v1590919074/my-sleep-paralysis/artwork_wpoubb.png",
+      backgroundImg: "v1590919059/my-sleep-paralysis/artwork_wpoubb.png",
     },
     links: {
       "Spotify": "",
