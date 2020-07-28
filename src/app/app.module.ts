@@ -9,6 +9,7 @@ import { StutterEpComponent } from '@components/releases/stutter-ep/stutter-ep.c
 import { MySleepParalysisComponent } from '@components/releases/my-sleep-paralysis/my-sleep-paralysis.component';
 import { SmartlinkTemplateComponent } from '@components/templates/smartlink-template/smartlink-template.component';
 import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer/smartlink-footer.component';
+import { TransparentVideoClipComponent } from '@components/temp-campaigns/transparent-video-clip/transparent-video-clip.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer
     ShyComponent,
     StutterComponent,
     StutterEpComponent,
+    TransparentVideoClipComponent,
     MySleepParalysisComponent
   ],
   imports: [

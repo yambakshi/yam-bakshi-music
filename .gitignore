@@ -45,4 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-src/assets/releases
+src/assets/media/releases
+src/assets/media/temp-campaigns
