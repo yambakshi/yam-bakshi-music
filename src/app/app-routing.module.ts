@@ -4,7 +4,7 @@ import { ShyComponent } from '@components/releases/shy/shy.component';
 import { StutterComponent } from '@components/releases/stutter/stutter.component';
 import { StutterEpComponent } from '@components/releases/stutter-ep/stutter-ep.component';
 import { MySleepParalysisComponent } from '@components/releases/my-sleep-paralysis/my-sleep-paralysis.component';
-import { TransparentVideoClipComponent } from '@components/temp-campaigns/transparent-video-clip/transparent-video-clip.component';
+import { TransparentVideoClipComponent } from '@components/releases/transparent-video-clip/transparent-video-clip.component';
 
 
 const routes: Routes = [
