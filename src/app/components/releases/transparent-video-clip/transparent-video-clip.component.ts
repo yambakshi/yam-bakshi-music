@@ -12,19 +12,15 @@ export class TransparentVideoClipComponent implements OnInit {
       released: true,
     },
     graphics: {
-      favicon: "v1589725229/transparent-video-clip/favicon_e0jr5m.ico",
-      artwork: "v1589194126/transparent-video-clip/artwork_h4u2v5.png",
+      favicon: "v1589725229/transparent-video-clip/favicon_ltjq6j.ico",
+      artwork: "v1589194126/transparent-video-clip/artwork_uyhsdq.png",
       backgroundImg: "v1589194126/transparent-video-clip/background_eqorfd.png",
     },
     links: {
+      "YouTube": "https://www.youtube.com/watch?v=gMXQjf8idXc",
       "Spotify": "https://open.spotify.com/track/2LPIpfeEpUVEKOq8tK9LmH?si=C7nvJoMyS-KPayI-JjYg5w",
       "AppleMusic": "https://music.apple.com/il/album/transparent/1510122304?i=1510122997",
-      "iTunesStore": "https://music.apple.com/il/album/transparent/1510122304?i=1510122997",
-      "Deezer": "https://www.deezer.com/track/941776592?utm_source=deezer&utm_content=track-941776592&utm_term=3486418944_1595929660&utm_medium=web",
-      "YouTubeMusic": "https://www.youtube.com/watch?v=-AqWQ0c_W7o&list=OLAK5uy_l6CpVywxDEHoxDk-u5knBF97iz5Q3whRQ&index=3",
-      "AmazonMusic": "https://www.amazon.com/dp/B0886GL9CK/ref=dm_ws_tlw_trk1",
-      "Soundcloud": "https://soundcloud.com/yambakshi/transparent",
-      "Bandcamp": "https://yambakshi.bandcamp.com/track/transparent-2"
+      "Soundcloud": "https://soundcloud.com/yambakshi/transparent"
     },
     lyrics: [
     {

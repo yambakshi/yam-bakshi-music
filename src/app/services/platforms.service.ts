@@ -59,6 +59,15 @@ export class PlatformsService {
                     small: 'v1588180498/streaming-platforms/small/youtube_l3tpk7.svg',
                 }
             },
+            "YouTube": {
+                artistPage: "https://www.youtube.com/user/yambakshi?sub_confirmation=1",
+                cta: "Watch",
+                icons: {
+                    alt: "YouTube",
+                    big: 'v1589303227/streaming-platforms/big/youtube_zdjnf6.png',
+                    small: 'v1588180498/streaming-platforms/small/youtube_l3tpk7.svg',
+                }
+            },
             "AmazonMusic": {
                 artistPage: "https://www.amazon.com/s?k=yam+bakshi&ref=nb_sb_noss_2",
                 cta: "Download",
