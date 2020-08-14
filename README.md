@@ -1,6 +1,9 @@
 # YamBakshiMusic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Node: 10.15.3
+NPM: 6.4.1
+Angular: 9.1.4
 
 ## Development server
 
