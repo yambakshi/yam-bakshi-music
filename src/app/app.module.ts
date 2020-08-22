@@ -23,7 +23,7 @@ import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer
     MySleepParalysisComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
   providers: [APP_PROVIDERS],
