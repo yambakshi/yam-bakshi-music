@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '@services/app.service';
 import { MetaTagsService } from '@services/meta-tags.service';
-import { Title } from '@angular/platform-browser';
+// import { Title } from '@angular/platform-browser';
 import { CloudinaryService } from '@services/cloudinary.service';
 import { PlatformsService } from '@root/app/services/platforms.service';
 
@@ -20,7 +20,7 @@ export class SmartlinkTemplateComponent implements OnInit {
   showLyrics: boolean = false;
 
   constructor(
-    private titleService: Title,
+    // private titleService: Title,
     private appService: AppService,
     private metaTagsService: MetaTagsService,
     private cloudinaryService: CloudinaryService,
@@ -37,7 +37,7 @@ export class SmartlinkTemplateComponent implements OnInit {
     this.releaseData.graphics.artwork = `${prefix}${artwork}`;
     this.releaseData.graphics.backgroundImg = `${prefix}${backgroundImg}`;
 
-    this.titleService.setTitle(title);
+    // this.titleService.setTitle(title);
     this.metaTagsService.setMetaTags({ title, artwork: this.releaseData.graphics.artwork });
     this.appService.setAppFavicon(this.releaseData.graphics.favicon);
   }

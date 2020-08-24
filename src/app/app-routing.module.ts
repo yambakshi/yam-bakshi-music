@@ -4,11 +4,12 @@ import { ShyComponent } from '@components/releases/shy/shy.component';
 import { StutterComponent } from '@components/releases/stutter/stutter.component';
 import { StutterEpComponent } from '@components/releases/stutter-ep/stutter-ep.component';
 import { MySleepParalysisComponent } from '@components/releases/my-sleep-paralysis/my-sleep-paralysis.component';
-import { TransparentVideoClipComponent } from '@components/releases/transparent-video-clip/transparent-video-clip.component';
+import { TransparentVideoClipComponent } from '@components/releases/transparent-video/transparent-video.component';
 
 
 const routes: Routes = [
   { path: '', component: TransparentVideoClipComponent },
+  { path: 'transparent-video', component: TransparentVideoClipComponent },
   { path: 'stutter-ep', component: StutterEpComponent },
   { path: 'my-sleep-paralysis', component: MySleepParalysisComponent },
   { path: 'stutter', component: StutterComponent },
