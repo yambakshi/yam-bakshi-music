@@ -14,7 +14,7 @@ export class ShyComponent implements OnInit {
     graphics: {
       favicon: "v1589729776/releases/shy/favicon_xltdu4.ico",
       artwork: "v1589729797/releases/shy/artwork_fdyrjx.png",
-      backgroundImg: "v1589730470/releases/shy/background_b5sidt.png",
+      background: "v1589730470/releases/shy/background_b5sidt.png",
     },
     links: {
       "Spotify": "https://open.spotify.com/track/4sj4bL3MmutjSqWcolyjKr",
