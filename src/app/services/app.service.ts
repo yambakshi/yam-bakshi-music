@@ -17,15 +17,21 @@ export class AppService {
         @Inject(DOCUMENT) private document: Document,
         private meta: Meta) { }
 
-    setMetadata({ og, favicon }) {
-        this.setLink('shortcut icon', favicon);
-        this.setLink('canonical', this.document.URL);
-        this.setLink('image_src', og);
+    setMetadata({ og, favicon }: { og: string, favicon: string }): void {
+        const links = [
+            { rel: 'shortcut icon', href: favicon },
+            { rel: 'canonical', href: this.document.URL },
+            { rel: 'image_src', href: og }
+        ];
+
+        this.setLinks(links);
         this.setMetaTags(og);
     }
 
-    setLink(rel: string, href: string) {
-        this.document.querySelector(`head > link[rel="${rel}"]`).setAttribute('href', href);
+    setLinks(links: { rel: string, href: string }[]): void {
+        links.forEach(({ rel, href }) => {
+            this.document.querySelector(`head > link[rel="${rel}"]`).setAttribute('href', href);    
+        })
     }
 
     setMetaTags(og: string): void {

@@ -13,9 +13,9 @@ export class TransparentVideoClipComponent implements OnInit {
     },
     graphics: {
       favicon: "v1589725229/releases/transparent-video/favicon_ltjq6j.ico",
-      artwork: "v1589194126/releases/transparent-video/artwork_uyhsdq.png",
-      background: "v1589194126/releases/transparent-video/background_eqorfd.png",
-      og: 'v1598125384/releases/transparent-video/og_hkzgee.png'
+      artwork: "v1589194126/releases/transparent-video/artwork_ddcaim.jpg",
+      background: "v1589194126/releases/transparent-video/background_flqzxr.jpg",
+      og: 'v1598125384/releases/transparent-video/og_nozbge.jpg'
     },
     links: {
       "YouTube": "https://www.youtube.com/watch?v=gMXQjf8idXc",
