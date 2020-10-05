@@ -55,7 +55,7 @@ export class PlatformsService {
                 cta: "Stream",
                 icons: {
                     alt: "YouTube Music",
-                    big: 'v1589303227/streaming-platforms/big/youtube_zdjnf6.png',
+                    big: 'v1589303227/streaming-platforms/big/youtube_c1l08l.svg',
                     small: 'v1588180498/streaming-platforms/small/youtube_l3tpk7.svg',
                 }
             },
