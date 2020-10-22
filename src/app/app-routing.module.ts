@@ -8,10 +8,9 @@ import { TransparentVideoClipComponent } from '@components/releases/transparent-
 
 
 const routes: Routes = [
-  { path: '', component: TransparentVideoClipComponent },
+  { path: '', component: MySleepParalysisComponent },
   { path: 'transparent-video', component: TransparentVideoClipComponent },
   { path: 'stutter-ep', component: StutterEpComponent },
-  { path: 'my-sleep-paralysis', component: MySleepParalysisComponent },
   { path: 'stutter', component: StutterComponent },
   { path: 'shy', component: ShyComponent },
   { path: "**", redirectTo: "" }

@@ -15,6 +15,7 @@ export class StutterEpComponent implements OnInit {
       favicon: "v1589725229/releases/stutter-ep/favicon_rqrnvr.ico",
       artwork: "v1589194126/releases/stutter-ep/artwork_ehv7fz.png",
       background: "v1589194126/releases/stutter-ep/background_qlkzad.png",
+      og: ""
     },
     links: {
       "Spotify": "https://open.spotify.com/album/4Rjpjmd2QvNsfwAz6Mst7M?si=p32BbfvBRVqBZTNmuek1Qw",

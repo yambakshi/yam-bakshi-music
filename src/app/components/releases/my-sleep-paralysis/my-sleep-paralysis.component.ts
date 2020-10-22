@@ -9,15 +9,13 @@ export class MySleepParalysisComponent implements OnInit {
   releaseData = {
     meta: {
       name: "My Sleep Paralysis",
-      released: true,
+      released: false,
     },
     graphics: {
-      favicon: "v1590919056/my-sleep-paralysis/favicon_x7n4fg.ico",
-      // artwork: "v1590919074/my-sleep-paralysis/artwork_hopfb9.png",
-      artwork: "v1590919074/my-sleep-paralysis/2_mqy2iq.png",
-      // background: "v1590919059/my-sleep-paralysis/background_zmrrpe.png",
-      // background: "v1590919059/my-sleep-paralysis/2_-_bg_vzhgys.png",
-      background: "v1590919059/my-sleep-paralysis/2_-_bg_-_1_jgd08f.png",
+      favicon: "v1603385851/releases/my-sleep-paralysis/favicon_cktpgx.ico",
+      artwork: "v1603385859/releases/my-sleep-paralysis/artowrk_txdb0i.jpg",
+      background: "v1603385971/releases/my-sleep-paralysis/background_aaj03j.jpg",
+      og: "v1603385853/releases/my-sleep-paralysis/og_mvghix.jpg"
     },
     links: {
       "Spotify": "",
