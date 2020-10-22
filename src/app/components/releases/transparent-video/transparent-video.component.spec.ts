@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TransparentVideoClipComponent } from './transparent-video-clip.component';
+import { TransparentVideoClipComponent } from './transparent-video.component';
 
 describe('TransparentVideoClipComponent', () => {
   let component: TransparentVideoClipComponent;

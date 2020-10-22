@@ -20,7 +20,7 @@ export class PlatformsService {
                 cta: "Stream",
                 icons: {
                     alt: "Spotify",
-                    big: 'v1589301599/streaming-platforms/big/spotify-black_rii4x8.png',
+                    big: 'v1598175552/streaming-platforms/big/spotify_fn5uyo.svg',
                     small: 'v1588185204/streaming-platforms/small/spotify_kmpedi.svg'
                 }
             },
@@ -29,8 +29,8 @@ export class PlatformsService {
                 cta: "Stream",
                 icons: {
                     alt: "Apple Music",
-                    big: 'v1589304167/streaming-platforms/big/apple-music_qd85pv.png',
-                    small: 'v1589305606/streaming-platforms/small/apple-music_f8fskk.png'
+                    big: 'v1598173711/streaming-platforms/big/apple-music_iwexff.svg',
+                    small: 'v1598175788/streaming-platforms/small/apple-music_ufk7r9.svg'
                 }
             },
             "iTunesStore": {
@@ -38,7 +38,7 @@ export class PlatformsService {
                 cta: "Download",
                 icons: {
                     alt: "iTunes Store",
-                    big: 'v1589301070/streaming-platforms/big/itunes-store_gwv5f6.png',
+                    big: 'v1598174410/streaming-platforms/big/itunes-store_hvdse8.svg',
                 }
             },
             "Deezer": {
@@ -46,8 +46,8 @@ export class PlatformsService {
                 cta: "Stream",
                 icons: {
                     alt: "Deezer",
-                    big: 'v1589303303/streaming-platforms/big/deezer_haceax.png',
-                    small: 'v1588443162/streaming-platforms/small/deezer_o9cayg.png',
+                    big: 'v1598174219/streaming-platforms/big/deezer_db5y77.svg',
+                    small: 'v1598176127/streaming-platforms/small/deezer_rxxsar.svg',
                 }
             },
             "YouTubeMusic": {
@@ -55,7 +55,7 @@ export class PlatformsService {
                 cta: "Stream",
                 icons: {
                     alt: "YouTube Music",
-                    big: 'v1589303227/streaming-platforms/big/youtube_zdjnf6.png',
+                    big: 'v1589303227/streaming-platforms/big/youtube_c1l08l.svg',
                     small: 'v1588180498/streaming-platforms/small/youtube_l3tpk7.svg',
                 }
             },
@@ -64,7 +64,7 @@ export class PlatformsService {
                 cta: "Watch",
                 icons: {
                     alt: "YouTube",
-                    big: 'v1589303227/streaming-platforms/big/youtube_zdjnf6.png',
+                    big: 'v1598175330/streaming-platforms/big/youtube_c1l08l.svg',
                     small: 'v1588180498/streaming-platforms/small/youtube_l3tpk7.svg',
                 }
             },
@@ -82,8 +82,8 @@ export class PlatformsService {
                 icons: {
                     alt: "Soundcloud",
                     size: { width: 46.8, height: 26.68 },
-                    big: 'v1589201729/streaming-platforms/big/soundcloud_jlev55.png',
-                    small: 'v1588180497/streaming-platforms/small/soundcloud_i4kych.png',
+                    big: 'v1598174636/streaming-platforms/big/soundcloud_wkbfge.svg',
+                    small: 'v1598176337/streaming-platforms/small/soundcloud_g9ltsq.svg',
                 }
             },
             "Bandcamp": {
@@ -91,8 +91,8 @@ export class PlatformsService {
                 cta: "Stream",
                 icons: {
                     alt: "Bandcamp",
-                    big: 'v1589300977/streaming-platforms/big/bandcamp_vaaq8h.png',
-                    small: 'v1588444379/streaming-platforms/small/bandcamp_thcf1t.png',
+                    big: 'v1598173968/streaming-platforms/big/bandcamp_qbxwlz.svg',
+                    small: 'v1598175959/streaming-platforms/small/bandcamp_lgpgan.svg',
                 }
             },
             "Facebook": {
@@ -120,7 +120,7 @@ export class PlatformsService {
                 artistPage: "https://genius.com/artists/Yam-bakshi",
                 icons: {
                     alt: "Genius",
-                    small: 'v1589731581/socials/genius_lh2ntf.png',
+                    small: 'v1598173432/socials/genius_xxlnbl.svg',
                 }
             }
         };
