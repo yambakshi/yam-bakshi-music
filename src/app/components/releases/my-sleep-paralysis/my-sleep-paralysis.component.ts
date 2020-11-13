@@ -15,7 +15,7 @@ export class MySleepParalysisComponent implements OnInit {
       favicon: "v1603385851/releases/my-sleep-paralysis/favicon_cktpgx.ico",
       artwork: "v1603385859/releases/my-sleep-paralysis/artowrk_txdb0i.jpg",
       background: "v1603385971/releases/my-sleep-paralysis/background_aaj03j.jpg",
-      og: "v1603385853/releases/my-sleep-paralysis/og_mvghix.jpg"
+      og: "v1604051923/releases/my-sleep-paralysis/og_k04ckg.jpg"
     },
     links: {
       "Spotify": "",
