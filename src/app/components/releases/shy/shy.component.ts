@@ -12,9 +12,10 @@ export class ShyComponent implements OnInit {
       released: true,
     },
     graphics: {
-      favicon: "v1589729776/shy/favicon_xltdu4.ico",
-      artwork: "v1589729797/shy/artwork_fdyrjx.png",
-      backgroundImg: "v1589730470/shy/background_b5sidt.png",
+      favicon: "v1589729776/releases/shy/favicon_xltdu4.ico",
+      artwork: "v1589729797/releases/shy/artwork_fdyrjx.png",
+      background: "v1589730470/releases/shy/background_b5sidt.png",
+      og: ""
     },
     links: {
       "Spotify": "https://open.spotify.com/track/4sj4bL3MmutjSqWcolyjKr",

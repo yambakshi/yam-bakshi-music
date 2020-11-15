@@ -12,9 +12,10 @@ export class StutterComponent implements OnInit {
       released: true,
     },
     graphics: {
-      favicon: "v1589725576/stutter/favicon_tjbh1o.ico",
-      artwork: "v1589704997/stutter/artwork_n4ah6v.png",
-      backgroundImg: "v1589706035/stutter/background_epu6g3.png",
+      favicon: "v1589725576/releases/stutter/favicon_tjbh1o.ico",
+      artwork: "v1589704997/releases/stutter/artwork_n4ah6v.png",
+      background: "v1589706035/releases/stutter/background_epu6g3.png",
+      og: ""
     },
     links: {
       "Spotify": "https://open.spotify.com/track/2fJtgqXs5IUrqIbnpyPpkY?si=V9PVdlIGSxm2HeYRTnIW_g",

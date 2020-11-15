@@ -1,5 +1,4 @@
-<div class="smartlink-container">
-    <div class="smartlink-background" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.backgroundImg + ')'}"></div>
+<div class="smartlink-container" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.background + ')'}">
     <div class="smartlink">
         <div *ngIf="releaseData.meta.released; else preRelease" class="smartlink-main-section">
             <div id="Toggle Lyrics - Show Lyrics" class="artwork" (click)="toggleShowLyrics()"
@@ -34,7 +33,7 @@
                     <img src="{{platformsService.platforms[name].icons.big}}"
                         alt="{{platformsService.platforms[name].icons.alt}}" width="120" />
                     <a id="{{name}} ({{platformsService.platforms[name].cta}})" href="{{releaseData.links[name]}}"
-                        target="_blank">
+                        target="_blank" rel="noopener">
                         <div class="cta">{{platformsService.platforms[name].cta}}</div>
                     </a>
                 </li>
@@ -42,9 +41,9 @@
         </div>
         <ng-template #preRelease>
             <div class="iframe-container">
-                <iframe frameborder="0" width="320px" height="610px"
+                <iframe frameborder="0" width="320px" height="595px"
                     style="overflow:hidden; border-radius: 8px; box-shadow: 0 0 28px 0 rgba(0,0,0,.8);" scrolling="no"
-                    allowtransparency="true" src="https://snd.click/nq9qQT0?embed=1"></iframe>
+                    allowtransparency="true" src="https://snd.click/vwnf?embed=1"></iframe>
             </div>
         </ng-template>
         <smartlink-footer></smartlink-footer>
