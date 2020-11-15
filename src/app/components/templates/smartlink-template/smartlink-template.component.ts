@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '@services/app.service';
-import { MetaTagsService } from '@services/meta-tags.service';
 import { Title } from '@angular/platform-browser';
 import { CloudinaryService } from '@services/cloudinary.service';
 import { PlatformsService } from '@root/app/services/platforms.service';
@@ -22,24 +21,22 @@ export class SmartlinkTemplateComponent implements OnInit {
   constructor(
     private titleService: Title,
     private appService: AppService,
-    private metaTagsService: MetaTagsService,
     private cloudinaryService: CloudinaryService,
     public platformsService: PlatformsService,
   ) { }
 
   ngOnInit(): void {
-    const { meta, graphics } = this.releaseData;
-    const { favicon, artwork, backgroundImg } = graphics;
+    const { graphics } = this.releaseData;
+    const { favicon, artwork, background, og } = graphics;
     const { prefix } = this.cloudinaryService;
-    const title = `Yam Bakshi - ${meta.name}`;
 
     this.releaseData.graphics.favicon = `${prefix}${favicon}`;
     this.releaseData.graphics.artwork = `${prefix}${artwork}`;
-    this.releaseData.graphics.backgroundImg = `${prefix}${backgroundImg}`;
+    this.releaseData.graphics.background = `${prefix}${background}`;
+    this.releaseData.graphics.og = `${prefix}${og}`;
 
-    this.titleService.setTitle(title);
-    this.metaTagsService.setMetaTags({ title, artwork: this.releaseData.graphics.artwork });
-    this.appService.setAppFavicon(this.releaseData.graphics.favicon);
+    this.titleService.setTitle(this.appService.name);
+    this.appService.setMetadata(this.releaseData.graphics)
   }
 
   get releasePlatforms(): string[] {

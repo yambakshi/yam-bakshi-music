@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'transparent-video-clip',
-  templateUrl: './transparent-video-clip.component.html',
-  styleUrls: ['./transparent-video-clip.component.scss']
+  selector: 'transparent-video',
+  templateUrl: './transparent-video.component.html',
+  styleUrls: ['./transparent-video.component.scss']
 })
 export class TransparentVideoClipComponent implements OnInit {
   releaseData = {
@@ -12,9 +12,10 @@ export class TransparentVideoClipComponent implements OnInit {
       released: true,
     },
     graphics: {
-      favicon: "v1589725229/transparent-video-clip/favicon_ltjq6j.ico",
-      artwork: "v1589194126/transparent-video-clip/artwork_uyhsdq.png",
-      backgroundImg: "v1589194126/transparent-video-clip/background_eqorfd.png",
+      favicon: "v1589725229/releases/transparent-video/favicon_ltjq6j.ico",
+      artwork: "v1589194126/releases/transparent-video/artwork_ddcaim.jpg",
+      background: "v1589194126/releases/transparent-video/background_flqzxr.jpg",
+      og: "v1598125384/releases/transparent-video/og_nozbge.jpg"
     },
     links: {
       "YouTube": "https://www.youtube.com/watch?v=gMXQjf8idXc",

@@ -12,22 +12,20 @@ export class MySleepParalysisComponent implements OnInit {
       released: true,
     },
     graphics: {
-      favicon: "v1590919056/my-sleep-paralysis/favicon_x7n4fg.ico",
-      // artwork: "v1590919074/my-sleep-paralysis/artwork_hopfb9.png",
-      artwork: "v1590919074/my-sleep-paralysis/2_mqy2iq.png",
-      // backgroundImg: "v1590919059/my-sleep-paralysis/background_zmrrpe.png",
-      // backgroundImg: "v1590919059/my-sleep-paralysis/2_-_bg_vzhgys.png",
-      backgroundImg: "v1590919059/my-sleep-paralysis/2_-_bg_-_1_jgd08f.png",
+      favicon: "v1603385851/releases/my-sleep-paralysis/favicon_cktpgx.ico",
+      artwork: "v1603385859/releases/my-sleep-paralysis/artowrk_txdb0i.jpg",
+      background: "v1603385971/releases/my-sleep-paralysis/background_aaj03j.jpg",
+      og: "v1604051923/releases/my-sleep-paralysis/og_k04ckg.jpg"
     },
     links: {
-      "Spotify": "",
-      "AppleMusic": "",
-      "iTunesStore": "",
-      "Deezer": "",
-      "YouTubeMusic": "",
-      "AmazonMusic": "",
-      "Soundcloud": "https://soundcloud.com/yambakshi/my-sleep-paralysis/s-BQADo",
-      "Bandcamp": ""
+      "Spotify": "https://open.spotify.com/track/3NCrzhT8ma585iIDvCILPV?si=xRRjtABISpm_TmCfXR28Yg",
+      "AppleMusic": "https://music.apple.com/il/album/my-sleep-paralysis/1535847255?i=1535847256",
+      "iTunesStore": "https://music.apple.com/il/album/my-sleep-paralysis/1535847255?i=1535847256",
+      "Deezer": "https://deezer.page.link/Nidb9tx46hGKzMxUA",
+      "YouTubeMusic": "https://www.youtube.com/watch?v=4zGZQvbxhwU&list=OLAK5uy_nbNk4dBto4gNv-bLWpn610p1t3SqSQoQw",
+      "AmazonMusic": "https://www.amazon.com/My-Sleep-Paralysis-Yam-Bakshi/dp/B08L7244RM/ref=sr_1_11?dchild=1&keywords=yam+bakshi&qid=1605260732&sr=8-11",
+      "Soundcloud": "https://soundcloud.com/yambakshi/my-sleep-paralysis",
+      "Bandcamp": "https://yambakshi.bandcamp.com/track/my-sleep-paralysis-2"
     },
     lyrics: [{
       name: 'My Sleep Paralysis',
