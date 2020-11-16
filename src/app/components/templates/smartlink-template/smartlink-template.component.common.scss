@@ -1,4 +1,9 @@
 .smartlink-container {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #000;
     position: absolute;
     min-height: 100%;
     height: auto;
@@ -7,22 +12,6 @@
     justify-content: center;
     align-items: center;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    overflow: hidden;
-}
-
-.smartlink-background {
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #000;
-    -webkit-filter: blur(15px);
-    filter: blur(15px);
-    transform: scale(1.2);
 }
 
 .smartlink {
