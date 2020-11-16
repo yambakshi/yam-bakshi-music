@@ -1,0 +1,57 @@
+<div class="linktone-container">
+    <div class="linktone-main">
+        <div class="linktone-header">
+            <ul>
+                <li>DOWNLOAD</li>
+                <li>PRESS KIT</li>
+                <li>PRESS</li>
+                <li>GALLERY</li>
+                <li>CREDITS</li>
+                <li>LYRICS</li>
+                <li>MAIN</li>
+            </ul>
+        </div>
+        <div class="linktone-body"></div>
+        <div class="linktone-footer">
+            <div *ngFor="let name of socials" class="platform-button">
+                <a id="{{name}}" href="{{platformsService.platforms[name].artistPage}}" target="_blank" rel="noopener">
+                    <img src="{{platformsService.platforms[name].icons.small}}" alt="{{platformsService.platforms[name].icons.alt}}" height="32" width="32" />
+                </a>
+            </div>
+            <div *ngFor="let name of moreMusic" class="platform-button">
+                <a id="{{name}} (Artist Page)" href="{{platformsService.platforms[name].artistPage}}" target="_blank" rel="noopener">
+                    <img src="{{platformsService.platforms[name].icons.small}}" alt="{{platformsService.platforms[name].icons.alt}}"
+                        height="{{platformsService.platforms[name].icons.size ? platformsService.platforms[name].icons.size.height : 32}}"
+                        width="{{platformsService.platforms[name].icons.size ? platformsService.platforms[name].icons.size.width : 32}}" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="linktone-side-menu">
+        <div class="linktone-actions">
+            <div class="linktone-share">SHARE</div>
+        </div>
+        <div class="linktone-release-type-container">
+            <div class="release-type">SINGLE</div>
+        </div>
+        <div class="linktone-avatar-container">
+            <div class="linktone-avatar"></div>
+        </div>
+        <div class="linktone-release-titles">
+            <h2 class="artist-name-title">Yam Bakshi | ים בקשי</h2>
+            <h1 class="release-name-title">My Sleep Paralysis</h1>
+        </div>
+        <div class="linktone-player">
+            PLAYER
+        </div>
+        <div class="songs-list-container">
+            <div *ngFor="let song of releaseData.lyrics; let i = index" class="songs-list">
+                <div id="{{song.name}}" class="songs-list-item">
+                    <div class="list-item-index">{{i+1}}.</div>
+                    <div class="list-item-name">{{song.name}}</div>
+                    <div class="download-song">DOWNLOAD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,12 +10,14 @@ import { MySleepParalysisComponent } from '@components/releases/my-sleep-paralys
 import { TransparentVideoClipComponent } from '@components/releases/transparent-video/transparent-video.component';
 import { SmartlinkTemplateComponent } from '@components/templates/smartlink-template/smartlink-template.component';
 import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer/smartlink-footer.component';
+import { LinktoneTemplateComponent } from './components/templates/linktone-template/linktone-template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SmartlinkTemplateComponent,
     SmartlinkFooterComponent,
+    LinktoneTemplateComponent,
     ShyComponent,
     StutterComponent,
     StutterEpComponent,

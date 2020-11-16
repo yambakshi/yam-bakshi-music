@@ -1,0 +1,198 @@
+.linktone-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    color: white;
+
+    & > .linktone-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & > .linktone-header {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, .4);
+
+            & > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 25px 0px;
+
+                & > li {
+                    font-weight: 900;
+                    font-size: 18px;
+                    user-select: none;
+                    display: inline;
+                    padding: 25px 30px;
+                    cursor: pointer;
+                    color: rgba(255, 255, 255, .7);
+
+                    &:hover {
+                        color: rgba(255, 255, 255, 1);
+                    }
+                }
+            }
+        }
+    
+        & > .linktone-body {
+            display: flex;
+            background-color: transparent;
+            height: 88%;
+            width: 100%;
+        }
+    
+        & > .linktone-footer {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            background-color: rgba(255, 255, 255, .7);
+
+            & > .platform-button {
+                margin: 0px 10px;
+
+                & > a {
+                    display: flex;
+                }
+            }
+        }
+    }
+    
+    & > .linktone-side-menu {
+        display: flex;
+        width: 25%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        padding: 0 15px;
+        flex-direction: column;
+
+        & > .linktone-actions {
+            margin-top: 10px;
+
+            & > .linktone-share {
+                cursor: pointer;
+            }
+        }
+
+        & > .linktone-release-type-container {
+            position: fixed;
+            right: 0px;
+            top: 0px;
+
+            & > .release-type {
+                position: absolute;
+                right: -65px;
+                top: -65px;
+                background: rgba(114,136,175,0.5);
+                color: #fff;
+                transform: rotate(45deg);
+                z-index: 99;
+                display: block;
+                width: 130px;
+                height: 130px;
+                text-align: center;
+                line-height: 230px;
+            }
+        }
+
+        & > .linktone-avatar-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+
+            & > .linktone-avatar {
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+        }
+
+        & > .linktone-release-titles {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 20px;
+
+
+            & > .artist-name-title {
+                font-weight: bold;
+                font-size: 38px;
+                margin: 0px;
+            }
+            
+            & > .release-name-title {
+                font-weight: lighter;
+                font-size: 27px;
+                margin: 0px;
+            }    
+        }
+
+        & > .linktone-player {
+            display: flex;
+            height: 50px;
+            width: 100%;
+            position: relative;
+            margin-top: 25px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: -5px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, .7);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, .7);
+            }
+        }
+
+        & > .songs-list-container {
+            position: relative;
+            margin-top: 25px;
+            font-size: 20px;
+
+            & > .songs-list {
+                & > .songs-list-item {
+                    display: inline-flex;
+                    width: 100%;
+
+                    & > .list-item-index {
+                        margin-right: 10px;
+                    }
+                    
+                    & > .list-item-name {
+                        flex: 1;
+                    }
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -24px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, .7);
+            }
+        }
+    }
+}
