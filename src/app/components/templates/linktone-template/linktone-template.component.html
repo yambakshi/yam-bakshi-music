@@ -2,13 +2,8 @@
     <div class="linktone-main">
         <div class="linktone-header">
             <ul>
-                <li>DOWNLOAD</li>
-                <li>PRESS KIT</li>
-                <li>PRESS</li>
-                <li>GALLERY</li>
-                <li>CREDITS</li>
-                <li>LYRICS</li>
-                <li>MAIN</li>
+                <li *ngFor="let tab of linktoneTabs; let i = index" [ngClass]="selectedTab === i ? 'selected' : ''"
+                    (click)="selectTab(i)">{{tab}}</li>
             </ul>
         </div>
         <div class="linktone-body"></div>

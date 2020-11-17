@@ -28,6 +28,16 @@ export class LinktoneTemplateComponent implements OnInit {
       "Genius"
     ];
 
+    linktoneTabs: string[] = [
+      "MAIN",
+      "LYRICS",
+      "CREDITS",
+      "GALLERY",
+      "PRESS",
+      "PRESS KIT",
+      "DOWNLOAD",
+    ]
+
     selectedTab: number = 0;
     selectedSong: number = 0;
 
@@ -40,5 +50,9 @@ export class LinktoneTemplateComponent implements OnInit {
 
     selectSong(i: number): void {
       this.selectedSong = i;
+    }
+
+    selectTab(i: number): void {
+      this.selectedTab = i;
     }
 }
