@@ -7,7 +7,9 @@
             </ul>
             <div #tabsLine class="tabs-line"></div>
         </div>
-        <div class="linktone-body"></div>
+        <div class="linktone-body">
+            <img src="{{releaseData.graphics.og}}" alt="og" height="750" />
+        </div>
         <div class="linktone-footer">
             <div *ngFor="let name of socials" class="platform-button">
                 <a id="{{name}}" href="{{platformsService.platforms[name].artistPage}}" target="_blank" rel="noopener">
@@ -28,17 +30,17 @@
     </div>
     <div class="linktone-side-menu">
         <div class="side-menu-actions">
-            <div class="linktone-share">SHARE</div>
+            <div class="linktone-share"><i class="icon-share2"></i></div>
         </div>
         <div class="side-menu-release-type-container">
-            <div class="release-type">SINGLE</div>
+            <div class="release-type">{{releaseData.meta.type}}</div>
         </div>
         <div class="side-menu-avatar-container">
             <div class="linktone-avatar"></div>
         </div>
         <div class="side-menu-release-titles">
             <h2 class="artist-name-title">Yam Bakshi | ים בקשי</h2>
-            <h1 class="release-name-title">My Sleep Paralysis</h1>
+            <h1 class="release-name-title">{{releaseData.meta.name}}</h1>
         </div>
         <div class="side-menu-player">
             PLAYER
@@ -49,7 +51,7 @@
                     [ngClass]="selectedSong === i ? 'selected' : ''" (click)="selectSong(i)">
                     <div class="song-item-index">{{i+1}}.</div>
                     <div class="song-item-name">{{song.name}}</div>
-                    <div class="song-item-download">DOWNLOAD</div>
+                    <div class="song-item-download"><i class="icon-download3"></i></div>
                 </div>
             </div>
         </div>

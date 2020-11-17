@@ -9,6 +9,7 @@ export class MySleepParalysisComponent implements OnInit {
   releaseData = {
     meta: {
       name: "My Sleep Paralysis",
+      type: "SINGLE",
       released: true,
     },
     graphics: {

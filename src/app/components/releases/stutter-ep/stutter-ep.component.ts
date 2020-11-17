@@ -9,6 +9,7 @@ export class StutterEpComponent implements OnInit {
   releaseData = {
     meta: {
       name: "Stutter EP",
+      type: "EP",
       released: true,
     },
     graphics: {
