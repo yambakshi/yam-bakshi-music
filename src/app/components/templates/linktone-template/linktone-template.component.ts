@@ -15,6 +15,7 @@ export class LinktoneTemplateComponent implements OnInit {
     @Input() releaseData;
     @ViewChild('headerTabs') headerTabs: ElementRef;
     @ViewChild('tabsLine') tabsLine: ElementRef;
+    @ViewChild('linktoneBody') linktoneBody: ElementRef;
 
     moreMusic = [
       "Spotify",
@@ -66,8 +67,9 @@ export class LinktoneTemplateComponent implements OnInit {
     }
 
     setTabsLine(i: number): void {
-      let tabWidth = this.headerTabs.nativeElement.children[i].offsetWidth;
-      let tabLeft = this.headerTabs.nativeElement.children[i].offsetLeft;
+      let selectedTab = this.headerTabs.nativeElement.children[i];
+      let tabWidth = selectedTab.offsetWidth;
+      let tabLeft = selectedTab.offsetLeft;
       this.renderer.setStyle(this.tabsLine.nativeElement, 'left', `${tabLeft}px`);
       this.renderer.setStyle(this.tabsLine.nativeElement, 'width', `${tabWidth}px`);
     }
@@ -77,7 +79,13 @@ export class LinktoneTemplateComponent implements OnInit {
     }
 
     selectTab(i: number): void {
+      if (i === this.selectedTab) return;
+
+      let deselectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
+      this.renderer.setStyle(deselectedElement, 'display', 'none');
       this.selectedTab = i;
       this.setTabsLine(i);
+      let selectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
+      this.renderer.setStyle(selectedElement, 'display', 'flex');
     }
 }

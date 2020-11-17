@@ -1,5 +1,5 @@
 <div class="linktone-container">
-    <div class="linktone-main">
+    <div class="linktone-main-panel">
         <div class="linktone-header">
             <ul #headerTabs>
                 <li *ngFor="let tab of linktoneTabs; let i = index" [ngClass]="selectedTab === i ? 'selected' : ''"
@@ -7,8 +7,28 @@
             </ul>
             <div #tabsLine class="tabs-line"></div>
         </div>
-        <div class="linktone-body">
-            <img src="{{releaseData.graphics.og}}" alt="og" height="750" />
+        <div #linktoneBody class="linktone-body">
+            <div class="main-screen">
+                <img src="{{releaseData.graphics.og}}" alt="og" height="750" />
+            </div>
+            <div class="lyrics-screen">
+                LYRICS
+            </div>
+            <div class="credits-screen">
+                CREDITS
+            </div>
+            <div class="gallery-screen">
+                GALLERY
+            </div>
+            <div class="press-screen">
+                PRESS
+            </div>
+            <div class="press-kit-screen">
+                PRESS KIT
+            </div>
+            <div class="download-screen">
+                DOWNLOAD
+            </div>
         </div>
         <div class="linktone-footer">
             <div *ngFor="let name of socials" class="platform-button">
@@ -28,7 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="linktone-side-menu">
+    <div class="linktone-side-panel">
         <div class="side-menu-actions">
             <div class="linktone-share"><i class="icon-share2"></i></div>
         </div>

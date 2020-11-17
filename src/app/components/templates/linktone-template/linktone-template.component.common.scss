@@ -4,7 +4,7 @@
     display: flex;
     color: white;
 
-    & > .linktone-main {
+    & > .linktone-main-panel {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -52,11 +52,20 @@
     
         & > .linktone-body {
             display: flex;
-            justify-content: center;
-            align-items: center;
             background-color: transparent;
             height: 88%;
             width: 100%;
+
+            & > div {
+                display: none;
+            }
+
+            & > .main-screen {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
         }
     
         & > .linktone-footer {
@@ -75,7 +84,7 @@
         }
     }
     
-    & > .linktone-side-menu {
+    & > .linktone-side-panel {
         display: flex;
         width: 25%;
         height: 100%;
