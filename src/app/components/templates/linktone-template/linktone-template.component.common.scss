@@ -61,10 +61,118 @@
             }
 
             & > .main-screen {
-                display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 100%;
+            }
+
+            & > .lyrics-screen {
+                width: 100%;
+                justify-content: center;
+                overflow: auto;
+
+                & > .lyrics-list-container {
+                    font-size: 24px;
+                    width: 30%;
+
+                    & > .lyrics-list-item {
+                        display: flex;
+                        flex-direction: column;
+                        color: rgba(255, 255, 255, .7);
+
+                        &.expanded {
+                            color: rgba(255, 255, 255, 1);
+                        }
+
+                        &:hover {
+                            color: rgba(255, 255, 255, 1);
+                        }
+
+                        &:last-of-type {
+                            padding-bottom: 15px;
+                        }
+
+                        & > .lyrics-list-item-header {
+                            display: flex;
+                            cursor: pointer;
+                            position: relative;
+                            padding: 15px 0px;
+                            justify-content: space-between;
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                top: 0px;
+                                left: 50%;
+                                -webkit-transform: translateX(-50%);
+                                transform: translateX(-50%);
+                                width: 100%;
+                                height: 1px;
+                                background-color: rgba(255, 255, 255, .7);
+                            }
+                
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                bottom: -1px;
+                                left: 50%;
+                                -webkit-transform: translateX(-50%);
+                                transform: translateX(-50%);
+                                width: 100%;
+                                height: 1px;
+                                background-color: rgba(255, 255, 255, .7);
+                            }
+
+                            & > .lyrics-item-index {
+                                margin-right: 10px;
+                            }
+    
+                            & > .lyrics-item-expand {
+                                font-size: 40;
+                                font-weight: 900;
+                                transform: rotate(0deg);
+                                transition: transform 0.30s ease-out;
+    
+                                &.expanded {
+                                    transform: rotate(180deg);
+                                    transition: transform 0.30s ease-in;
+                                }
+                            }
+                        }
+
+                        & > .lyrics-item-container {
+                            max-height: 0;
+                            transition: max-height 0.30s ease-out;
+                            overflow: hidden;
+
+                            &.expanded {
+                                max-height: 1080px;
+                                transition: max-height 0.30s ease-in;
+                            }
+
+                            & > .lyrics-content {
+                                white-space: pre;
+                                font-size: 20px;
+                                color: white;
+                                text-align: center;
+                                padding: 15px 0px;    
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > .credits-screen {
+                justify-content: center;
+                width: 100%;
+                align-items: center;
+
+                & > .credits-container {
+                    white-space: pre;
+                    font-size: 24px;
+                    color: white;
+                    text-align: center;
+                }
             }
         }
     

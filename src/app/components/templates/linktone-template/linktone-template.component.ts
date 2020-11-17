@@ -12,80 +12,87 @@ import { CloudinaryService } from '@services/cloudinary.service';
   ]
 })
 export class LinktoneTemplateComponent implements OnInit {
-    @Input() releaseData;
-    @ViewChild('headerTabs') headerTabs: ElementRef;
-    @ViewChild('tabsLine') tabsLine: ElementRef;
-    @ViewChild('linktoneBody') linktoneBody: ElementRef;
+  @Input() releaseData;
+  @ViewChild('headerTabs') headerTabs: ElementRef;
+  @ViewChild('tabsLine') tabsLine: ElementRef;
+  @ViewChild('linktoneBody') linktoneBody: ElementRef;
 
-    moreMusic = [
-      "Spotify",
-      "AppleMusic",
-      "Deezer",
-      "YouTubeMusic",
-      "Bandcamp",
-      "Soundcloud"
-    ];
-  
-    socials = [
-      "Facebook",
-      "Instagram",
-      "Twitter",
-      "Genius"
-    ];
+  moreMusic = [
+    "Spotify",
+    "AppleMusic",
+    "Deezer",
+    "YouTubeMusic",
+    "Bandcamp",
+    "Soundcloud"
+  ];
 
-    linktoneTabs: string[] = [
-      "MAIN",
-      "LYRICS",
-      "CREDITS",
-      "GALLERY",
-      "PRESS",
-      "PRESS KIT",
-      "DOWNLOAD",
-    ]
+  socials = [
+    "Facebook",
+    "Instagram",
+    "Twitter",
+    "Genius"
+  ];
 
-    gallery = {
-      avatar: '/v1605622365/gallery/avatar_kftj3u.jpg'
-    }
+  linktoneTabs: string[] = [
+    "MAIN",
+    "LYRICS",
+    "CREDITS",
+    "GALLERY",
+    "PRESS",
+    "PRESS KIT",
+    "DOWNLOAD",
+  ]
 
-    selectedTab: number = 0;
-    selectedSong: number = 0;
+  gallery = {
+    avatar: '/v1605622365/gallery/avatar_kftj3u.jpg'
+  }
 
-    constructor(
-      private renderer: Renderer2,
-      public platformsService: PlatformsService,
-      private cloudinaryService: CloudinaryService) {
-    }
+  selectedTab: number = 1;
+  selectedSong: number = 0;
+  lyricsExpandState: boolean[] = [];
 
-    ngOnInit(): void {
-      const { prefix } = this.cloudinaryService;
-      const { avatar } = this.gallery;
-      this.releaseData.graphics.avatar = `${prefix}${avatar}`;
-    }
+  constructor(
+    private renderer: Renderer2,
+    public platformsService: PlatformsService,
+    private cloudinaryService: CloudinaryService) {
+  }
 
-    ngAfterViewInit() {
-      this.setTabsLine(this.selectedTab);
-    }
+  ngOnInit(): void {
+    const { prefix } = this.cloudinaryService;
+    const { avatar } = this.gallery;
+    this.releaseData.graphics.avatar = `${prefix}${avatar}`;
+    this.releaseData.lyrics.forEach(song => this.lyricsExpandState.push(false));
+  }
 
-    setTabsLine(i: number): void {
-      let selectedTab = this.headerTabs.nativeElement.children[i];
-      let tabWidth = selectedTab.offsetWidth;
-      let tabLeft = selectedTab.offsetLeft;
-      this.renderer.setStyle(this.tabsLine.nativeElement, 'left', `${tabLeft}px`);
-      this.renderer.setStyle(this.tabsLine.nativeElement, 'width', `${tabWidth}px`);
-    }
+  ngAfterViewInit() {
+    this.setTabsLine(this.selectedTab);
+    let selectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
+    this.renderer.setStyle(selectedElement, 'display', 'flex');
+  }
 
-    selectSong(i: number): void {
-      this.selectedSong = i;
-    }
+  setTabsLine(i: number): void {
+    let selectedTab = this.headerTabs.nativeElement.children[i];
+    let tabWidth = selectedTab.offsetWidth;
+    let tabLeft = selectedTab.offsetLeft;
+    this.renderer.setStyle(this.tabsLine.nativeElement, 'left', `${tabLeft}px`);
+    this.renderer.setStyle(this.tabsLine.nativeElement, 'width', `${tabWidth}px`);
+  }
 
-    selectTab(i: number): void {
-      if (i === this.selectedTab) return;
+  selectSong(i: number): void {
+    this.selectedSong = i;
+  }
 
-      let deselectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
-      this.renderer.setStyle(deselectedElement, 'display', 'none');
-      this.selectedTab = i;
-      this.setTabsLine(i);
-      let selectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
-      this.renderer.setStyle(selectedElement, 'display', 'flex');
-    }
+  selectTab(i: number): void {
+    if (i === this.selectedTab) return;
+    let deselectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
+    this.renderer.setStyle(deselectedElement, 'display', 'none');
+    this.selectedTab = i;
+    this.setTabsLine(i);
+    let selectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
+    this.renderer.setStyle(selectedElement, 'display', 'flex');
+  }
+
+  toggleExpandLyrics(i: number): void {
+    this.lyricsExpandState[i] = !this.lyricsExpandState[i];
+  }
 }

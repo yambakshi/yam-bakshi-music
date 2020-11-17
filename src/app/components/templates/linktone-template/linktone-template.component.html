@@ -12,10 +12,25 @@
                 <img src="{{releaseData.graphics.og}}" alt="og" height="750" />
             </div>
             <div class="lyrics-screen">
-                LYRICS
+                <div class="lyrics-list-container">
+                    <div *ngFor="let song of releaseData.lyrics; let i = index" id="{{song.name}}"
+                        class="lyrics-list-item"
+                        [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
+                        <div class="lyrics-list-item-header" (click)="toggleExpandLyrics(i)">
+                            <div class="lyrics-item-index">{{i+1}}.</div>
+                            <div class="lyrics-item-name">{{song.name}}</div>
+                            <div class="lyrics-item-expand" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
+                                <i class="icon-chevron-thin-down"></i>
+                            </div>
+                        </div>
+                        <div class="lyrics-item-container" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
+                            <div class="lyrics-content">{{song.lyrics}}</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="credits-screen">
-                CREDITS
+                <div class="credits-container">{{releaseData.credits}}</div>
             </div>
             <div class="gallery-screen">
                 GALLERY
