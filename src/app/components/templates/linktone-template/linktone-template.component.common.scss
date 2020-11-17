@@ -47,7 +47,7 @@
             display: flex;
             align-items: center;
             flex: 1;
-            background-color: rgba(255, 255, 255, .7);
+            background-color: rgba(255, 255, 255, .6);
 
             & > .platform-button {
                 margin: 0px 10px;
@@ -67,7 +67,8 @@
         padding: 0 15px;
         flex-direction: column;
 
-        & > .linktone-actions {
+        & > .side-menu-actions {
+            display: flex;
             margin-top: 10px;
 
             & > .linktone-share {
@@ -75,7 +76,7 @@
             }
         }
 
-        & > .linktone-release-type-container {
+        & > .side-menu-release-type-container {
             position: fixed;
             right: 0px;
             top: 0px;
@@ -96,7 +97,7 @@
             }
         }
 
-        & > .linktone-avatar-container {
+        & > .side-menu-avatar-container {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -110,7 +111,7 @@
             }
         }
 
-        & > .linktone-release-titles {
+        & > .side-menu-release-titles {
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -130,7 +131,7 @@
             }    
         }
 
-        & > .linktone-player {
+        & > .side-menu-player {
             display: flex;
             height: 50px;
             width: 100%;
@@ -162,22 +163,41 @@
             }
         }
 
-        & > .songs-list-container {
+        & > .side-menu-songs-list-container {
             position: relative;
-            margin-top: 25px;
+            margin: 25px 0px;
             font-size: 20px;
 
             & > .songs-list {
+                max-height: 110px;
+                overflow: auto;
+                
                 & > .songs-list-item {
                     display: inline-flex;
                     width: 100%;
+                    margin-bottom: 6px;
+                    color: rgba(255, 255, 255, .7);
+                    user-select: none;
+                    cursor: pointer;
 
-                    & > .list-item-index {
+                    &.selected {
+                        color: rgba(255, 255, 255, 1);
+                    }
+                
+                    &:hover {
+                        color: rgba(255, 255, 255, 1);
+                    }
+
+                    & > .song-item-index {
                         margin-right: 10px;
                     }
                     
-                    & > .list-item-name {
+                    & > .song-item-name {
                         flex: 1;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 0px;
                     }
                 }
             }
@@ -194,5 +214,25 @@
                 background-color: rgba(255, 255, 255, .7);
             }
         }
+
+        & > .side-menu-lyrics-container {
+            overflow: auto;
+            width: 100%;
+            height: 100%;
+            
+            & > .song-lyrics{
+                position: relative;
+                white-space: pre;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 8px 0px 30px;
+            }
+        }
     }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }

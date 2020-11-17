@@ -27,10 +27,18 @@ export class LinktoneTemplateComponent implements OnInit {
       "Twitter",
       "Genius"
     ];
+
+    selectedTab: number = 0;
+    selectedSong: number = 0;
+
     constructor(
       public platformsService: PlatformsService) {
     }
 
     ngOnInit(): void {
+    }
+
+    selectSong(i: number): void {
+      this.selectedSong = i;
     }
 }
