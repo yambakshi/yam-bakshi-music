@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { PlatformsService } from '@root/app/services/platforms.service';
+import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
   selector: 'linktone-template',
@@ -41,15 +42,23 @@ export class LinktoneTemplateComponent implements OnInit {
       "DOWNLOAD",
     ]
 
+    gallery = {
+      avatar: '/v1605622365/gallery/avatar_kftj3u.jpg'
+    }
+
     selectedTab: number = 0;
     selectedSong: number = 0;
 
     constructor(
       private renderer: Renderer2,
-      public platformsService: PlatformsService) {
+      public platformsService: PlatformsService,
+      private cloudinaryService: CloudinaryService) {
     }
 
     ngOnInit(): void {
+      const { prefix } = this.cloudinaryService;
+      const { avatar } = this.gallery;
+      this.releaseData.graphics.avatar = `${prefix}${avatar}`;
     }
 
     ngAfterViewInit() {

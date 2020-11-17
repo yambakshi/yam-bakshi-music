@@ -36,7 +36,8 @@
             <div class="release-type">{{releaseData.meta.type}}</div>
         </div>
         <div class="side-menu-avatar-container">
-            <div class="linktone-avatar"></div>
+            <div class="linktone-avatar" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.avatar + ')'}">
+            </div>
         </div>
         <div class="side-menu-release-titles">
             <h2 class="artist-name-title">Yam Bakshi | ים בקשי</h2>
