@@ -14,6 +14,7 @@
             width: 100%;
             justify-content: center;
             background-color: rgba(0, 0, 0, .4);
+            position: relative;
 
             & > ul {
                 list-style-type: none;
@@ -37,6 +38,15 @@
                         color: rgba(255, 255, 255, 1);
                     }
                 }
+            }
+
+            & > .tabs-line {
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                margin: 10px 0 0 0;
+                background-color: #FF1847;
+                transition: all 0.4s ease;
             }
         }
     
