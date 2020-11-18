@@ -1,11 +1,13 @@
 <div class="linktone-container">
     <div class="linktone-main-panel">
         <div class="linktone-header">
-            <ul #headerTabs>
-                <li *ngFor="let tab of linktoneTabs; let i = index" [ngClass]="selectedTab === i ? 'selected' : ''"
-                    (click)="selectTab(i)">{{tab}}</li>
-            </ul>
-            <div #tabsLine class="tabs-line"></div>
+            <div class="tabs-container">
+                <ul #headerTabs>
+                    <li *ngFor="let tab of linktoneTabs; let i = index" [ngClass]="selectedTab === i ? 'selected' : ''"
+                        (click)="selectTab(i)">{{tab}}</li>
+                </ul>
+                <div #tabsLine class="tabs-line"></div>
+            </div>
         </div>
         <div #linktoneBody class="linktone-body">
             <div class="main-screen">
