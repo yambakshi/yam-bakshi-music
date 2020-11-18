@@ -47,7 +47,7 @@ export class LinktoneTemplateComponent implements OnInit {
     avatar: '/v1605622365/gallery/avatar_kftj3u.jpg'
   }
 
-  selectedTab: number = 1;
+  selectedTab: number = 0;
   selectedSong: number = 0;
   lyricsExpandState: boolean[] = [];
 
