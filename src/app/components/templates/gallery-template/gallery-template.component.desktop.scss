@@ -5,10 +5,15 @@
         flex-direction: row;
 
         & > .gallery-images-container {
+            position: absolute;
             flex-direction: row;
             align-items: center;
+            transition: transform 0.50s;
+            left: 50%;
 
             & > .gallery-image-container {
+                margin-right: 100px;
+
                 & > img {
                     max-height: 800px;
                 }
