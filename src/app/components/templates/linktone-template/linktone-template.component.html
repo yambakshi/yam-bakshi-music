@@ -14,8 +14,7 @@
             <div class="lyrics-screen">
                 <div class="lyrics-list-container">
                     <div *ngFor="let song of releaseData.lyrics; let i = index" id="{{song.name}}"
-                        class="lyrics-list-item"
-                        [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
+                        class="lyrics-list-item" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
                         <div class="lyrics-list-item-header" (click)="toggleExpandLyrics(i)">
                             <div class="lyrics-item-index">{{i+1}}.</div>
                             <div class="lyrics-item-name">{{song.name}}</div>
@@ -46,20 +45,23 @@
             </div>
         </div>
         <div class="linktone-footer">
-            <div *ngFor="let name of socials" class="platform-button">
-                <a id="{{name}}" href="{{platformsService.platforms[name].artistPage}}" target="_blank" rel="noopener">
-                    <img src="{{platformsService.platforms[name].icons.small}}"
-                        alt="{{platformsService.platforms[name].icons.alt}}" height="32" width="32" />
-                </a>
-            </div>
-            <div *ngFor="let name of moreMusic" class="platform-button">
-                <a id="{{name}} (Artist Page)" href="{{platformsService.platforms[name].artistPage}}" target="_blank"
-                    rel="noopener">
-                    <img src="{{platformsService.platforms[name].icons.small}}"
-                        alt="{{platformsService.platforms[name].icons.alt}}"
-                        height="{{platformsService.platforms[name].icons.size ? platformsService.platforms[name].icons.size.height : 32}}"
-                        width="{{platformsService.platforms[name].icons.size ? platformsService.platforms[name].icons.size.width : 32}}" />
-                </a>
+            <div class="platforms-buttons-container">
+                <div *ngFor="let name of socials" class="platform-button">
+                    <a id="{{name}}" href="{{platformsService.platforms[name].artistPage}}" target="_blank"
+                        rel="noopener">
+                        <img src="{{platformsService.platforms[name].icons.small}}"
+                            alt="{{platformsService.platforms[name].icons.alt}}" height="32" width="32" />
+                    </a>
+                </div>
+                <div *ngFor="let name of moreMusic" class="platform-button">
+                    <a id="{{name}} (Artist Page)" href="{{platformsService.platforms[name].artistPage}}"
+                        target="_blank" rel="noopener">
+                        <img src="{{platformsService.platforms[name].icons.small}}"
+                            alt="{{platformsService.platforms[name].icons.alt}}"
+                            height="{{platformsService.platforms[name].icons.size ? platformsService.platforms[name].icons.size.height : 32}}"
+                            width="{{platformsService.platforms[name].icons.size ? platformsService.platforms[name].icons.size.width : 32}}" />
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -92,8 +94,14 @@
             </div>
         </div>
         <div class="side-menu-lyrics-container">
-            <div class="song-lyrics">
-                {{releaseData.lyrics[selectedSong].lyrics}}
+            <div class="song-lyrics-container">
+                <div class="song-lyrics">
+                    {{releaseData.lyrics[selectedSong].lyrics}}
+                </div>
+            </div>
+            <div class="song-lyrics-fades">
+                <div class="lyrics-top-fade"></div>
+                <div class="lyrics-bottom-fade"></div>
             </div>
         </div>
     </div>

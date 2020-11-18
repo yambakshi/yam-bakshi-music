@@ -1,0 +1,9 @@
+@import "../../../../scss/global/index.scss";
+
+@include media("screen", "<mobile") {
+    .linktone-container {
+        & > .linktone-side-panel {
+            display: none;
+        }
+    }
+}
