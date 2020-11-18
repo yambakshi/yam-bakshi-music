@@ -4,6 +4,17 @@
     .linktone-container {
         & > .linktone-main-panel {
             & > .linktone-body {
+                & > .lyrics-screen {
+                    & > .lyrics-list-container {
+                        & > .lyrics-list-item {
+                            & > .lyrics-item-lyrics-container {
+                                & > .lyrics-content {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
                 & > .credits-screen {
                     & > .credits-container {
                         font-size: 16px;
