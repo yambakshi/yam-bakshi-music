@@ -1,0 +1,17 @@
+@import "../../../../scss/global/index.scss";
+
+@include media("screen", "<mobile") {
+    .gallery-container {
+        flex-direction: column;
+
+        & > .gallery-images-container {
+            flex-direction: column;
+
+            & > .gallery-image-container {
+                & > img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

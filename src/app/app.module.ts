@@ -11,6 +11,7 @@ import { TransparentVideoClipComponent } from '@components/releases/transparent-
 import { SmartlinkTemplateComponent } from '@components/templates/smartlink-template/smartlink-template.component';
 import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer/smartlink-footer.component';
 import { LinktoneTemplateComponent } from './components/templates/linktone-template/linktone-template.component';
+import { GalleryTemplateComponent } from './components/templates/gallery-template/gallery-template.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LinktoneTemplateComponent } from './components/templates/linktone-templ
     SmartlinkTemplateComponent,
     SmartlinkFooterComponent,
     LinktoneTemplateComponent,
+    GalleryTemplateComponent,
     ShyComponent,
     StutterComponent,
     StutterEpComponent,

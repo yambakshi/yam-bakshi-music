@@ -1,0 +1,7 @@
+<div class="gallery-container">
+    <div class="gallery-images-container">
+        <div *ngFor="let imageUrl of images; let i = index" class="gallery-image-container">
+            <img src="{{imageUrl}}" alt="gallery-image-{{i}}" />
+        </div>
+    </div>
+</div>

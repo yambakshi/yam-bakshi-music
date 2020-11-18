@@ -43,11 +43,18 @@ export class LinktoneTemplateComponent implements OnInit {
     "DOWNLOAD",
   ]
 
-  gallery = {
-    avatar: '/v1605622365/gallery/avatar_kftj3u.jpg'
+  images = {
+    avatar: '/v1605622365/gallery/avatar_kftj3u.jpg',
+    gallery: [
+      '/v1605714414/gallery/1_py52ie.jpg',
+      '/v1605714475/gallery/2_ix0c4v.jpg',
+      '/v1605714540/gallery/3_jpzp7x.jpg',
+      '/v1605714697/gallery/4_olunpi.jpg',
+      '/v1605714717/gallery/5_ltedcl.jpg'
+    ]
   }
 
-  selectedTab: number = 0;
+  selectedTab: number = 3;
   selectedSong: number = 0;
   lyricsExpandState: boolean[] = [];
 
@@ -59,7 +66,7 @@ export class LinktoneTemplateComponent implements OnInit {
 
   ngOnInit(): void {
     const { prefix } = this.cloudinaryService;
-    const { avatar } = this.gallery;
+    const { avatar } = this.images;
     this.releaseData.graphics.avatar = `${prefix}${avatar}`;
     this.releaseData.lyrics.forEach(song => this.lyricsExpandState.push(false));
   }
