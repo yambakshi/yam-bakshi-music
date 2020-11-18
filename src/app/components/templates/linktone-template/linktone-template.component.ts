@@ -54,7 +54,7 @@ export class LinktoneTemplateComponent implements OnInit {
     ]
   }
 
-  selectedTab: number = 3;
+  selectedTab: number = 0;
   selectedSong: number = 0;
   lyricsExpandState: boolean[] = [];
 
