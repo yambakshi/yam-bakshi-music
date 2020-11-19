@@ -2,14 +2,33 @@
 
 @include media("screen", "<mobile") {
     .gallery-container {
-        flex-direction: column;
+        flex-direction: row;
+
+        & > .arrows-container {
+            font-size: 60px;
+
+            & > .prevImage {
+                margin-left: 20px;
+            }
+    
+            & > .nextImage {
+                margin-right: 20px;
+            }
+        }
 
         & > .gallery-images-container {
-            flex-direction: column;
+            position: absolute;
+            flex-direction: row;
+            align-items: center;
+            transition: transform 0.50s;
+            left: 50%;
 
             & > .gallery-image-container {
+                margin-right: 50px;
+
                 & > img {
-                    width: 100%;
+                    max-width: 320px;
+                    transition: max-height 0.50s;
                 }
             }
         }

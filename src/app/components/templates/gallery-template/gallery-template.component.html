@@ -4,9 +4,10 @@
         <div #nextImageElement class="nextImage"><i class="icon-chevron-right" (click)="nextImage()"></i></div>
     </div>
     <div #galleryImagesContainerElement class="gallery-images-container">
-        <div *ngFor="let imageUrl of images; let i = index" class="gallery-image-container"
+        <div *ngFor="let image of images; let i = index" class="gallery-image-container"
             [ngClass]="selectedImageIndex === i ? 'selected' : ''">
-            <img src="{{imageUrl}}" alt="gallery-image-{{i}}" />
+            <img src="{{image.url}}" alt="gallery-image-{{i}}" />
+            <div class="image-label">{{image.description}}</div>
         </div>
     </div>
 </div>

@@ -24,7 +24,7 @@ export class GalleryTemplateComponent implements OnInit {
 
   ngOnInit(): void {
     const { prefix } = this.cloudinaryService;
-    this.images = this.images.map(imageUrl => `${prefix}${imageUrl}`);
+    this.images = this.images.map(image => ({ ...image, url: `${prefix}${image.url}` }));
   }
 
   ngAfterViewInit(): void {
@@ -66,7 +66,6 @@ export class GalleryTemplateComponent implements OnInit {
       this.renderer.setStyle(this.nextImageElement.nativeElement, 'visibility', 'visible');
     }
 
-    let asdf = imagesContainersElements[this.selectedImageIndex].offsetWidth / 2;
     this.selectedImageIndex--;
 
     let prevImagesWidth = 0, margin = 100;

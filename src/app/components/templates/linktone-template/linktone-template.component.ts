@@ -46,11 +46,11 @@ export class LinktoneTemplateComponent implements OnInit {
   images = {
     avatar: '/v1605622365/gallery/avatar_kftj3u.jpg',
     gallery: [
-      '/v1605714414/gallery/1_py52ie.jpg',
-      '/v1605714475/gallery/2_ix0c4v.jpg',
-      '/v1605714540/gallery/3_jpzp7x.jpg',
-      '/v1605714697/gallery/4_olunpi.jpg',
-      '/v1605714717/gallery/5_ltedcl.jpg'
+      { url: '/v1605714414/gallery/1_py52ie.jpg', description: 'Transparent Video Shoot #1 (Alon Daniel)' },
+      { url: '/v1605714475/gallery/2_ix0c4v.jpg', description: 'Transparent Video Shoot #2 (Alon Daniel)' },
+      { url: '/v1605714414/gallery/3_jpzp7x.jpg', description: 'Levontin 7, December 3, 2020 (Eran Ezra)' },
+      { url: '/v1605714414/gallery/4_olunpi.jpg', description: 'PR Photoshoot (Eran Ezra)' },
+      { url: '/v1605714414/gallery/5_ltedcl.jpg', description: 'Hoodna Bar, February 15 (Eran Ezra)' },
     ]
   }
 
