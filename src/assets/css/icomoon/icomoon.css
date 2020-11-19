@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../../fonts/icomoon.eot?6o0z7x');
-  src:  url('../../fonts/icomoon.eot?6o0z7x#iefix') format('embedded-opentype'),
-    url('../../fonts/icomoon.ttf?6o0z7x') format('truetype'),
-    url('../../fonts/icomoon.woff?6o0z7x') format('woff'),
-    url('../../fonts/icomoon.svg?6o0z7x#icomoon') format('svg');
+  src:  url('../../fonts/icomoon.eot?6qvvai');
+  src:  url('../../fonts/icomoon.eot?6qvvai#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?6qvvai') format('truetype'),
+    url('../../fonts/icomoon.woff?6qvvai') format('woff'),
+    url('../../fonts/icomoon.svg?6qvvai#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -75,6 +75,21 @@
 }
 .icon-download3:before {
   content: "\e9c7";
+}
+.icon-play3:before {
+  content: "\ea1c";
+}
+.icon-pause2:before {
+  content: "\ea1d";
+}
+.icon-stop2:before {
+  content: "\ea1e";
+}
+.icon-volume-medium:before {
+  content: "\ea27";
+}
+.icon-volume-mute2:before {
+  content: "\ea2a";
 }
 .icon-share2:before {
   content: "\ea82";

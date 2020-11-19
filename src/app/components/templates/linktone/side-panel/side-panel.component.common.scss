@@ -77,17 +77,17 @@
         }    
     }
 
-    & > .side-menu-player {
+    & > .side-menu-player-container {
         display: flex;
-        height: 50px;
         width: 100%;
         position: relative;
         margin-top: 25px;
+        font-size: 22px;
 
         &:before {
             content: "";
             position: absolute;
-            top: -5px;
+            top: 0px;
             left: 50%;
             -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -99,13 +99,72 @@
         &:after {
             content: "";
             position: absolute;
-            bottom: -5px;
+            bottom: 0px;
             left: 50%;
             -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
             width: 100%;
             height: 1px;
             background-color: rgba(255, 255, 255, .7);
+        }
+
+        & > .side-menu-player {
+            display: flex;
+            padding: 20px;
+            width: 100%;
+            align-items: center;
+
+            & > .play-pause-buttons {
+                display: flex;
+                cursor: pointer;
+
+                & > i[class^="icon-play3"] {
+                    display: none;
+                }
+            }
+
+            & > .player-timeline-container {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                margin: 0px 35px 0px 15px;
+                position: relative;
+    
+                & > .player-timeline {
+                    position: absolute;
+                    background-color: red;
+                    border-radius: 20px;
+                    height: 5px;
+                    left: 8px;
+                    right: -10px;
+                }
+
+                & > .player-timeline-picker {
+                    cursor: pointer;
+                    background-color: rgba(255, 255, 255, .5);
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                }
+            }
+
+            & > .player-timestamp-container {
+                & > .player-timestamp {
+                    margin-right: 15px;
+                }
+            }
+    
+            & > .volume-controller-container {
+                & > .mute-unmute-buttons {
+                    display: flex;
+                    cursor: pointer;
+
+                    & > i[class^="icon-volume-mute2"] {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 
