@@ -75,6 +75,7 @@
                 width: 100%;
 
                 & > img {
+                    user-select: none;
                     width: 100%;
                 }
             }
@@ -363,6 +364,7 @@
                 
                 & > .songs-list-item {
                     display: inline-flex;
+                    align-items: center;
                     width: 100%;
                     margin-bottom: 6px;
                     color: rgba(255, 255, 255, .7);
@@ -383,6 +385,10 @@
                     
                     & > .song-item-name {
                         flex: 1;
+                    }
+
+                    & > .song-item-download {
+                        display: flex;
                     }
 
                     &:last-of-type {

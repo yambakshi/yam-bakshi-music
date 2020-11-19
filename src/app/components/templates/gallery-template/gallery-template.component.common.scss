@@ -15,6 +15,7 @@
         z-index: 1;
 
         & > .prevImage {
+            visibility: hidden;
             margin-left: 50px;
         }
 
@@ -44,6 +45,35 @@
 
         & > .gallery-image-container {
             display: flex;
+            border: 1px solid #fff;
+            user-select: none;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .7);
+                transition: background-color 0.50s;
+            }
+
+            &.selected {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0);
+                    transition: background-color 0.50s;
+                }
+            }
         }
     }
 }

@@ -1,12 +1,12 @@
 <div class="gallery-container">
     <div class="arrows-container">
-        <div class="prevImage"><i class="icon-chevron-left" (click)="prevImage()"></i></div>
-        <div class="nextImage"><i class="icon-chevron-right" (click)="nextImage()"></i></div>
+        <div #prevImageElement class="prevImage"><i class="icon-chevron-left" (click)="prevImage()"></i></div>
+        <div #nextImageElement class="nextImage"><i class="icon-chevron-right" (click)="nextImage()"></i></div>
     </div>
-    <div #galleryImagesContainer class="gallery-images-container">
+    <div #galleryImagesContainerElement class="gallery-images-container">
         <div *ngFor="let imageUrl of images; let i = index" class="gallery-image-container"
-            [ngClass]="selectedImage === i ? 'selected' : ''">
-            <img src="{{imageUrl}}" alt="gallery-image-{{i}}" (load)="onImageLoad()" />
+            [ngClass]="selectedImageIndex === i ? 'selected' : ''">
+            <img src="{{imageUrl}}" alt="gallery-image-{{i}}" />
         </div>
     </div>
 </div>

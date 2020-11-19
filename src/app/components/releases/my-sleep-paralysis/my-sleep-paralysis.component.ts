@@ -37,7 +37,7 @@ Coexist with yourself, return to the path
 A fraction of a second
 Right before you take the shot
 
-Look to me
+Look at me
 
 But instead, you’re probably dead
 Do exactly as instructed

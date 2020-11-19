@@ -3,6 +3,7 @@
 @include media("screen", ">mobile") {
     .gallery-container {
         flex-direction: row;
+        overflow: hidden;
 
         & > .gallery-images-container {
             position: absolute;
@@ -14,8 +15,16 @@
             & > .gallery-image-container {
                 margin-right: 100px;
 
+                &.selected {
+                    & > img {
+                        max-height: 800px;
+                        transition: max-height 0.50s;
+                    }
+                }
+
                 & > img {
-                    max-height: 800px;
+                    max-height: 400px;
+                    transition: max-height 0.50s;
                 }
             }
         }
