@@ -1,4 +1,4 @@
-@import "../../../../scss/global/index.scss";
+@import "../../../../../scss/global/index.scss";
 
 @include media("screen", "<mobile") {
     .gallery-container {
@@ -29,6 +29,10 @@
                 & > img {
                     max-width: 320px;
                     transition: max-height 0.50s;
+                }
+
+                & > .image-label {
+                    font-size: 14px;
                 }
             }
         }

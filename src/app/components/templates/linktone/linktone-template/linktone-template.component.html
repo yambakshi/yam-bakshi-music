@@ -13,28 +13,14 @@
             <div class="main-screen">
                 <img src="{{releaseData.graphics.og}}" alt="og" />
             </div>
-            <div class="lyrics-screen">
-                <div class="lyrics-list-container">
-                    <div *ngFor="let song of releaseData.lyrics; let i = index" id="{{song.name}}"
-                        class="lyrics-list-item" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
-                        <div class="lyrics-list-item-header" (click)="toggleExpandLyrics(i)">
-                            <div class="lyrics-item-index">{{i+1}}.</div>
-                            <div class="lyrics-item-name">{{song.name}}</div>
-                            <div class="lyrics-item-expand" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
-                                <i class="icon-chevron-thin-down"></i>
-                            </div>
-                        </div>
-                        <div class="lyrics-item-lyrics-container" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
-                            <div class="lyrics-content">{{song.lyrics}}</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="lyrics-screen-container">
+                <lyrics-screen class="lyrics-screen" [lyrics]="releaseData.lyrics"></lyrics-screen>
             </div>
-            <div class="credits-screen">
+            <div class="credits-screen-container">
                 <div class="credits-container">{{releaseData.credits}}</div>
             </div>
-            <div class="gallery-screen">
-                <gallery-template [images]="images.gallery"></gallery-template>
+            <div class="gallery-screen-container">
+                <gallery-screen></gallery-screen>
             </div>
             <div class="press-screen">
                 PRESS
@@ -67,7 +53,8 @@
             </div>
         </div>
     </div>
-    <div class="linktone-side-panel">
+    <side-panel [releaseData]="releaseData"></side-panel>
+    <!-- <div class="linktone-side-panel">
         <div class="side-menu-actions">
             <div class="linktone-share"><i class="icon-share2"></i></div>
         </div>
@@ -106,5 +93,5 @@
                 <div class="lyrics-bottom-fade"></div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>

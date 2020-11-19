@@ -1,0 +1,112 @@
+.lyrics-list-container {
+    font-size: 24px;
+    width: 100%;
+
+    & > .lyrics-list-item {
+        display: flex;
+        flex-direction: column;
+        color: rgba(255, 255, 255, .7);
+        min-width: 375px;
+
+        &.expanded {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        &:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        & > .lyrics-list-item-header {
+            display: flex;
+            cursor: pointer;
+            position: relative;
+            padding: 15px 10px;
+            justify-content: space-between;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, .7);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, .7);
+            }
+
+            & > .lyrics-item-index {
+                margin-right: 10px;
+            }
+
+            & > .lyrics-item-expand {
+                font-size: 40;
+                font-weight: 900;
+                transform: rotate(0deg);
+                transition: transform 0.30s;
+
+                &.expanded {
+                    transform: rotate(180deg);
+                    transition: transform 0.30s;
+                }
+            }
+        }
+
+        & > .lyrics-item-lyrics-container {
+            max-height: 0;
+            transition: max-height 0.40s;
+            overflow: hidden;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, .7);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, .7);
+            }
+
+            &.expanded {
+                max-height: 10000px;
+                transition: max-height 1s;
+            }
+
+            & > .lyrics-content {
+                white-space: pre;
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                padding: 15px 0px;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+}

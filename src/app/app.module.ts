@@ -10,8 +10,10 @@ import { MySleepParalysisComponent } from '@components/releases/my-sleep-paralys
 import { TransparentVideoClipComponent } from '@components/releases/transparent-video/transparent-video.component';
 import { SmartlinkTemplateComponent } from '@components/templates/smartlink-template/smartlink-template.component';
 import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer/smartlink-footer.component';
-import { LinktoneTemplateComponent } from './components/templates/linktone-template/linktone-template.component';
-import { GalleryTemplateComponent } from './components/templates/gallery-template/gallery-template.component';
+import { LinktoneTemplateComponent } from '@components/templates/linktone/linktone-template/linktone-template.component';
+import { GalleryScreenComponent } from '@components/templates/linktone/gallery-screen/gallery-screen.component';
+import { LyricsScreenComponent } from '@components/templates/linktone/lyrics-screen/lyrics-screen.component';
+import { SidePanelComponent } from '@components/templates/linktone/side-panel/side-panel.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { GalleryTemplateComponent } from './components/templates/gallery-templat
     SmartlinkTemplateComponent,
     SmartlinkFooterComponent,
     LinktoneTemplateComponent,
-    GalleryTemplateComponent,
+    GalleryScreenComponent,
+    LyricsScreenComponent,
+    SidePanelComponent,
     ShyComponent,
     StutterComponent,
     StutterEpComponent,

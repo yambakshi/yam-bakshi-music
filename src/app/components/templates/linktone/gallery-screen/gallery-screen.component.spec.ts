@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GalleryTemplateComponent } from './gallery-template.component';
+import { GalleryScreenComponent } from './gallery-screen.component';
 
-describe('GalleryTemplateComponent', () => {
-  let component: GalleryTemplateComponent;
-  let fixture: ComponentFixture<GalleryTemplateComponent>;
+describe('GalleryScreenComponent', () => {
+  let component: GalleryScreenComponent;
+  let fixture: ComponentFixture<GalleryScreenComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GalleryTemplateComponent ]
+      declarations: [ GalleryScreenComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GalleryTemplateComponent);
+    fixture = TestBed.createComponent(GalleryScreenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,19 @@
+@import "../../../../../scss/global/index.scss";
+
+@include media("screen", "<mobile") {
+    .linktone-container {
+        & > .linktone-main-panel {
+            & > .linktone-body {
+                & > .credits-screen-container {
+                    & > .credits-container {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        & > .linktone-side-panel {
+            display: none;
+        }
+    }
+}
