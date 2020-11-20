@@ -123,29 +123,16 @@
                 }
             }
 
-            & > .player-timeline-container {
+            & > .player-timeline-slider-container {
                 display: flex;
                 align-items: center;
                 flex: 1;
-                margin: 0px 35px 0px 15px;
+                margin: 0px 15px 0px 15px;
                 position: relative;
     
-                & > .player-timeline {
-                    position: absolute;
-                    background-color: red;
-                    border-radius: 20px;
-                    height: 5px;
-                    left: 8px;
-                    right: -10px;
-                }
-
-                & > .player-timeline-picker {
+                & > .player-timeline-slider {
                     cursor: pointer;
-                    background-color: rgba(255, 255, 255, .5);
-                    position: absolute;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
+                    flex: 1;
                 }
             }
 

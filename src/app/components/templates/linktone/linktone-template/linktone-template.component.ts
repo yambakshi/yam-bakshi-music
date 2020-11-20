@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { PlatformsService } from '@root/app/services/platforms.service';
-import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
   selector: 'linktone-template',

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CloudinaryService } from '@services/cloudinary.service';
+import { DownloadsService } from '@services/downloads.service';
+
 
 @Component({
     selector: 'side-panel',
@@ -16,6 +18,7 @@ export class SidePanelComponent implements OnInit {
     selectedSong: number = 0;
 
     constructor(
+        private downloadsService: DownloadsService,
         private cloudinaryService: CloudinaryService) {
     }
 
@@ -24,8 +27,12 @@ export class SidePanelComponent implements OnInit {
         this.releaseData.graphics.avatar = `${prefix}${this.avatar}`;
     }
 
-
     selectSong(i: number): void {
         this.selectedSong = i;
+    }
+
+    async downloadSong(i): Promise<void> {
+        let songName = this.releaseData.lyrics[i].name;
+        this.downloadsService.downloadFile(songName).catch(console.error);
     }
 }

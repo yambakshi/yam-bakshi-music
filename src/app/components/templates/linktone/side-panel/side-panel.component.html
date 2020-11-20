@@ -19,10 +19,9 @@
                 <i class="icon-play3"></i>
                 <i class="icon-pause2"></i>
             </div>
-            
-            <div class="player-timeline-container">
-                <div class="player-timeline"></div>
-                <div class="player-timeline-picker"></div>
+
+            <div class="player-timeline-slider-container">
+                <input class="player-timeline-slider" type="range" min="1" max="100" value="50">
             </div>
 
             <div class="player-timestamp-container">
@@ -35,6 +34,7 @@
                     <i class="icon-volume-mute2"></i>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="side-menu-songs-list-container">
@@ -43,7 +43,7 @@
                 [ngClass]="selectedSong === i ? 'selected' : ''" (click)="selectSong(i)">
                 <div class="song-item-index">{{i+1}}.</div>
                 <div class="song-item-name">{{song.name}}</div>
-                <div class="song-item-download"><i class="icon-download3"></i></div>
+                <div class="song-item-download" (click)="downloadSong(i)"><i class="icon-download3"></i></div>
             </div>
         </div>
     </div>
