@@ -55,7 +55,8 @@ export class SidePanelComponent implements OnInit {
 
             // When the audio ends, we need to hide the pause button and show the play button
             if (audioPlayerElement.ended) {
-                this.paused = true;
+                let nextSongIndex = this.selectedSong + 1 < this.releaseData.lyrics.length ? (this.selectedSong + 1) : 0;
+                this.selectSong(nextSongIndex);
             }
         });
 

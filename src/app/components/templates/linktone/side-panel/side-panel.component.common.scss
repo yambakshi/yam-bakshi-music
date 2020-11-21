@@ -191,14 +191,14 @@
         font-size: 20px;
 
         & > .songs-list {
-            max-height: 110px;
+            max-height: 150px;
             overflow: auto;
             
             & > .songs-list-item {
                 display: inline-flex;
                 align-items: center;
                 width: 100%;
-                margin-bottom: 6px;
+                margin-bottom: 10px;
                 color: rgba(255, 255, 255, .7);
                 user-select: none;
                 cursor: pointer;
