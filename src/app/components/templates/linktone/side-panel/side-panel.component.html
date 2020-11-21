@@ -14,27 +14,22 @@
         <h1 class="release-name-title">{{releaseData.meta.name}}</h1>
     </div>
     <div class="side-menu-player-container">
+        <audio #audioPlayer class="audio-player" type="audio/mpeg" [src]="fileSource" preload="metadata"
+            autoplay></audio>
         <div class="side-menu-player">
-            <div class="play-pause-buttons">
-                <i class="icon-play3"></i>
-                <i class="icon-pause2"></i>
+            <div class="play-pause-buttons-container" [ngClass]="paused ? 'paused' : ''">
+                <div class="play-button" (click)="pauseAudio(false)"><i class="icon-play3"></i></div>
+                <div class="pause-button" (click)="pauseAudio(true)"><i class="icon-pause2"></i></div>
             </div>
-
-            <div class="player-timeline-slider-container">
-                <input class="player-timeline-slider" type="range" min="1" max="100" value="50">
+            <div class="player-current-time">{{currentTime}}</div>
+            <div class="player-seek-slider-container">
+                <input #seekSlider class="player-seek-slider" type="range" min="0" max="1" [value]="seekSliderValue" (input)="seekSliderChanged()">
             </div>
-
-            <div class="player-timestamp-container">
-                <div class="player-timestamp">00:00</div>
+            <div class="player-duration">{{duration}}</div>
+            <div class="mute-unmute-buttons-container" [ngClass]="muted ? 'muted' : ''">
+                <div class="unmute-button" (click)="muteAudio(false)"><i class="icon-volume-mute2"></i></div>
+                <div class="mute-button" (click)="muteAudio(true)"><i class="icon-volume-medium"></i></div>
             </div>
-
-            <div class="volume-controller-container">
-                <div class="mute-unmute-buttons">
-                    <i class="icon-volume-medium"></i>
-                    <i class="icon-volume-mute2"></i>
-                </div>
-            </div>
-
         </div>
     </div>
     <div class="side-menu-songs-list-container">
@@ -53,9 +48,9 @@
                 {{releaseData.lyrics[selectedSong].lyrics}}
             </div>
         </div>
-        <div class="song-lyrics-fades">
+        <!-- <div class="song-lyrics-fades">
             <div class="lyrics-top-fade"></div>
             <div class="lyrics-bottom-fade"></div>
-        </div>
+        </div> -->
     </div>
 </div>

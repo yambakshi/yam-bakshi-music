@@ -110,46 +110,76 @@
 
         & > .side-menu-player {
             display: flex;
-            padding: 20px;
+            padding: 20px 10px;
             width: 100%;
             align-items: center;
 
-            & > .play-pause-buttons {
+            & > .play-pause-buttons-container {
                 display: flex;
                 cursor: pointer;
+                margin-right: 15px;
 
-                & > i[class^="icon-play3"] {
+                &.paused {
+                    & > .play-button {
+                        display: flex;
+                    }
+    
+                    & > .pause-button {
+                        display: none;
+                    }    
+                }
+
+                & > .play-button {
                     display: none;
+                }
+
+                & > .pause-button {
+                    display: flex;
                 }
             }
 
-            & > .player-timeline-slider-container {
+            & > .player-duration {
+                margin-right: 15px;
+            }
+
+            & > .player-seek-slider-container {
                 display: flex;
                 align-items: center;
                 flex: 1;
-                margin: 0px 15px 0px 15px;
+                margin-right: 15px;
                 position: relative;
     
-                & > .player-timeline-slider {
+                & > .player-seek-slider {
                     cursor: pointer;
-                    flex: 1;
+                    width: 100%;
                 }
             }
 
-            & > .player-timestamp-container {
-                & > .player-timestamp {
-                    margin-right: 15px;
-                }
+            & > .player-current-time {
+                margin-right: 15px;
             }
     
-            & > .volume-controller-container {
-                & > .mute-unmute-buttons {
-                    display: flex;
-                    cursor: pointer;
+            
+            & > .mute-unmute-buttons-container {
+                display: flex;
+                cursor: pointer;
 
-                    & > i[class^="icon-volume-mute2"] {
-                        display: none;
+                &.muted {
+                    & > .unmute-button {
+                        display: flex;
                     }
+    
+                    & > .mute-button {
+                        display: none;
+                    }    
+                }
+                
+                & > .mute-button {
+                    display: flex;
+                }
+
+                & > .unmute-button {
+                    display: none;
                 }
             }
         }
@@ -251,6 +281,22 @@
             }
         }
     }
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+}
+
+input[type='range']::-moz-range-track {
+    -webkit-appearance: none;
+}
+
+input[type='range']::-ms-track {
+    -webkit-appearance: none;
 }
 
 ::-webkit-scrollbar {

@@ -19,4 +19,8 @@ export class DownloadsService {
             URL.revokeObjectURL(objectUrl);
         })
     }
+
+    getFileUrl(filename: string): string {
+        return `https://storage.googleapis.com/${this.bucketName}/${filename}`;
+    }
 }
