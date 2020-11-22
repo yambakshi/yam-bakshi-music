@@ -1,0 +1,16 @@
+@import "../../../../../scss/global/index.scss";
+
+@include media("screen", "<mobile") {
+    .press-kit-container {    
+        > .press-kit {
+            font-size: 20px;
+            width: 100%;
+
+            > .press-kit-download-container {
+                > .press-kit-download-icon {
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
+}

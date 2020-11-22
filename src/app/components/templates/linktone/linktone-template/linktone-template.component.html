@@ -10,14 +10,14 @@
             </div>
         </div>
         <div #linktoneBody class="linktone-body">
-            <div class="main-screen">
+            <div class="main-screen-container">
                 <img src="{{releaseData.graphics.og}}" alt="og" />
             </div>
             <div class="lyrics-screen-container">
                 <lyrics-screen class="lyrics-screen" [lyrics]="releaseData.lyrics"></lyrics-screen>
             </div>
             <div class="credits-screen-container">
-                <div class="credits-container">{{releaseData.credits}}</div>
+                <div class="credits-screen">{{releaseData.credits}}</div>
             </div>
             <div class="gallery-screen-container">
                 <gallery-screen></gallery-screen>
@@ -25,8 +25,8 @@
             <div class="press-screen-container">
                 <iframe src="assets/media/press-release.pdf" width="100%" height="100%"></iframe>
             </div>
-            <div class="press-kit-screen">
-                PRESS KIT
+            <div class="press-kit-screen-container">
+                <press-kit-screen class="press-kit-screen" [releaseData]="releaseData"></press-kit-screen>
             </div>
             <div class="download-screen">
                 DOWNLOAD

@@ -14,6 +14,7 @@ import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer
 import { LinktoneTemplateComponent } from '@components/templates/linktone/linktone-template/linktone-template.component';
 import { GalleryScreenComponent } from '@components/templates/linktone/gallery-screen/gallery-screen.component';
 import { LyricsScreenComponent } from '@components/templates/linktone/lyrics-screen/lyrics-screen.component';
+import { PressKitScreenComponent } from '@components/templates/linktone/press-kit-screen/press-kit-screen.component';
 import { SidePanelComponent } from '@components/templates/linktone/side-panel/side-panel.component';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { SidePanelComponent } from '@components/templates/linktone/side-panel/si
     SmartlinkFooterComponent,
     LinktoneTemplateComponent,
     GalleryScreenComponent,
+    PressKitScreenComponent,
     LyricsScreenComponent,
     SidePanelComponent,
     ShyComponent,

@@ -1,0 +1,44 @@
+.press-kit-container {
+    display: flex;
+    justify-content: center;
+
+    > .press-kit {
+        font-size: 24px;
+        width: 40%;
+        
+        > .press-kit-download-container {
+            display: flex;
+            padding: 10px;
+            border: 1px solid #fff;
+
+            > .press-kit-download-label {
+                flex: 1;                
+            }
+
+            > .press-kit-download-icon {
+                cursor: pointer;
+                color: rgba(255, 255, 255, 0.6);
+                margin-right: 23px;
+                position: relative;
+
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                }
+
+                &:not(:last-of-type):after {
+                    content: "";
+                    position: absolute;
+                    transform: translateX(-50%);
+                    width: 3px;
+                    height: 100%;
+                    background-color: white;
+                    right: -14px;
+                }
+
+                &:last-of-type {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}

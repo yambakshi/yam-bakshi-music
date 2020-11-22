@@ -69,7 +69,7 @@
                 display: none;
             }
 
-            & > .main-screen {
+            & > .main-screen-container {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
@@ -94,7 +94,7 @@
                 width: 100%;
                 align-items: center;
 
-                & > .credits-container {
+                & > .credits-screen {
                     white-space: pre;
                     font-size: 26px;
                     color: white;
@@ -116,6 +116,15 @@
             & > .press-screen-container {
                 width: 100%;
                 height: 100%;
+            }
+
+            > .press-kit-screen-container {
+                display: flex;
+                width: 100%;
+
+                > .press-kit-screen {
+                    width: 100%;
+                }
             }
         }
     

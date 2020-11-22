@@ -96,9 +96,9 @@ export class SidePanelComponent implements OnInit {
         this.muted = state;
     }
 
-    async downloadSong($event, i): Promise<void> {
-        let songName = this.releaseData.lyrics[i].name;
-        this.downloadsService.downloadFile(songName).catch(console.error);
+    downloadSong($event, i): void {
         $event.stopPropagation();
+        const filename = this.releaseData.lyrics[i].name;
+        this.downloadsService.downloadFile('Songs', filename, 'audio/mpeg', 'mp3').catch(console.error);
     }
 }
