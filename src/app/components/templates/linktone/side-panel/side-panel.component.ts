@@ -59,9 +59,6 @@ export class SidePanelComponent implements OnInit {
                 this.selectSong(nextSongIndex);
             }
         });
-
-        this.muteAudio(this.muted);
-        this.pauseAudio(this.paused);
     }
 
     seekSliderChanged(): void {
@@ -90,7 +87,7 @@ export class SidePanelComponent implements OnInit {
     }
 
     pauseAudio(state: boolean): void {
-        state ? this.audioPlayer.nativeElement.pause() : this.audioPlayer.nativeElement.play()
+        state ? this.audioPlayer.nativeElement.pause() : this.audioPlayer.nativeElement.play();
         this.paused = state;
     }
 
@@ -99,8 +96,9 @@ export class SidePanelComponent implements OnInit {
         this.muted = state;
     }
 
-    async downloadSong(i): Promise<void> {
+    async downloadSong($event, i): Promise<void> {
         let songName = this.releaseData.lyrics[i].name;
         this.downloadsService.downloadFile(songName).catch(console.error);
+        $event.stopPropagation();
     }
 }

@@ -38,7 +38,7 @@
                 [ngClass]="selectedSong === i ? 'selected' : ''" (click)="selectSong(i)">
                 <div class="song-item-index">{{i+1}}.</div>
                 <div class="song-item-name">{{song.name}}</div>
-                <div class="song-item-download" (click)="downloadSong(i)"><i class="icon-download3"></i></div>
+                <div class="song-item-download" (click)="downloadSong($event, i)"><i class="icon-download3"></i></div>
             </div>
         </div>
     </div>
