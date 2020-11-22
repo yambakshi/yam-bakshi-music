@@ -15,6 +15,7 @@ import { LinktoneTemplateComponent } from '@components/templates/linktone/linkto
 import { GalleryScreenComponent } from '@components/templates/linktone/gallery-screen/gallery-screen.component';
 import { LyricsScreenComponent } from '@components/templates/linktone/lyrics-screen/lyrics-screen.component';
 import { PressKitScreenComponent } from '@components/templates/linktone/press-kit-screen/press-kit-screen.component';
+import { DownloadScreenComponent } from '@components/templates/linktone/download-screen/download-screen.component';
 import { SidePanelComponent } from '@components/templates/linktone/side-panel/side-panel.component';
 
 @NgModule({
@@ -23,9 +24,10 @@ import { SidePanelComponent } from '@components/templates/linktone/side-panel/si
     SmartlinkTemplateComponent,
     SmartlinkFooterComponent,
     LinktoneTemplateComponent,
+    LyricsScreenComponent,
     GalleryScreenComponent,
     PressKitScreenComponent,
-    LyricsScreenComponent,
+    DownloadScreenComponent,
     SidePanelComponent,
     ShyComponent,
     StutterComponent,

@@ -1,0 +1,17 @@
+<div class="download-container">
+    <div class="download-title-container">
+        <div class="release-title">{{releaseData.meta.name}}</div>
+        <div class="download-icon" (click)="downloadRelease()">
+            <i class="icon-download3"></i>
+        </div>
+    </div>
+    <ng-container *ngIf="releaseData.lyrics.length > 1">
+        <div *ngFor="let song of releaseData.lyrics; let i = index" id="{{song.name}}" class="download-list-item">
+            <div class="download-item-index">{{i+1}}.</div>
+            <div class="download-item-name">{{song.name}}</div>
+            <div class="download-item-icon" (click)="downloadSong(i)">
+                <i class="icon-download3"></i>
+            </div>
+        </div>
+    </ng-container>
+</div>

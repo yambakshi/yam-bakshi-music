@@ -119,11 +119,19 @@
             }
 
             > .press-kit-screen-container {
-                display: flex;
                 width: 100%;
 
                 > .press-kit-screen {
                     width: 100%;
+                }
+            }
+
+            > .download-screen-container {
+                width: 100%;
+                justify-content: center;
+
+                > .download-screen {
+                    width: 40%;
                 }
             }
         }

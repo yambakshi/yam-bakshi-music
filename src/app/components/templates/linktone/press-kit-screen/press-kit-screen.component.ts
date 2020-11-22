@@ -22,7 +22,7 @@ export class PressKitScreenComponent {
             extension: 'pdf'
         },
         'RAR': {
-            mimeType: 'application/rar',
+            mimeType: 'application/vnd.rar',
             extension: 'rar'
         }
     }

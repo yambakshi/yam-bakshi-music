@@ -2,17 +2,23 @@
 
 @include media("screen", "<mobile") {
     .linktone-container {
-        & > .linktone-main-panel {
-            & > .linktone-body {
-                & > .credits-screen-container {
-                    & > .credits-screen {
+        > .linktone-main-panel {
+            > .linktone-body {
+                > .credits-screen-container {
+                    > .credits-screen {
                         font-size: 16px;
+                    }
+                }
+
+                > .download-screen-container {    
+                    > .download-screen {
+                        width: 100%;
                     }
                 }
             }
         }
 
-        & > .linktone-side-panel {
+        > .linktone-side-panel {
             display: none;
         }
     }
