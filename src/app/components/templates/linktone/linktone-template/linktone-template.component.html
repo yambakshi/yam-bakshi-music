@@ -17,7 +17,11 @@
                 <lyrics-screen class="lyrics-screen" [lyrics]="releaseData.lyrics"></lyrics-screen>
             </div>
             <div class="credits-screen-container">
-                <div class="credits-screen">{{releaseData.credits}}</div>
+                <div class="credits-screen">
+                    <div class="credits-container">
+                        {{releaseData.credits}}
+                    </div>
+                </div>
             </div>
             <div class="gallery-screen-container">
                 <gallery-screen></gallery-screen>

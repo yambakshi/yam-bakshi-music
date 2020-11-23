@@ -1,8 +1,8 @@
 [
     {
-      "origin": ["https://yambakshimusic.com"],
+      "origin": ["https://www.yambakshimusic.com"],
       "method": ["GET"],
-      "responseHeader": ["*"],
+      "responseHeader": ["Access-Control-Allow-Origin"],
       "maxAgeSeconds": 3600
     }
 ]

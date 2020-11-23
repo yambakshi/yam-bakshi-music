@@ -25,7 +25,7 @@ export class SidePanelComponent implements OnInit {
     duration: string = '00:00';
     currentTime: string = '00:00';
     seekSliderValue: number = 0;
-    fileSource: string = '';
+    audioSource: string = '';
 
     constructor(
         private downloadsService: DownloadsService,
@@ -88,7 +88,7 @@ export class SidePanelComponent implements OnInit {
     selectSong(i: number): void {
         this.selectedSong = i;
         let songName = this.releaseData.lyrics[i].name;
-        this.fileSource = this.downloadsService.getFileUrl(`Songs/${songName}`);
+        this.audioSource = this.downloadsService.getFileUrl(`Songs/${encodeURIComponent(songName)}`);
     }
 
     pauseAudio(state: boolean): void {

@@ -15,8 +15,8 @@ export class DownloadsService {
     constructor(private http: HttpClient) { }
 
     async downloadFile(objectPath: string, objectName: string, extension: string): Promise<void> {
-        const url = this.getFileUrl(`${objectPath}${objectName}`);
-        this.http.get(url, { responseType: 'blob' }).subscribe((data: any) => {
+        const url = this.getFileUrl(`${objectPath}${encodeURIComponent(objectName)}`);
+        this.http.get(url, { headers: { 'Access-Control-Allow-Origin': 'https://www.yambakshimusic.com' }, responseType: 'blob' }).subscribe((data: any) => {
             const blob = new Blob([data], { type: this.extensions[extension] });
             const a = document.createElement('a')
             const objectUrl = URL.createObjectURL(blob);

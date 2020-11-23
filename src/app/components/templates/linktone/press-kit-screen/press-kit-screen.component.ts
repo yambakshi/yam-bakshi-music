@@ -21,7 +21,6 @@ export class PressKitScreenComponent {
     }
 
     downloadFile(filename: string, extension: string): void {
-        const filepath = `Releases/${this.releaseData.meta.name}/`;
-        this.downloadsService.downloadFile(filepath, filename, extension);
+        this.downloadsService.downloadFile(`Releases/${encodeURIComponent(this.releaseData.meta.name)}/`, filename, extension);
     }
 }

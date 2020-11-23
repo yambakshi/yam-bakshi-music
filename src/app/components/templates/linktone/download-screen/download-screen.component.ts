@@ -24,7 +24,7 @@ export class DownloadScreenComponent {
                 break;
 
             default:
-                this.downloadsService.downloadFile(`Releases/${releaseName}`, releaseName, 'rar').catch(console.error);
+                this.downloadsService.downloadFile(`Releases/${encodeURIComponent(releaseName)}/`, releaseName, 'rar').catch(console.error);
                 break;
         }
     }
