@@ -20,17 +20,17 @@ export class DownloadScreenComponent {
         const releaseName = this.releaseData.meta.name;
         switch (this.releaseData.meta.type) {
             case 'SINGLE':
-                this.downloadsService.downloadFile('Songs', releaseName, 'audio/mpeg', 'mp3').catch(console.error);
+                this.downloadsService.downloadFile('Songs/', releaseName, 'mp3').catch(console.error);
                 break;
 
             default:
-                this.downloadsService.downloadFile(`Releases/${releaseName}`, releaseName, 'application/vnd.rar', 'rar').catch(console.error);
+                this.downloadsService.downloadFile(`Releases/${releaseName}`, releaseName, 'rar').catch(console.error);
                 break;
         }
     }
 
     downloadSong(i: number): void {
         const filename = this.releaseData.lyrics[i].name;
-        this.downloadsService.downloadFile('Songs', filename, 'audio/mpeg', 'mp3').catch(console.error);
+        this.downloadsService.downloadFile('Songs/', filename, 'mp3').catch(console.error);
     }
 }

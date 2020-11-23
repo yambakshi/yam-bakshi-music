@@ -44,7 +44,7 @@ export class SidePanelComponent implements OnInit {
             this.duration = this.stringifyElapsedTime(audioPlayerElement.duration);
             this.currentTime = this.stringifyElapsedTime(audioPlayerElement.currentTime);
             this.seekSlider.nativeElement.max = audioPlayerElement.duration;
-            this.seekSlider.nativeElement.setAttribute("value", this.audioPlayer.nativeElement.currentTime);   
+            this.seekSlider.nativeElement.setAttribute("value", this.audioPlayer.nativeElement.currentTime);
         });
 
         this.audioPlayer.nativeElement.addEventListener('timeupdate', () => {
@@ -55,8 +55,13 @@ export class SidePanelComponent implements OnInit {
 
             // When the audio ends, we need to hide the pause button and show the play button
             if (audioPlayerElement.ended) {
-                let nextSongIndex = this.selectedSong + 1 < this.releaseData.lyrics.length ? (this.selectedSong + 1) : 0;
-                this.selectSong(nextSongIndex);
+                if (this.releaseData.lyrics.length > 1) {
+                    let nextSongIndex = this.selectedSong + 1 < this.releaseData.lyrics.length ? (this.selectedSong + 1) : 0;
+                    this.selectSong(nextSongIndex);
+                } else {
+                    audioPlayerElement.currentTime = 0
+                    audioPlayerElement.play();
+                }
             }
         });
     }
@@ -83,7 +88,7 @@ export class SidePanelComponent implements OnInit {
     selectSong(i: number): void {
         this.selectedSong = i;
         let songName = this.releaseData.lyrics[i].name;
-        this.fileSource = this.downloadsService.getFileUrl(songName);
+        this.fileSource = this.downloadsService.getFileUrl(`Songs/${songName}`);
     }
 
     pauseAudio(state: boolean): void {
@@ -99,6 +104,6 @@ export class SidePanelComponent implements OnInit {
     downloadSong($event, i): void {
         $event.stopPropagation();
         const filename = this.releaseData.lyrics[i].name;
-        this.downloadsService.downloadFile('Songs', filename, 'audio/mpeg', 'mp3').catch(console.error);
+        this.downloadsService.downloadFile('Songs/', filename, 'mp3').catch(console.error);
     }
 }

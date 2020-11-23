@@ -12,32 +12,16 @@ import { DownloadsService } from '@services/downloads.service';
 })
 export class PressKitScreenComponent {
     @Input() releaseData;
-    fileTypes = {
-        'Microsoft Word': {
-            mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-            extension: 'docx'
-        },
-        'PDF': {
-            mimeType: 'application/pdf', 
-            extension: 'pdf'
-        },
-        'RAR': {
-            mimeType: 'application/vnd.rar',
-            extension: 'rar'
-        }
-    }
 
     constructor(private downloadsService: DownloadsService) {
     }
 
     downloadGallery(): void {
-        const { mimeType, extension } = this.fileTypes['RAR'];
-        this.downloadsService.downloadFile('', 'Gallery',  mimeType, extension);
+        this.downloadsService.downloadFile('', 'Gallery', 'rar');
     }
 
-    downloadFile(filename: string, filetype: string): void {
-        const filepath = `Releases/${this.releaseData.meta.name}`;
-        const { mimeType, extension } = this.fileTypes[filetype];
-        this.downloadsService.downloadFile(filepath, filename, mimeType, extension);
+    downloadFile(filename: string, extension: string): void {
+        const filepath = `Releases/${this.releaseData.meta.name}/`;
+        this.downloadsService.downloadFile(filepath, filename, extension);
     }
 }
