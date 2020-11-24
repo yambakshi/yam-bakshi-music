@@ -99,16 +99,14 @@
                     background-color: rgba(255, 255, 255, .6);
                     border-radius: 20px;
                     box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
-                    max-height: 92%;
+                    max-height: 90%;
                     overflow: auto;
                     
                     > .credits-container {
                         white-space: pre;
                         text-align: center;
                         color: black;
-                        font-size: 20px;
                         padding: 20px;
-                        background-color: transparent;
                     }
                 }
             }

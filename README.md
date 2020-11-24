@@ -20,6 +20,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Deploy
 
 Run `npm run build:ssr` to build the project in SSR mode. Then run `gcloud app deploy` to deploy.
+Configure Google Cloud Storage CORS:
+`gsutil cors set .\src\environments\bucket-cors.prod.json gs://coherent-lock-275712.appspot.com`
+
+Verify Google Cloud Storage CORS configuration:
+`gsutil cors get gs://coherent-lock-275712.appspot.com`
 
 ## Running unit tests
 

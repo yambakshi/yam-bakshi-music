@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Renderer2, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, Renderer2, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
@@ -11,9 +11,11 @@ import { CloudinaryService } from '@services/cloudinary.service';
   ]
 })
 export class GalleryScreenComponent implements OnInit {
+  @Input() visible: boolean;
   @ViewChild('galleryImagesContainerElement') galleryImagesContainerElement: ElementRef;
   @ViewChild('nextImageElement') nextImageElement: ElementRef;
   @ViewChild('prevImageElement') prevImageElement: ElementRef;
+  margin: number = 100;
 
   images: { url: string, description: string }[] = [
     { url: '/v1605714414/gallery/1_py52ie.jpg', description: 'Transparent Video Shoot #1 (Alon Daniel)' },
@@ -36,7 +38,18 @@ export class GalleryScreenComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.galleryImagesContainerElement.nativeElement.children[this.selectedImageIndex].children[0].addEventListener('load', this.onImageLoad.bind(this));
+    this.centerImage();
+  }
+
+  @HostListener("window:resize", [])
+  private onResize(): void {
+    this.centerImage();
+  }
+
+  ngOnChanges() {
+    if (this.visible) {
+      this.centerImage();
+    }
   }
 
   nextImage(): void {
@@ -50,16 +63,17 @@ export class GalleryScreenComponent implements OnInit {
       this.renderer.setStyle(this.prevImageElement.nativeElement, 'visibility', 'visible');
     }
 
+    const prevImageWidth = imagesContainersElements[this.selectedImageIndex].offsetWidth;
     this.selectedImageIndex++;
 
-    let prevImagesWidth = 0, margin = 100;
-    for (let i = 0; i < this.selectedImageIndex; i++) {
-      prevImagesWidth += (i < this.selectedImageIndex - 1 ? imagesContainersElements[i].offsetWidth : (imagesContainersElements[i].offsetWidth / 2));
+    let prevImagesWidth = 0;
+    for (let i = 0; i < this.selectedImageIndex - 1; i++) {
+      prevImagesWidth += imagesContainersElements[i].offsetWidth;
     }
 
     const selectedImageElement = imagesContainersElements[this.selectedImageIndex];
     const selectedImageWidth = selectedImageElement.offsetWidth;
-    const translation = (prevImagesWidth) + (margin * this.selectedImageIndex) + selectedImageWidth;
+    const translation = prevImagesWidth + (this.margin * this.selectedImageIndex) + selectedImageWidth + (prevImageWidth / 2);
     this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translate(${-translation}px, 0%)`);
   }
 
@@ -76,20 +90,29 @@ export class GalleryScreenComponent implements OnInit {
 
     this.selectedImageIndex--;
 
-    let prevImagesWidth = 0, margin = 100;
+    let prevImagesWidth = 0;
     for (let i = 0; i < this.selectedImageIndex; i++) {
       prevImagesWidth += imagesContainersElements[i].offsetWidth;
     }
 
     const selectedImageElement = imagesContainersElements[this.selectedImageIndex];
     const selectedImageWidth = selectedImageElement.offsetWidth;
-    const translation = prevImagesWidth + (margin * this.selectedImageIndex) + selectedImageWidth;
+    const translation = prevImagesWidth + (this.margin * this.selectedImageIndex) + selectedImageWidth;
     this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translate(${-translation}px, 0%)`);
   }
 
-  onImageLoad(): void {
-    const imagesContainerElement = this.galleryImagesContainerElement.nativeElement;
-    const imageContainerElement = this.galleryImagesContainerElement.nativeElement.children[this.selectedImageIndex];
-    this.renderer.setStyle(imagesContainerElement, 'transform', `translate(${-imageContainerElement.offsetWidth / 2}px, 0%)`);
+  centerImage(): void {
+    const galleryImagesContainerElement = this.galleryImagesContainerElement.nativeElement;
+    const imagesContainersElements = galleryImagesContainerElement.children;
+
+    let prevImagesWidth = 0;
+    for (let i = 0; i < this.selectedImageIndex; i++) {
+      prevImagesWidth += imagesContainersElements[i].offsetWidth;
+    }
+
+    const selectedImageElement = imagesContainersElements[this.selectedImageIndex];
+    const selectedImageWidth = selectedImageElement.offsetWidth;
+    const translation = prevImagesWidth + (this.margin * this.selectedImageIndex) + (selectedImageWidth / 2);
+    this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translate(${-translation}px, 0%)`);
   }
 }
