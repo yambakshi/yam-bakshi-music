@@ -1,25 +1,29 @@
 <div class="press-kit-container">
-    <div class="press-kit">
-        <div class="press-kit-download-container">
-            <div class="press-kit-download-label">Download Full Kit</div>
-            <div class="press-kit-download-icon" (click)="downloadFile('Press Kit', 'rar')"><i class="icon-download3"></i></div>
+    <div class="press-kit-title-container">
+        <div class="press-kit-download-label">Download Full Kit</div>
+        <div class="press-kit-download-icon" (click)="downloadFile('Press Kit', 'rar')">
+            <i class="icon-download3"></i>
         </div>
-        <div class="press-kit-download-container">
-            <div class="press-kit-download-label">Lyrics</div>
-            <div class="press-kit-download-icon" (click)="downloadFile('Lyrics', 'docx')"><i class="icon-download3"></i></div>
+    </div>
+    <div class="press-kit-item-container">
+        <div class="press-kit-download-label">Lyrics</div>
+        <div class="press-kit-download-icon" (click)="downloadFile('Lyrics', 'docx')"><i class="icon-download3"></i>
         </div>
-        <div class="press-kit-download-container">
-            <div class="press-kit-download-label">Credits</div>
-            <div class="press-kit-download-icon" (click)="downloadFile('Credits', 'docx')"><i class="icon-download3"></i></div>
-        </div>
-        <div class="press-kit-download-container">
-            <div class="press-kit-download-label">Gallery</div>
-            <div class="press-kit-download-icon" (click)="downloadGallery()"><i class="icon-download3"></i></div>            
-        </div>
-        <div class="press-kit-download-container">
-            <div class="press-kit-download-label">Press Release</div>
-            <div class="press-kit-download-icon" (click)="downloadFile('Press Release - PDF', 'pdf')">PDF <i class="icon-download3"></i></div>
-            <div class="press-kit-download-icon" (click)="downloadFile('Press Release', 'docx')">WORD <i class="icon-download3"></i></div>
-        </div>
+    </div>
+    <div class="press-kit-item-container">
+        <div class="press-kit-download-label">Credits</div>
+        <div class="press-kit-download-icon" (click)="downloadFile('Credits', 'docx')"><i
+                class="icon-download3"></i></div>
+    </div>
+    <div class="press-kit-item-container">
+        <div class="press-kit-download-label">Gallery</div>
+        <div class="press-kit-download-icon" (click)="downloadGallery()"><i class="icon-download3"></i></div>
+    </div>
+    <div class="press-kit-item-container">
+        <div class="press-kit-download-label">Press Release</div>
+        <div class="press-kit-download-icon" (click)="downloadFile('Press Release - PDF', 'pdf')">PDF <i
+                class="icon-download3"></i></div>
+        <div class="press-kit-download-icon" (click)="downloadFile('Press Release', 'docx')">WORD <i
+                class="icon-download3"></i></div>
     </div>
 </div>

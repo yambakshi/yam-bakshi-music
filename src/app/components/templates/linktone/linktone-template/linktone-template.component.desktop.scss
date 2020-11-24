@@ -7,10 +7,22 @@
                 > .credits-screen-container {    
                     > .credits-screen {                        
                         > .credits-container {
-                            font-size: 24px;
+                            font-size: 26px;
                         }
                     }
-                }    
+                }
+
+                > .press-kit-screen-container {    
+                    > .press-kit-screen {
+                        min-width: 40%;
+                    }
+                }
+    
+                > .download-screen-container {    
+                    > .download-screen {
+                        min-width: 40%;
+                    }
+                }
             }
         }
     }

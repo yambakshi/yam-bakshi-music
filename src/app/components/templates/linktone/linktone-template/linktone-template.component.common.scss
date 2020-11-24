@@ -124,19 +124,12 @@
 
             > .press-kit-screen-container {
                 width: 100%;
-
-                > .press-kit-screen {
-                    width: 100%;
-                }
+                justify-content: center;
             }
 
             > .download-screen-container {
                 width: 100%;
                 justify-content: center;
-
-                > .download-screen {
-                    width: 40%;
-                }
             }
         }
     

@@ -1,4 +1,31 @@
 @import "../../../../../scss/global/index.scss";
 
 @include media("screen", ">mobile") {
+    .press-kit-container {
+        font-size: 24px;
+
+        > .press-kit-title-container {
+            font-size: 30px;
+
+            > .press-kit-download-icon {
+                cursor: pointer;
+                color: rgba(255, 255, 255, .6);
+
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+
+        > .press-kit-item-container {
+            > .press-kit-download-icon {
+                cursor: pointer;
+                color: rgba(255, 255, 255, 0.6);
+
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
 }
