@@ -12,8 +12,9 @@ import { TransparentVideoClipComponent } from '@components/releases/transparent-
 import { SmartlinkTemplateComponent } from '@components/templates/smartlink-template/smartlink-template.component';
 import { SmartlinkFooterComponent } from '@components/templates/smartlink-footer/smartlink-footer.component';
 import { LinktoneTemplateComponent } from '@components/templates/linktone/linktone-template/linktone-template.component';
-import { GalleryScreenComponent } from '@components/templates/linktone/gallery-screen/gallery-screen.component';
 import { LyricsScreenComponent } from '@components/templates/linktone/lyrics-screen/lyrics-screen.component';
+import { CreditsScreenComponent } from '@components/templates/linktone/credits-screen/credits-screen.component';
+import { GalleryScreenComponent } from '@components/templates/linktone/gallery-screen/gallery-screen.component';
 import { PressKitScreenComponent } from '@components/templates/linktone/press-kit-screen/press-kit-screen.component';
 import { DownloadScreenComponent } from '@components/templates/linktone/download-screen/download-screen.component';
 import { SidePanelComponent } from '@components/templates/linktone/side-panel/side-panel.component';
@@ -25,6 +26,7 @@ import { SidePanelComponent } from '@components/templates/linktone/side-panel/si
     SmartlinkFooterComponent,
     LinktoneTemplateComponent,
     LyricsScreenComponent,
+    CreditsScreenComponent,
     GalleryScreenComponent,
     PressKitScreenComponent,
     DownloadScreenComponent,

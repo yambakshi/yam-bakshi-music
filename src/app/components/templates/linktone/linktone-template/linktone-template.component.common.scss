@@ -90,24 +90,15 @@
             }
 
             > .credits-screen-container {
-                justify-content: center;
                 width: 100%;
-                align-items: center;
+                height: 100%;
 
                 > .credits-screen {
-                    color: white;
-                    background-color: rgba(255, 255, 255, .6);
-                    border-radius: 20px;
-                    box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
-                    max-height: 90%;
-                    overflow: auto;
-                    
-                    > .credits-container {
-                        white-space: pre;
-                        text-align: center;
-                        color: black;
-                        padding: 20px;
-                    }
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
                 }
             }
 

@@ -1,0 +1,9 @@
+@import "../../../../../scss/global/index.scss";
+
+@include media("screen", "<mobile") {
+    .credits-container {
+        > .credits-content {
+            font-size: 20px;
+        }
+    }
+}

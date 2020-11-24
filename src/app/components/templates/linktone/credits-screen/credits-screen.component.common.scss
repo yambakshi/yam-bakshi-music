@@ -1,0 +1,19 @@
+.credits-container {    
+    overflow: auto;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+    max-height: 90%;
+
+    > .credits-content {
+        white-space: pre;
+        text-align: center;
+        color: black;
+        padding: 20px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}

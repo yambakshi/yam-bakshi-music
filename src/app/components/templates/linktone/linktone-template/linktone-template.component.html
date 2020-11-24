@@ -17,11 +17,7 @@
                 <lyrics-screen class="lyrics-screen" [lyrics]="releaseData.lyrics"></lyrics-screen>
             </div>
             <div class="credits-screen-container">
-                <div class="credits-screen">
-                    <div class="credits-container">
-                        {{releaseData.credits}}
-                    </div>
-                </div>
+                <credits-screen class="credits-screen" [releaseData]="releaseData"></credits-screen>
             </div>
             <div class="gallery-screen-container">
                 <gallery-screen [visible]="selectedTab == 3"></gallery-screen>
