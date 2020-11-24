@@ -4,7 +4,7 @@
     height: 100%;
     overflow: hidden;
 
-    & > .arrows-container {
+    > .arrows-container {
         display: flex;
         position: absolute;
         width: 100%;
@@ -14,15 +14,15 @@
         justify-content: space-between;
         z-index: 1;
 
-        & > .prevImage {
+        > .prevImage {
             visibility: hidden;
         }
 
-        & > .nextImage {
+        > .nextImage {
             margin-right: 50px;
         }
 
-        & > div {
+        > div {
             cursor: pointer;
             display: flex;
 
@@ -30,14 +30,14 @@
                 color: rgba(255, 255, 255, 1);
             }
 
-            & > i[class^="icon-"] {
+            > i[class^="icon-"] {
                 display: flex;
                 align-items: center;
             }
         }
     }
 
-    & > .gallery-images-container {
+    > .gallery-images-container {
         display: flex;
         height: 100%;
         width: 100%;
@@ -46,7 +46,7 @@
         transition: transform 0.50s;
         left: 50%;
 
-        & > .gallery-image-container {
+        > .gallery-image-container {
             display: flex;
             border: 1px solid #fff;
             user-select: none;
@@ -78,12 +78,12 @@
                     transition: background-color 0.50s;
                 }
 
-                & > .image-label {
+                > .image-label {
                     display: block;
                 }
             }
 
-            & > .image-label {
+            > .image-label {
                 display: none;
                 position: absolute;
                 background-color: rgba(255, 255, 255, .6);

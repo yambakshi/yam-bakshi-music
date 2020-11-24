@@ -2,7 +2,7 @@
     font-size: 24px;
     width: 100%;
 
-    & > .lyrics-list-item {
+    > .lyrics-list-item {
         display: flex;
         flex-direction: column;
         color: rgba(255, 255, 255, .7);
@@ -16,7 +16,7 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        & > .lyrics-list-item-header {
+        > .lyrics-list-item-header {
             display: flex;
             cursor: pointer;
             position: relative;
@@ -47,11 +47,11 @@
                 background-color: rgba(255, 255, 255, .7);
             }
 
-            & > .lyrics-item-index {
+            > .lyrics-item-index {
                 margin-right: 10px;
             }
 
-            & > .lyrics-item-expand {
+            > .lyrics-item-expand {
                 font-size: 40;
                 font-weight: 900;
                 transform: rotate(0deg);
@@ -64,7 +64,7 @@
             }
         }
 
-        & > .lyrics-item-lyrics-container {
+        > .lyrics-item-lyrics-container {
             max-height: 0;
             transition: max-height 0.40s;
             overflow: hidden;
@@ -99,7 +99,7 @@
                 transition: max-height 1s;
             }
 
-            & > .lyrics-content {
+            > .lyrics-content {
                 white-space: pre;
                 font-size: 20px;
                 color: white;

@@ -51,25 +51,25 @@ export class LinktoneTemplateComponent {
 
   ngAfterViewInit() {
     this.setTabsLine(this.selectedTab);
-    let selectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
+    const selectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
     this.renderer.setStyle(selectedElement, 'display', 'flex');
   }
 
   setTabsLine(i: number): void {
-    let selectedTab = this.headerTabs.nativeElement.children[i];
-    let tabWidth = selectedTab.offsetWidth;
-    let tabLeft = selectedTab.offsetLeft;
+    const selectedTab = this.headerTabs.nativeElement.children[i];
+    const tabWidth = selectedTab.offsetWidth;
+    const tabLeft = selectedTab.offsetLeft;
     this.renderer.setStyle(this.tabsLine.nativeElement, 'left', `${tabLeft}px`);
     this.renderer.setStyle(this.tabsLine.nativeElement, 'width', `${tabWidth}px`);
   }
 
   selectTab(i: number): void {
     if (i === this.selectedTab) return;
-    let deselectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
+    const deselectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
     this.renderer.setStyle(deselectedElement, 'display', 'none');
     this.selectedTab = i;
     this.setTabsLine(i);
-    let selectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
+    const selectedElement = this.linktoneBody.nativeElement.children[this.selectedTab];
     this.renderer.setStyle(selectedElement, 'display', 'flex');
   }
 }

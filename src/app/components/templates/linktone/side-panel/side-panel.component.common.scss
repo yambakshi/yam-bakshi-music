@@ -6,11 +6,11 @@
     padding: 0 15px;
     flex-direction: column;
 
-    & > .side-menu-actions {
+    > .side-menu-actions {
         display: flex;
         margin-top: 10px;
 
-        & > .linktone-share {
+        > .linktone-share {
             color: rgba(255, 255, 255, 0.6);
             cursor: pointer;
             
@@ -20,12 +20,12 @@
         }
     }
 
-    & > .side-menu-release-type-container {
+    > .side-menu-release-type-container {
         position: fixed;
         right: 0px;
         top: 0px;
 
-        & > .release-type {
+        > .release-type {
             position: absolute;
             right: -65px;
             top: -65px;
@@ -41,13 +41,13 @@
         }
     }
 
-    & > .side-menu-avatar-container {
+    > .side-menu-avatar-container {
         width: 100%;
         display: flex;
         justify-content: center;
         margin-top: 25px;
 
-        & > .linktone-avatar {
+        > .linktone-avatar {
             border-radius: 50%;
             width: 100px;
             height: 100px;
@@ -57,27 +57,27 @@
         }
     }
 
-    & > .side-menu-release-titles {
+    > .side-menu-release-titles {
         display: flex;
         flex-direction: column;
         text-align: center;
         margin-top: 20px;
 
 
-        & > .artist-name-title {
+        > .artist-name-title {
             font-weight: bold;
             font-size: 38px;
             margin: 0px;
         }
         
-        & > .release-name-title {
+        > .release-name-title {
             font-weight: lighter;
             font-size: 27px;
             margin: 0px;
         }    
     }
 
-    & > .side-menu-player-container {
+    > .side-menu-player-container {
         display: flex;
         width: 100%;
         position: relative;
@@ -108,93 +108,93 @@
             background-color: rgba(255, 255, 255, .7);
         }
 
-        & > .side-menu-player {
+        > .side-menu-player {
             display: flex;
             padding: 20px 10px;
             width: 100%;
             align-items: center;
 
-            & > .play-pause-buttons-container {
+            > .play-pause-buttons-container {
                 display: flex;
                 cursor: pointer;
                 margin-right: 15px;
 
                 &.paused {
-                    & > .play-button {
+                    > .play-button {
                         display: flex;
                     }
     
-                    & > .pause-button {
+                    > .pause-button {
                         display: none;
                     }    
                 }
 
-                & > .play-button {
+                > .play-button {
                     display: none;
                 }
 
-                & > .pause-button {
+                > .pause-button {
                     display: flex;
                 }
             }
 
-            & > .player-duration {
+            > .player-duration {
                 margin-right: 15px;
             }
 
-            & > .player-seek-slider-container {
+            > .player-seek-slider-container {
                 display: flex;
                 align-items: center;
                 flex: 1;
                 margin-right: 15px;
                 position: relative;
     
-                & > .player-seek-slider {
+                > .player-seek-slider {
                     cursor: pointer;
                     width: 100%;
                 }
             }
 
-            & > .player-current-time {
+            > .player-current-time {
                 margin-right: 15px;
             }
     
             
-            & > .mute-unmute-buttons-container {
+            > .mute-unmute-buttons-container {
                 display: flex;
                 cursor: pointer;
 
                 &.muted {
-                    & > .unmute-button {
+                    > .unmute-button {
                         display: flex;
                     }
     
-                    & > .mute-button {
+                    > .mute-button {
                         display: none;
                     }    
                 }
                 
-                & > .mute-button {
+                > .mute-button {
                     display: flex;
                 }
 
-                & > .unmute-button {
+                > .unmute-button {
                     display: none;
                 }
             }
         }
     }
 
-    & > .side-menu-songs-list-container {
+    > .side-menu-songs-list-container {
         position: relative;
         margin: 25px 0px;
         font-size: 20px;
 
-        & > .songs-list {
+        > .songs-list {
             max-height: 150px;
             overflow: auto;
             
-            & > .songs-list-item {
+            > .songs-list-item {
                 display: inline-flex;
                 align-items: center;
                 width: 100%;
@@ -211,15 +211,15 @@
                     color: rgba(255, 255, 255, 1);
                 }
 
-                & > .song-item-index {
+                > .song-item-index {
                     margin-right: 10px;
                 }
                 
-                & > .song-item-name {
+                > .song-item-name {
                     flex: 1;
                 }
 
-                & > .song-item-download {
+                > .song-item-download {
                     display: flex;
                 }
 
@@ -242,18 +242,18 @@
         }
     }
 
-    & > .side-menu-lyrics-container {
+    > .side-menu-lyrics-container {
         width: 100%;
         height: 100%;
         position: relative;
         overflow: hidden;
         
-        & > .song-lyrics-container {
+        > .song-lyrics-container {
             overflow: auto;
             width: 100%;
             height: 100%;
 
-            & > .song-lyrics {
+            > .song-lyrics {
                 position: relative;
                 white-space: pre;
                 font-size: 18px;
@@ -263,8 +263,8 @@
             }
         }
 
-        & > .song-lyrics-fades {
-            & > .lyrics-top-fade {
+        > .song-lyrics-fades {
+            > .lyrics-top-fade {
                 position: absolute;
                 height: 40px;
                 width: 100%;
@@ -272,7 +272,7 @@
                 background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,.5));
             }
 
-            & > .lyrics-bottom-fade {
+            > .lyrics-bottom-fade {
                 position: absolute;
                 height: 40px;
                 width: 100%;

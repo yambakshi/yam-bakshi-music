@@ -4,30 +4,30 @@
     display: flex;
     color: white;
 
-    & > .linktone-main-panel {
+    > .linktone-main-panel {
         display: flex;
         flex-direction: column;
         width: 100%;
 
-        & > .linktone-header {
+        > .linktone-header {
             display: flex;
             min-height: 70px;
             width: 100%;
             justify-content: center;
             background-color: rgba(0, 0, 0, .4);
 
-            & > .tabs-container {
+            > .tabs-container {
                 display: flex;
                 overflow: auto;
                 position: relative;
 
-                & > ul {
+                > ul {
                     display: flex;
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
     
-                    & > li {
+                    > li {
                         font-weight: 900;
                         font-size: 18px;
                         user-select: none;
@@ -47,7 +47,7 @@
                     }
                 }
     
-                & > .tabs-line {
+                > .tabs-line {
                     height: 2px;
                     position: absolute;
                     bottom: 0;
@@ -58,43 +58,43 @@
             }
         }
     
-        & > .linktone-body {
+        > .linktone-body {
             display: flex;
             background-color: transparent;
             flex: 1;
             width: 100%;
             overflow: auto;
 
-            & > div {
+            > div {
                 display: none;
             }
 
-            & > .main-screen-container {
+            > .main-screen-container {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
 
-                & > img {
+                > img {
                     user-select: none;
                     width: 100%;
                 }
             }
 
-            & > .lyrics-screen-container {
+            > .lyrics-screen-container {
                 width: 100%;
                 justify-content: center;
 
-                & > .lyrics-screen {
+                > .lyrics-screen {
                     width: 100%;
                 }
             }
 
-            & > .credits-screen-container {
+            > .credits-screen-container {
                 justify-content: center;
                 width: 100%;
                 align-items: center;
 
-                & > .credits-screen {
+                > .credits-screen {
                     color: white;
                     background-color: rgba(255, 255, 255, .6);
                     border-radius: 20px;
@@ -113,13 +113,13 @@
                 }
             }
 
-            & > .gallery-screen-container {
+            > .gallery-screen-container {
                 position: relative;
                 width: 100%;
                 height: 100%;
             }
 
-            & > .press-screen-container {
+            > .press-screen-container {
                 width: 100%;
                 height: 100%;
             }
@@ -142,7 +142,7 @@
             }
         }
     
-        & > .linktone-footer {
+        > .linktone-footer {
             display: flex;
             align-items: center;
             flex: 1;
@@ -151,18 +151,18 @@
             max-height: 50px;
             overflow: auto;
 
-            & > .platforms-buttons-container {
+            > .platforms-buttons-container {
                 display: flex;
                 padding: 0px 10px;
 
-                & > .platform-button {
+                > .platform-button {
                     margin-right: 20px;
     
                     &:last-of-type {
                         margin-right: 0px;
                     }
     
-                    & > a {
+                    > a {
                         display: flex;
                     }
                 }

@@ -40,7 +40,7 @@ export class SidePanelComponent implements OnInit {
 
     ngAfterViewInit(): void {
         this.audioPlayer.nativeElement.addEventListener('loadedmetadata', () => {
-            let audioPlayerElement = this.audioPlayer.nativeElement;
+            const audioPlayerElement = this.audioPlayer.nativeElement;
             this.duration = this.stringifyElapsedTime(audioPlayerElement.duration);
             this.currentTime = this.stringifyElapsedTime(audioPlayerElement.currentTime);
             this.seekSlider.nativeElement.max = audioPlayerElement.duration;
@@ -48,15 +48,15 @@ export class SidePanelComponent implements OnInit {
         });
 
         this.audioPlayer.nativeElement.addEventListener('timeupdate', () => {
-            let audioPlayerElement = this.audioPlayer.nativeElement;
-            let numericCurrentTime = audioPlayerElement.currentTime;
+            const audioPlayerElement = this.audioPlayer.nativeElement;
+            const numericCurrentTime = audioPlayerElement.currentTime;
             this.currentTime = this.stringifyElapsedTime(numericCurrentTime);
             this.seekSliderValue = numericCurrentTime;
 
             // When the audio ends, we need to hide the pause button and show the play button
             if (audioPlayerElement.ended) {
                 if (this.releaseData.lyrics.length > 1) {
-                    let nextSongIndex = this.selectedSong + 1 < this.releaseData.lyrics.length ? (this.selectedSong + 1) : 0;
+                    const nextSongIndex = this.selectedSong + 1 < this.releaseData.lyrics.length ? (this.selectedSong + 1) : 0;
                     this.selectSong(nextSongIndex);
                 } else {
                     audioPlayerElement.currentTime = 0
@@ -87,7 +87,7 @@ export class SidePanelComponent implements OnInit {
 
     selectSong(i: number): void {
         this.selectedSong = i;
-        let songName = this.releaseData.lyrics[i].name;
+        const songName = this.releaseData.lyrics[i].name;
         this.audioSource = this.downloadsService.getFileUrl(`Songs/${encodeURIComponent(songName)}`);
     }
 
