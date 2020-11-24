@@ -11,7 +11,7 @@
         </div>
         <div #linktoneBody class="linktone-body">
             <div class="main-screen-container">
-                <img src="{{releaseData.graphics.og}}" alt="og" />
+                <img [src]="releaseData.graphics.og" alt="og" />
             </div>
             <div class="lyrics-screen-container">
                 <lyrics-screen class="lyrics-screen" [lyrics]="releaseData.lyrics"></lyrics-screen>

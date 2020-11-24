@@ -14,7 +14,7 @@
         <h1 class="release-name-title">{{releaseData.meta.name}}</h1>
     </div>
     <div class="side-menu-player-container">
-        <audio #audioPlayer class="audio-player" type="audio/mpeg" [src]="audioSource" preload="metadata"></audio>
+        <audio #audioPlayer class="audio-player" type="audio/mpeg" [src]="audioSource" preload="metadata" autoplay></audio>
         <div class="side-menu-player">
             <div class="play-pause-buttons-container" [ngClass]="paused ? 'paused' : ''">
                 <div class="play-button" (click)="pauseAudio(false)"><i class="icon-play3"></i></div>
@@ -47,9 +47,5 @@
                 {{releaseData.lyrics[selectedSong].lyrics}}
             </div>
         </div>
-        <!-- <div class="song-lyrics-fades">
-            <div class="lyrics-top-fade"></div>
-            <div class="lyrics-bottom-fade"></div>
-        </div> -->
     </div>
 </div>

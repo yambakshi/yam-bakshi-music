@@ -40,9 +40,9 @@ export class GalleryScreenComponent implements OnInit {
   }
 
   nextImage(): void {
-    let galleryImagesContainerElement = this.galleryImagesContainerElement.nativeElement;
-    let imagesContainersElements = galleryImagesContainerElement.children;
-    let imagesCount = imagesContainersElements.length;
+    const galleryImagesContainerElement = this.galleryImagesContainerElement.nativeElement;
+    const imagesContainersElements = galleryImagesContainerElement.children;
+    const imagesCount = imagesContainersElements.length;
 
     if (this.selectedImageIndex + 1 == imagesCount - 1) {
       this.renderer.setStyle(this.nextImageElement.nativeElement, 'visibility', 'hidden');
@@ -57,16 +57,16 @@ export class GalleryScreenComponent implements OnInit {
       prevImagesWidth += (i < this.selectedImageIndex - 1 ? imagesContainersElements[i].offsetWidth : (imagesContainersElements[i].offsetWidth / 2));
     }
 
-    let selectedImageElement = imagesContainersElements[this.selectedImageIndex];
-    let selectedImageWidth = selectedImageElement.offsetWidth;
-    let translation = (prevImagesWidth) + (margin * this.selectedImageIndex) + selectedImageWidth;
+    const selectedImageElement = imagesContainersElements[this.selectedImageIndex];
+    const selectedImageWidth = selectedImageElement.offsetWidth;
+    const translation = (prevImagesWidth) + (margin * this.selectedImageIndex) + selectedImageWidth;
     this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translate(${-translation}px, 0%)`);
   }
 
   prevImage(): void {
-    let galleryImagesContainerElement = this.galleryImagesContainerElement.nativeElement;
-    let imagesContainersElements = galleryImagesContainerElement.children;
-    let imagesCount = imagesContainersElements.length;
+    const galleryImagesContainerElement = this.galleryImagesContainerElement.nativeElement;
+    const imagesContainersElements = galleryImagesContainerElement.children;
+    const imagesCount = imagesContainersElements.length;
 
     if (this.selectedImageIndex - 1 == 0) {
       this.renderer.setStyle(this.prevImageElement.nativeElement, 'visibility', 'hidden');
@@ -81,18 +81,15 @@ export class GalleryScreenComponent implements OnInit {
       prevImagesWidth += imagesContainersElements[i].offsetWidth;
     }
 
-    let selectedImageElement = imagesContainersElements[this.selectedImageIndex];
-    let selectedImageWidth = selectedImageElement.offsetWidth;
-    let translation = prevImagesWidth + (margin * this.selectedImageIndex) + selectedImageWidth;
+    const selectedImageElement = imagesContainersElements[this.selectedImageIndex];
+    const selectedImageWidth = selectedImageElement.offsetWidth;
+    const translation = prevImagesWidth + (margin * this.selectedImageIndex) + selectedImageWidth;
     this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translate(${-translation}px, 0%)`);
   }
 
   onImageLoad(): void {
-    let imagesContainerElement = this.galleryImagesContainerElement.nativeElement;
-    let imgElement = this.galleryImagesContainerElement.nativeElement.children[this.selectedImageIndex].firstElementChild;
-    let originalWidth = imgElement.width, originalHeight = imgElement.height;
-    let height = 800;
-    let width = (originalWidth / originalHeight) * height;
-    this.renderer.setStyle(imagesContainerElement, 'transform', `translate(${-width / 2}px, 0%)`);
+    const imagesContainerElement = this.galleryImagesContainerElement.nativeElement;
+    const imageContainerElement = this.galleryImagesContainerElement.nativeElement.children[this.selectedImageIndex];
+    this.renderer.setStyle(imagesContainerElement, 'transform', `translate(${-imageContainerElement.offsetWidth / 2}px, 0%)`);
   }
 }

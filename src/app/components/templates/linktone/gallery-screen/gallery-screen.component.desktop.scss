@@ -2,29 +2,35 @@
 
 @include media("screen", ">mobile") {
     .gallery-container {
-        flex-direction: row;
-        overflow: hidden;
+        > .arrows-container {
+            font-size: 100px;
 
-        & > .gallery-images-container {
-            position: absolute;
-            flex-direction: row;
-            align-items: center;
-            transition: transform 0.50s;
-            left: 50%;
+            > .prevImage {
+                margin-left: 50px;
+            }
+    
+            > .nextImage {
+                margin-right: 50px;
+            }
+        }
 
-            & > .gallery-image-container {
+        > .gallery-images-container {
+            > .gallery-image-container {
                 margin-right: 100px;
+                height: 45%;
+                transition: height 0.50s;
 
                 &.selected {
-                    & > img {
-                        max-height: 800px;
-                        transition: max-height 0.50s;
-                    }
+                    height: 90%;
+                    transition: height 0.50s;
                 }
 
-                & > img {
-                    max-height: 400px;
-                    transition: max-height 0.50s;
+                > img {
+                    height: 100%;
+                }
+
+                > .image-label {
+                    font-size: 14px;
                 }
             }
         }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { PlatformsService } from '@root/app/services/platforms.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { PlatformsService } from '@root/app/services/platforms.service';
     './linktone-template.component.mobile.scss'
   ]
 })
-export class LinktoneTemplateComponent implements OnInit {
+export class LinktoneTemplateComponent {
   @Input() releaseData;
   @ViewChild('headerTabs') headerTabs: ElementRef;
   @ViewChild('tabsLine') tabsLine: ElementRef;
@@ -47,9 +47,6 @@ export class LinktoneTemplateComponent implements OnInit {
   constructor(
     private renderer: Renderer2,
     public platformsService: PlatformsService) {
-  }
-
-  ngOnInit(): void {
   }
 
   ngAfterViewInit() {

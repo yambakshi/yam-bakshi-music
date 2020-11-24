@@ -2,36 +2,34 @@
 
 @include media("screen", "<mobile") {
     .gallery-container {
-        flex-direction: row;
-
-        & > .arrows-container {
+        > .arrows-container {
             font-size: 60px;
 
-            & > .prevImage {
+            > .prevImage {
                 margin-left: 20px;
             }
     
-            & > .nextImage {
+            > .nextImage {
                 margin-right: 20px;
             }
         }
 
-        & > .gallery-images-container {
-            position: absolute;
-            flex-direction: row;
-            align-items: center;
-            transition: transform 0.50s;
-            left: 50%;
-
-            & > .gallery-image-container {
+        > .gallery-images-container {
+            > .gallery-image-container {
                 margin-right: 50px;
+                height: 45%;
+                transition: height 0.50s;
 
-                & > img {
-                    max-width: 320px;
-                    transition: max-height 0.50s;
+                &.selected {
+                    height: 90%;
+                    transition: height 0.50s;
                 }
 
-                & > .image-label {
+                > img {
+                    height: 100%;
+                }
+
+                > .image-label {
                     font-size: 14px;
                 }
             }
