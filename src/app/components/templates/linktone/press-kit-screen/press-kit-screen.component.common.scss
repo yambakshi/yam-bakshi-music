@@ -1,0 +1,41 @@
+.press-kit-container {
+    > .press-kit-title-container {
+        display: flex;
+        padding: 15px;
+        border: 1px solid #fff;
+
+        > .press-kit-download-label {
+            flex: 1;
+        }
+    }
+
+    > .press-kit-item-container {
+        display: flex;
+        padding: 15px;
+        border: 1px solid #fff;
+
+        > .press-kit-download-label {
+            flex: 1;
+            margin-right: 15px;
+        }
+
+        > .press-kit-download-icon {
+            margin-right: 25px;
+            position: relative;
+
+            &:not(:last-of-type):after {
+                content: "";
+                position: absolute;
+                transform: translateX(-50%);
+                width: 3px;
+                height: 100%;
+                background-color: white;
+                right: -16px;
+            }
+
+            &:last-of-type {
+                margin-right: 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.download-container {
+    > .download-title-container {
+        display: flex;
+        padding: 15px;
+        border: 1px solid #fff;
+
+        > .release-title {
+            flex: 1;
+        }
+    }
+
+    > .download-list-item {
+        display: flex;
+        padding: 15px;
+        border: 1px solid #fff;
+
+        > .download-item-index {
+            margin-right: 20px;
+        }
+
+        > .download-item-name {
+            flex: 1;
+        }
+    }
+}
