@@ -18,7 +18,7 @@ export class SidePanelComponent implements OnInit {
     @ViewChild('audioPlayer') audioPlayer: ElementRef;
     @ViewChild('seekSlider') seekSlider: ElementRef;
 
-    avatar: string = '/v1605622365/gallery/avatar_kftj3u.jpg';
+    avatar: string = '/v1605622365/linktone/avatar_kftj3u.jpg';
     selectedSong: number = 0;
     paused: boolean = false;
     muted: boolean = false;

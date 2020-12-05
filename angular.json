@@ -27,7 +27,7 @@
               "src/robots.txt",
               "src/sitemap.xml",
               "src/assets/scss",
-              "src/assets/media/press-release.pdf"
+              "src/assets/media/linktone/press-release.pdf"
             ],
             "styles": [
               "src/styles.scss"
