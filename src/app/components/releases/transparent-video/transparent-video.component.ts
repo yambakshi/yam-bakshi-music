@@ -9,6 +9,7 @@ export class TransparentVideoClipComponent implements OnInit {
   releaseData = {
     meta: {
       name: "Transparent",
+      type: "SINGLE",
       released: true,
     },
     graphics: {

@@ -1,0 +1,25 @@
+@import "../../../../../scss/global/index.scss";
+
+@include media("screen", "<mobile") {
+    .linktone-container {
+        > .linktone-main-panel {
+            > .linktone-body {
+                > .press-kit-screen-container {    
+                    > .press-kit-screen {
+                        width: 100%;
+                    }
+                }
+
+                > .download-screen-container {    
+                    > .download-screen {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        > .linktone-side-panel {
+            display: none;
+        }
+    }
+}

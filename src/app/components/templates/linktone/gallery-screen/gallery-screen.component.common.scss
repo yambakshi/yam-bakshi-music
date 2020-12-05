@@ -1,0 +1,103 @@
+.gallery-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    > .arrows-container {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        color: rgba(255, 255, 255, .7);
+        top: 50%;
+        transform: translate(0%, -50%);
+        justify-content: space-between;
+        z-index: 1;
+
+        > .prevImage {
+            visibility: hidden;
+        }
+
+        > .nextImage {
+            margin-right: 50px;
+        }
+
+        > div {
+            cursor: pointer;
+            display: flex;
+
+            &:hover {
+                color: rgba(255, 255, 255, 1);
+            }
+
+            > i[class^="icon-"] {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    > .gallery-images-container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        align-items: center;
+        transition: transform 0.50s;
+        left: 50%;
+
+        > .gallery-image-container {
+            display: flex;
+            border: 1px solid #fff;
+            user-select: none;
+            position: relative;
+            box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .7);
+                transition: background-color 0.50s;
+            }
+
+            &.selected {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0);
+                    transition: background-color 0.50s;
+                }
+
+                > .image-label {
+                    display: block;
+                }
+            }
+
+            > .image-label {
+                display: none;
+                position: absolute;
+                background-color: rgba(255, 255, 255, .6);
+                color: black;
+                font-size: 20px;
+                padding: 15px;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%, 0%);
+                max-width: 85%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

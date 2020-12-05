@@ -1,0 +1,51 @@
+<div class="linktone-side-panel">
+    <!-- <div class="side-menu-actions">
+        <div class="linktone-share"><i class="icon-share2"></i></div>
+    </div> -->
+    <div class="side-menu-release-type-container">
+        <div class="release-type">{{releaseData.meta.type}}</div>
+    </div>
+    <div class="side-menu-avatar-container">
+        <div class="linktone-avatar" [ngStyle]="{'background-image': 'url(' + releaseData.graphics.avatar + ')'}">
+        </div>
+    </div>
+    <div class="side-menu-release-titles">
+        <h2 class="artist-name-title">Yam Bakshi | ים בקשי</h2>
+        <h1 class="release-name-title">{{releaseData.meta.name}}</h1>
+    </div>
+    <div class="side-menu-player-container">
+        <audio #audioPlayer class="audio-player" type="audio/mpeg" [src]="audioSource" preload="metadata" autoplay></audio>
+        <div class="side-menu-player">
+            <div class="play-pause-buttons-container" [ngClass]="paused ? 'paused' : ''">
+                <div class="play-button" (click)="pauseAudio(false)"><i class="icon-play3"></i></div>
+                <div class="pause-button" (click)="pauseAudio(true)"><i class="icon-pause2"></i></div>
+            </div>
+            <div class="player-current-time">{{currentTime}}</div>
+            <div class="player-seek-slider-container">
+                <input #seekSlider class="player-seek-slider" type="range" min="0" max="1" [value]="seekSliderValue" (input)="seekSliderChanged()">
+            </div>
+            <div class="player-duration">{{duration}}</div>
+            <div class="mute-unmute-buttons-container" [ngClass]="muted ? 'muted' : ''">
+                <div class="unmute-button" (click)="muteAudio(false)"><i class="icon-volume-mute2"></i></div>
+                <div class="mute-button" (click)="muteAudio(true)"><i class="icon-volume-medium"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="side-menu-songs-list-container">
+        <div class="songs-list">
+            <div *ngFor="let song of releaseData.lyrics; let i = index" id="{{song.name}}" class="songs-list-item"
+                [ngClass]="selectedSong === i ? 'selected' : ''" (click)="selectSong(i)">
+                <div class="song-item-index">{{i+1}}.</div>
+                <div class="song-item-name">{{song.name}}</div>
+                <div class="song-item-download" (click)="downloadSong($event, i)"><i class="icon-download3"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="side-menu-lyrics-container">
+        <div class="song-lyrics-container">
+            <div class="song-lyrics">
+                {{releaseData.lyrics[selectedSong].lyrics}}
+            </div>
+        </div>
+    </div>
+</div>

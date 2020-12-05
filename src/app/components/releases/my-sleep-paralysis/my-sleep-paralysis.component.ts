@@ -9,6 +9,7 @@ export class MySleepParalysisComponent implements OnInit {
   releaseData = {
     meta: {
       name: "My Sleep Paralysis",
+      type: "SINGLE",
       released: true,
     },
     graphics: {
@@ -36,7 +37,7 @@ Coexist with yourself, return to the path
 A fraction of a second
 Right before you take the shot
 
-Look to me
+Look at me
 
 But instead, you’re probably dead
 Do exactly as instructed
@@ -45,7 +46,29 @@ Coexist with yourself
 You were so close
 
 Close to me`
-    }]
+    }],
+    credits: `מילים ולחן: ים בקשי
+הפקה: ים בקשי
+עיבוד: ים בקשי
+מיקס: ארן לביא וים בקשי
+מאסטר: ארן לביא
+
+שירה: ים בקשי
+קלידים: ים בקשי
+גיטרות: ים בקשי
+בס: ים בקשי
+תופים: עמית כהן
+
+טכנאי הקלטת תופים: איתמר אפשר
+תופים הוקלטו באולפני ברדו
+
+עיצוב עטיפה: עומר ענבר
+צילום תמונת עטיפה: רן עזרא
+
+יצירת קשר
+איש קשר: ים בקשי
+yambakshi@gmail.com :מייל
+טלפון: 052-4232753`
   }
 
   constructor() { }

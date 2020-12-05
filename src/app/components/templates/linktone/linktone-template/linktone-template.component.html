@@ -1,0 +1,57 @@
+<div class="linktone-container">
+    <div class="linktone-main-panel">
+        <div class="linktone-header">
+            <div class="tabs-container">
+                <ul #headerTabs>
+                    <li *ngFor="let tab of linktoneTabs; let i = index" [ngClass]="selectedTab === i ? 'selected' : ''"
+                        (click)="selectTab(i)">{{tab}}</li>
+                </ul>
+                <div #tabsLine class="tabs-line"></div>
+            </div>
+        </div>
+        <div #linktoneBody class="linktone-body">
+            <div class="main-screen-container">
+                <img [src]="releaseData.graphics.og" alt="og" />
+            </div>
+            <div class="lyrics-screen-container">
+                <lyrics-screen class="lyrics-screen" [lyrics]="releaseData.lyrics"></lyrics-screen>
+            </div>
+            <div class="credits-screen-container">
+                <credits-screen class="credits-screen" [releaseData]="releaseData"></credits-screen>
+            </div>
+            <div class="gallery-screen-container">
+                <gallery-screen [visible]="selectedTab == 3"></gallery-screen>
+            </div>
+            <div class="press-screen-container">
+                <iframe title="Press PDF" src="assets/media/linktone/press-release.pdf" width="100%" height="100%"></iframe>
+            </div>
+            <div class="press-kit-screen-container">
+                <press-kit-screen class="press-kit-screen" [releaseData]="releaseData"></press-kit-screen>
+            </div>
+            <div class="download-screen-container">
+                <download-screen class="download-screen" [releaseData]="releaseData"></download-screen>
+            </div>
+        </div>
+        <div class="linktone-footer">
+            <div class="platforms-buttons-container">
+                <div *ngFor="let name of socials" class="platform-button">
+                    <a id="{{name}}" href="{{platformsService.platforms[name].artistPage}}" target="_blank"
+                        rel="noopener">
+                        <img src="{{platformsService.platforms[name].icons.small}}"
+                            alt="{{platformsService.platforms[name].icons.alt}}" height="32" width="32" />
+                    </a>
+                </div>
+                <div *ngFor="let name of moreMusic" class="platform-button">
+                    <a id="{{name}} (Artist Page)" href="{{platformsService.platforms[name].artistPage}}"
+                        target="_blank" rel="noopener">
+                        <img src="{{platformsService.platforms[name].icons.small}}"
+                            alt="{{platformsService.platforms[name].icons.alt}}"
+                            height="{{platformsService.platforms[name].icons.size ? platformsService.platforms[name].icons.size.height : 32}}"
+                            width="{{platformsService.platforms[name].icons.size ? platformsService.platforms[name].icons.size.width : 32}}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <side-panel [releaseData]="releaseData"></side-panel>
+</div>

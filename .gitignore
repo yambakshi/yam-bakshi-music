@@ -46,3 +46,5 @@ testem.log
 Thumbs.db
 
 src/assets/media/releases
+src/assets/media/linktone/gallery
+src/assets/media/linktone/avatar.jpg

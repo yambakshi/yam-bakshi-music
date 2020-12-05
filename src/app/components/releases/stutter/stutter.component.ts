@@ -9,6 +9,7 @@ export class StutterComponent implements OnInit {
   releaseData = {
     meta: {
       name: "Stutter",
+      type: "SINGLE",
       released: true,
     },
     graphics: {

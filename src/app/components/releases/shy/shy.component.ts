@@ -9,6 +9,7 @@ export class ShyComponent implements OnInit {
   releaseData = {
     meta: {
       name: "Shy",
+      type: "SINGLE",
       released: true,
     },
     graphics: {

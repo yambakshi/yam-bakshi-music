@@ -1,0 +1,13 @@
+@import "../../../../../scss/global/index.scss";
+
+@include media("screen", "<mobile") {
+    .lyrics-list-container {
+        > .lyrics-list-item {
+            > .lyrics-item-lyrics-container {
+                > .lyrics-content {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

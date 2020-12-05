@@ -3,6 +3,7 @@ import { AppService } from '@services/app.service';
 import { Title } from '@angular/platform-browser';
 import { CloudinaryService } from '@services/cloudinary.service';
 import { PlatformsService } from '@root/app/services/platforms.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'smartlink-template',
@@ -19,6 +20,7 @@ export class SmartlinkTemplateComponent implements OnInit {
   showLyrics: boolean = false;
 
   constructor(
+    public router: Router,
     private titleService: Title,
     private appService: AppService,
     private cloudinaryService: CloudinaryService,

@@ -1,0 +1,38 @@
+@import "../../../../../scss/global/index.scss";
+
+@include media("screen", ">mobile") {
+    .gallery-container {
+        > .arrows-container {
+            font-size: 100px;
+
+            > .prevImage {
+                margin-left: 50px;
+            }
+    
+            > .nextImage {
+                margin-right: 50px;
+            }
+        }
+
+        > .gallery-images-container {
+            > .gallery-image-container {
+                margin-right: 100px;
+                height: 45%;
+                transition: height 0.50s;
+
+                &.selected {
+                    height: 90%;
+                    transition: height 0.50s;
+                }
+
+                > img {
+                    height: 100%;
+                }
+
+                > .image-label {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
