@@ -2,7 +2,7 @@
     {
       "origin": ["http://localhost:4200"],
       "method": ["GET"],
-      "responseHeader": ["*"],
+      "responseHeader": ["Access-Control-Allow-Origin"],
       "maxAgeSeconds": 3600
     }
 ]
