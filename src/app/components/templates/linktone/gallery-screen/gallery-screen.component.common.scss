@@ -14,10 +14,6 @@
         justify-content: space-between;
         z-index: 1;
 
-        > .prevImage {
-            visibility: hidden;
-        }
-
         > .nextImage {
             margin-right: 50px;
         }
@@ -52,6 +48,10 @@
             user-select: none;
             position: relative;
             box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
+            
+            > img {
+                height: 100%;
+            }
 
             &:before {
                 content: "";
