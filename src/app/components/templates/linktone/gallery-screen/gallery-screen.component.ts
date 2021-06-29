@@ -110,8 +110,9 @@ export class GalleryScreenComponent implements OnInit {
 
       if (imgRatio < windowRatio) {
         this.renderer.setStyle(img, 'height', '90%');
+        this.renderer.setStyle(img, 'width', `${(imgWidth / imgHeight) * img.offsetHeight}px`);
       } else {
-        this.renderer.setStyle(img, 'width', '90%');
+        this.renderer.setStyle(img, 'width', `${windowWidth * .9}px`);
         this.renderer.setStyle(img, 'height', `${(imgHeight / imgWidth) * img.offsetWidth}px`);
       }
 

@@ -44,13 +44,12 @@
 
         > .gallery-image-container {
             display: flex;
-            border: 1px solid #fff;
             user-select: none;
             position: relative;
             box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
             
             > img {
-                height: 100%;
+                border: 1px solid #fff;
             }
 
             &:before {
