@@ -1,14 +1,14 @@
-<div class="lyrics-list-container">
-    <div *ngFor="let song of lyrics; let i = index" id="{{song.name}}"
-        class="lyrics-list-item" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
-        <div class="lyrics-list-item-header" (click)="toggleExpandLyrics(i)">
+<div #accordion class="lyrics-list-container">
+    <div *ngFor="let song of lyrics; let i = index" id="{{song.name}}" class="lyrics-list-item">
+        <div class="lyrics-list-item-header" (click)="onAccordionClick($event, i)"
+            [ngClass]="accordionState[i] ? 'expanded' : ''">
             <div class="lyrics-item-index">{{i+1}}.</div>
             <div class="lyrics-item-name">{{song.name}}</div>
-            <div class="lyrics-item-expand" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
+            <div class="lyrics-item-expand">
                 <i class="icon-chevron-thin-down"></i>
             </div>
         </div>
-        <div class="lyrics-item-lyrics-container" [ngClass]="lyricsExpandState[i] ? 'expanded' : ''">
+        <div class="lyrics-list-item-body">
             <div class="lyrics-content">{{song.lyrics}}</div>
         </div>
     </div>

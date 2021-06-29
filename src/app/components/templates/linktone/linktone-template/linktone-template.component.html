@@ -14,7 +14,7 @@
                 <img [src]="releaseData.graphics.og" alt="og" />
             </div>
             <div class="lyrics-screen-container">
-                <lyrics-screen class="lyrics-screen" [lyrics]="releaseData.lyrics"></lyrics-screen>
+                <lyrics-screen class="lyrics-screen" [visible]="selectedTab == 1" [lyrics]="releaseData.lyrics"></lyrics-screen>
             </div>
             <div class="credits-screen-container">
                 <credits-screen class="credits-screen" [releaseData]="releaseData"></credits-screen>

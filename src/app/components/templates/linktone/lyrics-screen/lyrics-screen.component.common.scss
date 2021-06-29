@@ -5,16 +5,8 @@
     > .lyrics-list-item {
         display: flex;
         flex-direction: column;
-        color: rgba(255, 255, 255, .7);
+        color: rgba(255, 255, 255, 0.7);
         min-width: 375px;
-
-        &.expanded {
-            color: rgba(255, 255, 255, 1);
-        }
-
-        &:hover {
-            color: rgba(255, 255, 255, 1);
-        }
 
         > .lyrics-list-item-header {
             display: flex;
@@ -22,6 +14,18 @@
             position: relative;
             padding: 15px 10px;
             justify-content: space-between;
+
+            &.expanded {
+                color: rgba(255, 255, 255, 1);
+
+                > .lyrics-item-expand {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &:hover {
+                color: rgba(255, 255, 255, 1);
+            }
 
             &:before {
                 content: "";
@@ -32,7 +36,7 @@
                 transform: translateX(-50%);
                 width: 100%;
                 height: 1px;
-                background-color: rgba(255, 255, 255, .7);
+                background-color: rgba(255, 255, 255, 0.7);
             }
 
             &:after {
@@ -44,7 +48,7 @@
                 transform: translateX(-50%);
                 width: 100%;
                 height: 1px;
-                background-color: rgba(255, 255, 255, .7);
+                background-color: rgba(255, 255, 255, 0.7);
             }
 
             > .lyrics-item-index {
@@ -55,18 +59,13 @@
                 font-size: 40;
                 font-weight: 900;
                 transform: rotate(0deg);
-                transition: transform 0.30s;
-
-                &.expanded {
-                    transform: rotate(180deg);
-                    transition: transform 0.30s;
-                }
+                transition: transform 0.3s;
             }
         }
 
-        > .lyrics-item-lyrics-container {
+        > .lyrics-list-item-body {
             max-height: 0;
-            transition: max-height 0.40s;
+            transition: max-height 0.4s ease-out;
             overflow: hidden;
             position: relative;
 
@@ -79,7 +78,7 @@
                 transform: translateX(-50%);
                 width: 100%;
                 height: 1px;
-                background-color: rgba(255, 255, 255, .7);
+                background-color: rgba(255, 255, 255, 0.7);
             }
 
             &:after {
@@ -91,12 +90,7 @@
                 transform: translateX(-50%);
                 width: 100%;
                 height: 1px;
-                background-color: rgba(255, 255, 255, .7);
-            }
-
-            &.expanded {
-                max-height: 10000px;
-                transition: max-height 1s;
+                background-color: rgba(255, 255, 255, 0.7);
             }
 
             > .lyrics-content {
