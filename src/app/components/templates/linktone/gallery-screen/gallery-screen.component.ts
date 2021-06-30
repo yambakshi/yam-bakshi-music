@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, Renderer2, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, Input, Renderer2, ElementRef, ViewChild, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { WindowRefService } from '@root/app/services/window-ref.service';
 import { CloudinaryService } from '@services/cloudinary.service';
 
 @Component({
@@ -29,6 +31,8 @@ export class GalleryScreenComponent implements OnInit {
 
   constructor(
     private renderer: Renderer2,
+    private windowRefService: WindowRefService,
+    @Inject(PLATFORM_ID) private platformId: any,
     private cloudinaryService: CloudinaryService) {
   }
 
@@ -38,11 +42,14 @@ export class GalleryScreenComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.centerImage();
+    if (isPlatformBrowser(this.platformId)) {
+      this.calcMargin();
+    }
   }
 
-  @HostListener("window:resize", [])
-  private onResize(): void {
+  @HostListener('window:resize', ['$event'])
+  onResize(event?) {
+    this.calcMargin();
     this.centerImage();
   }
 
@@ -55,38 +62,24 @@ export class GalleryScreenComponent implements OnInit {
   nextImage(): void {
     const galleryImagesContainerElement = this.galleryImagesContainerElement.nativeElement;
     const imagesContainersElements = galleryImagesContainerElement.children;
-    const imagesCount = imagesContainersElements.length;
 
-    if (this.selectedImageIndex + 1 == imagesCount - 1) {
-      this.renderer.setStyle(this.nextImageElement.nativeElement, 'visibility', 'hidden');
-    } else if (this.selectedImageIndex == 0) {
-      this.renderer.setStyle(this.prevImageElement.nativeElement, 'visibility', 'visible');
-    }
-
-    const prevImageWidth = imagesContainersElements[this.selectedImageIndex].offsetWidth;
     this.selectedImageIndex++;
 
     let prevImagesWidth = 0;
-    for (let i = 0; i < this.selectedImageIndex - 1; i++) {
+    for (let i = 0; i < this.selectedImageIndex; i++) {
       prevImagesWidth += imagesContainersElements[i].offsetWidth;
     }
 
-    const selectedImageElement = imagesContainersElements[this.selectedImageIndex];
-    const selectedImageWidth = selectedImageElement.offsetWidth;
-    const translation = prevImagesWidth + (this.margin * this.selectedImageIndex) + selectedImageWidth + (prevImageWidth / 2);
-    this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translate(${-translation}px, 0%)`);
+    const selectedImageWidth = imagesContainersElements[this.selectedImageIndex].offsetWidth;
+    const translation = prevImagesWidth + (this.margin * this.selectedImageIndex) + (selectedImageWidth / 2);
+    this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translateX(${-translation}px)`);
+
+    this.showArrows(imagesContainersElements.length);
   }
 
   prevImage(): void {
     const galleryImagesContainerElement = this.galleryImagesContainerElement.nativeElement;
     const imagesContainersElements = galleryImagesContainerElement.children;
-    const imagesCount = imagesContainersElements.length;
-
-    if (this.selectedImageIndex - 1 == 0) {
-      this.renderer.setStyle(this.prevImageElement.nativeElement, 'visibility', 'hidden');
-    } else if (this.selectedImageIndex == imagesCount - 1) {
-      this.renderer.setStyle(this.nextImageElement.nativeElement, 'visibility', 'visible');
-    }
 
     this.selectedImageIndex--;
 
@@ -95,24 +88,62 @@ export class GalleryScreenComponent implements OnInit {
       prevImagesWidth += imagesContainersElements[i].offsetWidth;
     }
 
-    const selectedImageElement = imagesContainersElements[this.selectedImageIndex];
-    const selectedImageWidth = selectedImageElement.offsetWidth;
-    const translation = prevImagesWidth + (this.margin * this.selectedImageIndex) + selectedImageWidth;
-    this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translate(${-translation}px, 0%)`);
+    const selectedImageWidth = imagesContainersElements[this.selectedImageIndex].offsetWidth;
+    const translation = prevImagesWidth + (this.margin * this.selectedImageIndex) + (selectedImageWidth / 2);
+    this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translateX(${-translation}px)`);
+
+    this.showArrows(imagesContainersElements.length);
   }
 
   centerImage(): void {
     const galleryImagesContainerElement = this.galleryImagesContainerElement.nativeElement;
     const imagesContainersElements = galleryImagesContainerElement.children;
 
-    let prevImagesWidth = 0;
-    for (let i = 0; i < this.selectedImageIndex; i++) {
-      prevImagesWidth += imagesContainersElements[i].offsetWidth;
-    }
+    const windowWidth = this.windowRefService.nativeWindow.innerWidth;
+    const containerHeight = galleryImagesContainerElement.clientHeight;
+    const windowRatio = windowWidth / containerHeight;
 
-    const selectedImageElement = imagesContainersElements[this.selectedImageIndex];
-    const selectedImageWidth = selectedImageElement.offsetWidth;
+    let prevImagesWidth = 0;
+    Array.from(imagesContainersElements).forEach((img: any, i) => {
+      const imgWidth = img.offsetWidth, imgHeight = img.offsetHeight;
+      const imgRatio = imgWidth / imgHeight;
+
+      if (imgRatio < windowRatio) {
+        this.renderer.setStyle(img, 'height', `${containerHeight * .9}px`);
+        this.renderer.setStyle(img, 'width', `${(imgWidth / imgHeight) * (containerHeight * .9)}px`);
+      } else {
+        this.renderer.setStyle(img, 'width', `${windowWidth * .9}px`);
+        this.renderer.setStyle(img, 'height', `${(imgHeight / imgWidth) * img.offsetWidth}px`);
+      }
+
+      this.renderer.setStyle(img, 'margin-right', `${this.margin}px`);
+
+      if (i < this.selectedImageIndex) {
+        prevImagesWidth += imagesContainersElements[i].offsetWidth;
+      }
+    })
+
+    const selectedImageWidth = imagesContainersElements[this.selectedImageIndex].offsetWidth;
     const translation = prevImagesWidth + (this.margin * this.selectedImageIndex) + (selectedImageWidth / 2);
-    this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translate(${-translation}px, 0%)`);
+    this.renderer.setStyle(galleryImagesContainerElement, 'transform', `translateX(${-translation}px)`);
+
+    this.showArrows(imagesContainersElements.length);
+  }
+
+  private calcMargin() {
+    const windowWidth = this.windowRefService.nativeWindow.innerWidth;
+    const ratio = Math.abs(100 - 50) / (1920 - 375);
+    this.margin = 100 - (ratio * (1920 - windowWidth));
+  }
+
+  private showArrows(imagesCount: number) {
+    if (this.selectedImageIndex + 1 == imagesCount) {
+      this.renderer.setStyle(this.nextImageElement.nativeElement, 'visibility', 'hidden');
+    } else if (this.selectedImageIndex == 0) {
+      this.renderer.setStyle(this.prevImageElement.nativeElement, 'visibility', 'hidden');
+    } else {
+      this.renderer.setStyle(this.nextImageElement.nativeElement, 'visibility', 'visible');
+      this.renderer.setStyle(this.prevImageElement.nativeElement, 'visibility', 'visible');
+    }
   }
 }

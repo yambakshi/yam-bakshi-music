@@ -2,6 +2,11 @@
 @import './assets/scss/style.scss';
 @import './assets/css/icomoon/icomoon.css';
 
+html {
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
+}
+
 body {
     margin: 0;
 }

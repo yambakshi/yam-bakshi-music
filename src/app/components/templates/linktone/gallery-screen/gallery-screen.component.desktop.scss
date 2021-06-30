@@ -16,19 +16,6 @@
 
         > .gallery-images-container {
             > .gallery-image-container {
-                margin-right: 100px;
-                height: 45%;
-                transition: height 0.50s;
-
-                &.selected {
-                    height: 90%;
-                    transition: height 0.50s;
-                }
-
-                > img {
-                    height: 100%;
-                }
-
                 > .image-label {
                     font-size: 20px;
                 }
